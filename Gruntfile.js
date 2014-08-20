@@ -34,14 +34,8 @@ module.exports = function (grunt) {
         },
         {
           expand: true,
-          cwd: 'node_modules/bagel-*/<%= globalConfig.styleguide  %>',
-          src: ['**/*.hbs'],
-          dest: '<%= globalConfig.dist.docs  %>'
-        },
-        {
-          expand: true,
-          cwd: 'node_modules/**/bagel-*/<%= globalConfig.styleguide  %>',
-          src: ['**/*.hbs'],
+          src: ['**/node_modules/bagel-*/guide/**/*.hbs'],
+          flatten: true,
           dest: '<%= globalConfig.dist.docs  %>'
         }]
       }
@@ -144,8 +138,7 @@ grunt.registerTask('bagel:dirs',
     var loadPaths = grunt.file.expand({}, [
       './',
       'node_modules/',
-      'node_modules/bagel-*/node_modules/',
-      'node_modules/**/node_modules/bagel-*/node_modules/'
+      '**/node_modules/bagel-*/node_modules/'
     ]);
     grunt.log.write(loadPaths.join(", "));
     grunt.config.set('sass.options.loadPath', loadPaths);
