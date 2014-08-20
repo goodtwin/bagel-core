@@ -1,0 +1,12 @@
+@import "config";
+
+@if variable-exists(globalConfig) {
+  $globalConfig: map_merge($defaultConfig, $globalConfig)!global;
+} @else {
+  $globalConfig: $defaultConfig!global;
+}
+
+@import "bagel-authoring/init";
+@import "bagel-theme-prototype/init";
+@import "src/init";
+@import "chrome/init";
