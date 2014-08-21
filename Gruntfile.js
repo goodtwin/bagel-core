@@ -138,6 +138,7 @@ grunt.registerTask('bagel:dirs',
     var loadPaths = grunt.file.expand({}, [
       './',
       'node_modules/',
+      '**/node_modules/bagel-*/',
       '**/node_modules/bagel-*/node_modules/'
     ]);
     grunt.log.write(loadPaths.join(", "));
