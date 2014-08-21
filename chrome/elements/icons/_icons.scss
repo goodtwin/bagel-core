@@ -3,17 +3,6 @@
 				Icon
 	*******************************/
 
-	@font-face {
-		font-family: 'Icons';
-		src: url(../assets/icons/icons.eot);
-		src:
-			url(../assets/icons/icons.eot?#iefix) format('embedded-opentype'),
-			url(../assets/icons/icons.svg#icons) format('svg'),
-			url(../assets/icons/icons.woff) format('woff'),
-			url(../assets/icons/icons.ttf) format('truetype')
-		;
-	}
-
 	i.icon {
 		opacity: 0.75;
 		margin: 0em 0.25em 0em 0em;

@@ -26,24 +26,7 @@
 @mixin icons-src {
   /*******************************
                Icon
-  *******************************/
-
-  @font-face {
-    font-family: 'Icons';
-    src: url(../assets/icons/icons.eot);
-    src:
-      url(../assets/icons/icons.eot?#iefix) format('embedded-opentype'),
-      url(../assets/icons/icons.svg#icons) format('svg'),
-      url(../assets/icons/icons.woff) format('woff'),
-      url(../assets/icons/icons.ttf) format('truetype')
-    ;
-
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-decoration: inherit;
-    text-transform: none;
-  }
+  *******************************
 
   i.icon {
     display: inline-block;
