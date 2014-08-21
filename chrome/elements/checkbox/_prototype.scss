@@ -36,6 +36,10 @@
 			width: 0.45em;
 			height: 0.15em;
 			@extend i.icon;
+		}
+
+		input:checked + .box:after,
+		input:checked + label:after {
 			@extend i.icon.checkmark:before;
 		}
 
@@ -123,6 +127,7 @@
 			background-color: palette(neutral, mid);
 		}
 		&.radio input:checked + label:after {
+			content: '';
 			background-color: palette(neutral, dark);
 		}
 		/*--------------
@@ -173,6 +178,7 @@
 			input:checked + label:before,
 			input:checked + .box:after,
 			input:checked + label:after {
+				content: '';
 				left: 1.75em;
 			}
 
@@ -185,6 +191,7 @@
 			/* On Color */
 			input:checked + .box:after,
 			input:checked + label:after {
+				content: '';
 				background-color: palette(info, success);
 			}
 		}
@@ -230,6 +237,7 @@
 			/* Active */
 			input:checked + .box:after,
 			input:checked + label:after {
+				content: '';
 				background-color: palette(info, success);
 			}
 		}
