@@ -1,7 +1,8 @@
 @mixin button-prototype {
-	/*******************************
-				Button
-	*******************************/
+	/* Button
+	========================================
+	======================================== */
+
 	.ui.button {
 		background-color: palette(neutral, mid);
 		color: palette(neutral, light);
@@ -12,33 +13,32 @@
 		-webkit-tap-highlight-color: rgba(0,0,0, 0);
 	}
 
-	/*******************************
-				States
-	*******************************/
+	/* States
+	======================================== */
 	.ui.button {
-		/*--------------
-			Active
-		---------------*/
+		/**
+		 * Active
+		 */
 		&.active{
 			background-color: palette(neutral, mid, 105);
 		}
-		/*--------------
-			Hover
-		---------------*/
+		/**
+		 * Hover
+		 */
 		&:hover,
 		&.active:hover  {
 			background-color: palette(neutral, mid, 110);
 		}
-		/*--------------
-			Down
-		---------------*/
+		/**
+		 * Down
+		 */
 		&:active,
 		&.active:active {
 			background-color: palette(neutral, mid, 120);
 		}
-		/*--------------
-			Loading
-		---------------*/
+		/**
+		 * Loading
+		 */
 		&.loading {
 			position: relative;
 			cursor: default;
@@ -61,9 +61,9 @@
 				box-shadow: none;
 			}
 		}
-		/*-------------------
-			Disabled
-		--------------------*/
+		/**
+		 * Disabled
+		 */
 		&.disabled,
 		&.disabled:hover,
 		&.disabled.active {
@@ -72,13 +72,12 @@
 		}
 	}
 
-	/*******************************
-				Types
-	*******************************/
+	/* Types
+	======================================== */
 	.ui.button {
-		/*-------------------
-			Primary
-		--------------------*/
+		/**
+		 * Primary
+		 */
 		&.primary {
 			background-color: palette(button, primary);
 
@@ -91,9 +90,9 @@
 				background-color: palette(button, primary, 105);
 			}
 		}
-		/*-------------------
-			Secondary
-		--------------------*/
+		/**
+		 * Secondary
+		 */
 		&.secondary {
 			background-color: palette(button, secondary);
 
@@ -106,9 +105,9 @@
 				background-color: palette(button, secondary, 105);
 			}
 		}
-		/*-------------------
-			Social
-		--------------------*/
+		/**
+		 * Social
+		 */
 		/* Facebook */
 		&.facebook {
 			background-color: palette(social, facebook);
@@ -225,21 +224,20 @@
 				background-color: palette(info, error, 105);
 			}
 		}
-		/*--------------
-			Icon
-		---------------*/
+		/**
+		 * Icon
+		 */
 		> .icon {
 			margin-right: 0.6em;
 		}
 	}
 
-	/*******************************
-			Variations
-	*******************************/
+	/* Variations
+	======================================== */
 	.ui.button, .ui.buttons {
-		/*-------------------
-				Sizes
-		--------------------*/
+		/**
+		 * Sizes
+		 */
 		font-size: 1rem;
 
 		&.mini,
@@ -277,9 +275,9 @@
 			font-size: 1.5rem;
 			font-weight: bold;
 		}
-		/*--------------
-			Toggle
-		---------------*/
+		/**
+		 * Toggle
+		 */
 		/* Toggle (Modifies active state to give affordances) */
 		&.toggle .active.button,
 		&.toggle.active {
@@ -289,9 +287,9 @@
 				background-color: palette(info, success, 110) !important;
 			}
 		}
-		/*--------------
-		Labeled Icon
-		---------------*/
+		/**
+		 * Labeled Icon
+		 */
 		&.labeled.icon > .button > .icon,
 		&.labeled.icon > .icon {
 			background-color: rgba(0, 0, 0, 0.05);

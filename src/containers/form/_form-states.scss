@@ -1,47 +1,45 @@
 @mixin form-src-states {
-  /*******************************
-              States
-  *******************************/
+  /* States
+  ======================================== */
 
+  /**
+   * Focus
+   */
 
-  /*--------------------
-          Focus
-  ---------------------*/
-
-  /*--------------------
-          Error
-  ---------------------*/
+  /**
+   * Error
+   */
 
   /* On Form */
   .ui.form.warning .warning.message {
     display: block;
   }
 
-  /*--------------------
-          Warning
-  ---------------------*/
+  /**
+   * Warning
+   */
 
   /* On Form */
   .ui.form.error .error.message {
     display: block;
   }
 
-  /*--------------------
-    Empty (Placeholder)
-  ---------------------*/
+  /**
+   * Empty (Placeholder)
+   */
 
-  /*--------------------
-         Disabled
-  ---------------------*/
+  /**
+   * Disabled
+   */
 
   .ui.form .field.disabled :disabled {
     opacity: 1;
   }
 
 
-  /*--------------------
-       Loading State
-  ---------------------*/
+  /**
+   * Loading State
+   */
 
   /* On Form */
   .ui.form.loading {

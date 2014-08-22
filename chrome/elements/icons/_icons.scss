@@ -1,7 +1,7 @@
 @mixin icons-prototype {
-	/*******************************
-				Icon
-	*******************************/
+	/* Icon
+	========================================
+	======================================== */
 
 	i.icon {
 		opacity: 0.75;
@@ -380,9 +380,9 @@
 	i.icon.zoom.in:before { content: "\f00e"; }
 	i.icon.zoom.out:before { content: "\f010"; }
 
-	/*--------------
-		Aliases
-	---------------*/
+	/**
+	 * Aliases
+	 */
 
 	i.icon.check:before { content: "\f00c"; }
 	i.icon.close:before { content: "\f00d"; }
@@ -391,9 +391,9 @@
 	i.icon.plus:before { content: "\f067"; }
 	i.icon.signup:before { content: "\f044"; }
 
-	/*--------------
-	Spacing Fix
-	---------------*/
+	/**
+	 * Spacing Fix
+	 */
 
 	/* stars are usually consecutive */
 	i.icon.star {
@@ -414,13 +414,12 @@
 		margin: 0em 0em 0em 0.5em;
 	}
 
-	/*******************************
-				Types
-	*******************************/
+	/* Types
+	======================================== */
 
-	/*--------------
-		Loading
-	---------------*/
+	/**
+	 * Loading
+	 */
 
 	i.icon.loading {
 	animation: icon-loading 2s linear infinite;
@@ -442,9 +441,8 @@
 		}
 	}
 
-	/*******************************
-				States
-	*******************************/
+	/* States
+	======================================== */
 
 	i.icon.hover {
 		opacity: 1;
@@ -462,14 +460,13 @@
 		opacity: 0.3;
 	}
 
-	/*******************************
-			Variations
-	*******************************/
+	/* Variations
+	======================================== */
 
 
-	/*-------------------
-			Link
-	--------------------*/
+	/**
+	 * Link
+	 */
 
 	i.link.icon {
 		cursor: pointer;
@@ -480,9 +477,9 @@
 		opacity: 1 !important;
 	}
 
-	/*-------------------
-		Circular
-	--------------------*/
+	/**
+	 * Circular
+	 */
 
 	i.circular.icon {
 		border-radius: 500em !important;
@@ -497,9 +494,9 @@
 		box-shadow: none;
 	}
 
-	/*-------------------
-			Square
-	--------------------*/
+	/**
+	 * Square
+	 */
 
 	i.square.icon {
 		width: 2em;
@@ -513,18 +510,18 @@
 		box-shadow: none;
 	}
 
-	/*-------------------
-		Inverted
-	--------------------*/
+	/**
+	 * Inverted
+	 */
 
 	i.inverted.icon {
 		background-color: palette(neutral, dark);
 		color: palette(neutral, light);
 	}
 
-	/*-------------------
-			Sizes
-	--------------------*/
+	/**
+	 * Sizes
+	 */
 
 	i.small.icon {
 		font-size: 0.875em;

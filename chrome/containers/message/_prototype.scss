@@ -1,7 +1,7 @@
 @mixin message-prototype {
-	/*******************************
-				Message
-	*******************************/
+	/* Message
+	========================================
+	======================================== */
 
 	.ui.message {
 		min-height: 18px;
@@ -18,9 +18,9 @@
 		;
 	}
 
-	/*--------------
-		Content
-	---------------*/
+	/**
+	 * Content
+	 */
 
 	/* block with headers */
 	.ui.message .header {
@@ -67,13 +67,12 @@
 		;
 	}
 
-	/*******************************
-				Variations
-	*******************************/
+	/* Variations
+	======================================== */
 
-	/*--------------
-		Attached
-	---------------*/
+	/**
+	 * Attached
+	 */
 
 	.ui.attached.message {
 		box-shadow: 0em 0em 0em 1px rgba(0, 0, 0, 0.1) inset;
@@ -82,9 +81,9 @@
 		margin-bottom: 1em;
 	}
 
-	/*--------------
-		Icon
-	---------------*/
+	/**
+	 * Icon
+	 */
 
 	.ui.icon.message > .icon:not(.close) {
 		font-size: 3.8em;
@@ -94,9 +93,9 @@
 		padding-left: 1em;
 	}
 
-	/*--------------
-		Inverted
-	---------------*/
+	/**
+	 * Inverted
+	 */
 
 	.ui.inverted.message {
 		background-color: palette(neutral, dark);
@@ -104,9 +103,9 @@
 	}
 
 
-	/*--------------
-		Floating
-	---------------*/
+	/**
+	 * Floating
+	 */
 
 	.ui.floating.message {
 		box-shadow:
@@ -115,9 +114,9 @@
 		;
 	}
 
-	/*--------------
-		Types
-	---------------*/
+	/**
+	 * Types
+	 */
 
 	/* Success Text Block */
 	.ui.success.message,
@@ -133,9 +132,9 @@
 	}
 
 
-	/*--------------
-		Sizes
-	---------------*/
+	/**
+	 * Sizes
+	 */
 
 	.ui.small.message {
 		font-size: 0.875em;

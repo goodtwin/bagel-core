@@ -13,9 +13,8 @@
     animation-fill-mode: both;
   }
 
-  /*******************************
-              States
-  *******************************/
+  /* States
+  ======================================== */
 
   .ui.animating.transition {
     display: block;
@@ -46,22 +45,20 @@
     animation-play-state: paused;
   }
 
-  /*******************************
-            Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
   .ui.looping.transition {
     animation-iteration-count: infinite;
   }
 
 
-  /*******************************
-               Types
-  *******************************/
+  /* Types
+  ======================================== */
 
-  /*--------------
-      Emphasis
-  ---------------*/
+  /**
+   * Emphasis
+   */
 
   .ui.flash.transition {
     animation-name: flash;
@@ -79,9 +76,9 @@
   .ui.pulse.transition {
     animation-name: pulse;
   }
-  /*--------------
-       Flips
-  ---------------*/
+  /**
+   * Flips
+   */
 
   .ui.flip.transition.in,
   .ui.flip.transition.out {
@@ -103,9 +100,9 @@
     animation-name: verticalFlipOut;
   }
 
-  /*--------------
-        Fades
-  ---------------*/
+  /**
+   * Fades
+   */
 
   .ui.fade.transition.in {
     animation-name: fade;
@@ -144,9 +141,9 @@
     animation-name: fadeRightOut;
   }
 
-  /*--------------
-        Scale
-  ---------------*/
+  /**
+   * Scale
+   */
 
   .ui.scale.transition.in {
     animation-name: scale;
@@ -155,11 +152,9 @@
     animation-name: scaleOut;
   }
 
-
-
-  /*--------------
-       Slide
-  ---------------*/
+  /**
+   *  Slide
+   */
 
   .ui.slide.down.transition.in {
     animation-name: slide;
@@ -202,13 +197,12 @@
     }
   }
 
-  /*******************************
-         Animations
-  *******************************/
+  /* Animations
+  ======================================== */
 
-  /*--------------
-      Emphasis
-  ---------------*/
+  /**
+   * Emphasis
+   */
 
   /* Flash */
   @keyframes flash {
@@ -283,9 +277,9 @@
   }
 
 
-  /*--------------
-       Flips
-  ---------------*/
+  /**
+   * Flips
+   */
 
   /* Horizontal */
   @keyframes horizontalFlip {
@@ -332,9 +326,9 @@
     }
   }
 
-  /*--------------
-       Fades
-  ---------------*/
+  /**
+   * Fades
+   */
 
   /* Fade */
   @keyframes fade {
@@ -445,9 +439,9 @@
   }
 
 
-  /*--------------
-        Scale
-  ---------------*/
+  /**
+   * Scale
+   */
 
   /* Scale */
   @keyframes scale {

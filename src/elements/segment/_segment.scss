@@ -1,7 +1,7 @@
 @mixin segment-src {
-  /*******************************
-              Segment
-  *******************************/
+  /* Segment
+  ========================================
+  ======================================== */
 
   .ui.segment {
     position: relative;
@@ -40,9 +40,9 @@
     padding-left: 0em;
   }
 
-  /*-------------------
-      Loose Coupling
-  --------------------*/
+  /**
+   * Loose Coupling
+   */
 
   /* No padding on edge content */
   .ui.segment > :first-child {
@@ -53,14 +53,13 @@
   }
 
 
-  /*******************************
-               Types
-  *******************************/
+  /* Types
+  ======================================== */
 
 
-  /*-------------------
-         Circular
-  --------------------*/
+  /**
+   * Circular
+   */
 
   .ui.circular.segment {
     display: table-cell;
@@ -70,14 +69,13 @@
   }
 
 
-  /*******************************
-             Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
 
-  /*-------------------
-         Basic
-  --------------------*/
+  /**
+   * Basic
+   */
 
   .ui.basic.segment {
     position: relative;
@@ -93,9 +91,9 @@
   }
 
 
-  /*-------------------
-         Fittted
-  --------------------*/
+  /**
+   * Fittted
+   */
 
   .ui.fitted.segment {
     padding: 0em;
@@ -103,9 +101,9 @@
 
 
 
-  /*-------------------
-         Aligned
-  --------------------*/
+  /**
+   * Aligned
+   */
 
   .ui.left.aligned.segment {
     text-align: left;
@@ -121,9 +119,9 @@
     hyphens: auto;
   }
 
-  /*-------------------
-         Floated
-  --------------------*/
+  /**
+   * Floated
+   */
 
   .ui.floated.segment,
   .ui.left.floated.segment {
@@ -134,9 +132,9 @@
   }
 
 
-  /*-------------------
-        Attached
-  --------------------*/
+  /**
+   * Attached
+   */
 
   .ui.segment.attached {
     border-radius: 0px;

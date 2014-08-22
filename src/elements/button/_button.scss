@@ -1,9 +1,8 @@
 @mixin button-src {
-  /*******************************
-              Button
-  *******************************/
+  /* Button
+  ========================================
+  ======================================== */
 
-  /* Prototype */
   .ui.button {
     cursor: pointer;
     display: inline-block;
@@ -18,13 +17,12 @@
     user-select: none;
   }
 
-  /*******************************
-               Types
-  *******************************/
+  /* Types
+  ======================================== */
 
-  /*-------------------
-         Animated
-  --------------------*/
+  /**
+   * Animated
+   */
 
   .ui.animated.button {
     position: relative;
@@ -117,14 +115,13 @@
   }
 
 
-  /*******************************
-             Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
 
-  /*-------------------
-         Floated
-  --------------------*/
+  /**
+   * Floated
+   */
 
   .ui.left.floated.buttons,
   .ui.left.floated.button {
@@ -137,9 +134,9 @@
     margin-left: 0.25em;
   }
 
-  /*--------------
-      Icon Only
-  ---------------*/
+  /**
+   * Icon Only
+   */
 
   .ui.icon.buttons .button,
   .ui.icon.button {
@@ -153,9 +150,9 @@
 
 
 
-  /*-------------------
-          Basic
-  --------------------*/
+  /**
+   * Basic
+   */
 
   .ui.basic.buttons .button,
   .ui.basic.button {
@@ -164,9 +161,9 @@
   }
 
 
-  /*--------------
-     Labeled Icon
-  ---------------*/
+  /**
+   * Labeled Icon
+   */
 
   .ui.labeled.icon.buttons .button,
   .ui.labeled.icon.button {
@@ -205,18 +202,18 @@
 
 
 
-  /*--------------
-      Circular
-  ---------------*/
+  /**
+   * Circular
+   */
 
   .ui.circular.button {
     border-radius: 10em;
   }
 
 
-  /*--------------
-       Attached
-  ---------------*/
+  /**
+   * Attached
+   */
 
   .ui.attached.button {
        display: block;
@@ -375,9 +372,8 @@
   }
 
 
-  /*******************************
-              Groups
-  *******************************/
+  /* Groups
+  ======================================== */
 
   .ui.buttons {
       display: inline-block;

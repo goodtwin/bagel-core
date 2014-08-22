@@ -1,31 +1,27 @@
 @mixin form-prototype {
-	/*******************************
-			Standard
-	*******************************/
+	/* Form
+	========================================
+	======================================== */
 
-	/*--------------------
-			Form
-	---------------------*/
-
-	/*--------------------
-			Content
-	---------------------*/
+	/**
+	 * Content
+	 */
 
 	.ui.form > p {
 		margin: 1em 0;
 	}
 
-	/*--------------------
-			Field
-	---------------------*/
+	/**
+	 * Field
+	 */
 
 	.ui.form .field {
 		margin: 0em 0em 1em;
 	}
 
-	/*--------------------
-			Labels
-	---------------------*/
+	/**
+	 * Labels
+	 */
 
 	.ui.form .field > label {
 		color: palette(neutral, dark);
@@ -33,9 +29,9 @@
 		font-size: 0.875em;
 	}
 
-	/*--------------------
-		Standard Inputs
-	---------------------*/
+	/**
+	 * Standard Inputs
+	 */
 
 	.ui.form textarea,
 	.ui.form input[type="text"],
@@ -71,21 +67,21 @@
 	}
 
 
-	/*--------------------
-		Dividers
-	---------------------*/
+	/**
+	 * Dividers
+	 */
 
 	.ui.form .divider {
 		margin: 1em 0em;
 	}
 
-	/*--------------------
-	Types of Messages
-	---------------------*/
+	/**
+	 * Types of Messages
+	 */
 
-	/*--------------------
-	Validation Prompt
-	---------------------*/
+	/**
+	 * Validation Prompt
+	 */
 
 	.ui.form .inline.field .prompt {
 		margin-top: 0em;
@@ -95,14 +91,13 @@
 		margin-top: -0.3em;
 	}
 
-	/*******************************
-				States
-	*******************************/
+	/* States
+	======================================== */
 
 
-	/*--------------------
-			Focus
-	---------------------*/
+	/**
+	 * Focus
+	 */
 
 	.ui.form input[type="text"]:focus,
 	.ui.form input[type="email"]:focus,
@@ -120,13 +115,13 @@
 		box-shadow: 0.3em 0em 0em 0em rgba(0, 0, 0, 0.2) inset;
 	}
 
-	/*--------------------
-			Error
-	---------------------*/
+	/**
+	 * Error
+	 */
 
-	/*--------------------
-			Warning
-	---------------------*/
+	/**
+	 * Warning
+	 */
 
 	/* On Field(s) */
 	.ui.form .fields.error .field label,
@@ -181,9 +176,9 @@
 		box-shadow: 0.3em 0em 0em 0em palette(info, error) inset;
 	}
 
-	/*--------------------
-	Empty (Placeholder)
-	---------------------*/
+	/**
+	 * Empty (Placeholder)
+	 */
 
 	/* browsers require these rules separate */
 	.ui.form ::-webkit-input-placeholder {
@@ -213,9 +208,9 @@
 		color: palette(info, error);
 	}
 
-	/*--------------------
-		Disabled
-	---------------------*/
+	/**
+	 * Disabled
+	 */
 
 	.ui.form .field :disabled,
 	.ui.form .field.disabled {
@@ -225,34 +220,33 @@
 		opacity: 0.5;
 	}
 
-	/*--------------------
-		Loading State
-	---------------------*/
+	/**
+	 * Loading State
+	 */
 
 	.ui.form.loading:after {
 		background: palette(neutral, light) url(../assets/images/loader-large.gif) no-repeat 50% 50%;
 	}
 
-	/*******************************
-			Variations
-	*******************************/
+	/*Variations
+	======================================== */
 
 
-	/*--------------------
-		Fluid Width
-	---------------------*/
+	/**
+	 * Fluid Width
+	 */
 
 	.ui.form.fluid {
 		width: 100%;
 	}
 
-	/*--------------------------
-	Input w/ attached Button
-	---------------------------*/
+	/**
+	 * Input w/ attached Button
+	 */
 
-	/*--------------------
-		Date Input
-	---------------------*/
+	/**
+	 * Date Input
+	 */
 	.ui.form .date.field > label:after {
 		top: 2em;
 		right: 0.5em;
@@ -263,9 +257,9 @@
 	}
 
 
-	/*--------------------
-		Inverted Colors
-	---------------------*/
+	/**
+	 * Inverted Colors
+	 */
 
 	.ui.inverted.form label {
 		color: palette(neutral, light);
@@ -289,9 +283,10 @@
 		color: palette(neutral, light);
 	}
 
-	/*--------------------
-		Field Groups
-	---------------------*/
+	/**
+	 * Field Groups
+	 */
+
 	/* Grouped Vertically */
 	.ui.form .grouped.fields {
 		margin: 0em 0em 1em;
@@ -300,18 +295,18 @@
 		margin: 0.5em 0em;
 		padding: 0em;
 	}
-	/*--------------------
-			Fields
-	---------------------*/
+	/**
+	 * Fields
+	 */
 
 	.ui.form .fields > .field:first-child {
 		border-left: none;
 		box-shadow: none;
 	}
 
-	/*--------------------
-		Inline Fields
-	---------------------*/
+	/**
+	 * Inline Fields
+	 */
 	.ui.form .inline.fields .field {
 		min-height: 1.3em;
 		margin-right: 0.5em;
@@ -338,9 +333,9 @@
 
 
 
-	/*--------------------
-			Sizes
-	---------------------*/
+	/**
+	 * Sizes
+	 */
 
 	/* Standard */
 	.ui.small.form {

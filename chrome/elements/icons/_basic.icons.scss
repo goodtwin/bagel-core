@@ -1,7 +1,7 @@
 @mixin basic-icons-prototype {
-	/*******************************
-			Basic Icon
-	*******************************/
+	/* Basic Icon
+	========================================
+	======================================== */
 
 	@font-face {
 		font-family: 'Basic Icons';
@@ -168,9 +168,9 @@
 	i.basic.icon.zoom.in:before { content: '\e750'; } /* '' */
 	i.basic.icon.zoom.out:before { content: '\e751'; } /* '' */
 
-	/*--------------
-		Aliases
-	---------------*/
+	/**
+	 * Aliases
+	 */
 
 	/* aliases for convenience */
 	i.basic.icon.delete:before { content: '\e80d'; } /* '' */
@@ -187,9 +187,9 @@
 	i.basic.icon.eye.hidden:before { content: '\e70b'; } /* '' */
 	i.basic.icon.date:before { content: '📅'; } /* '\1f4c5' */
 
-	/*--------------
-	Spacing Fix
-	---------------*/
+	/**
+	 * Spacing Fix
+	 */
 
 	/* dropdown arrows are to the right */
 	i.dropdown.basic.icon {
@@ -220,9 +220,8 @@
 	}
 
 
-	/*******************************
-				States
-	*******************************/
+	/* States
+	======================================== */
 
 	i.basic.icon.hover {
 		opacity: 1;
@@ -240,13 +239,12 @@
 		opacity: 0.3;
 	}
 
-	/*******************************
-			Variations
-	*******************************/
+	/* Variations
+	======================================== */
 
-	/*-------------------
-			Link
-	--------------------*/
+	/**
+	 * Link
+	 */
 
 	i.link.basic.icon {
 		cursor: pointer;
@@ -257,9 +255,9 @@
 		opacity: 1 !important;
 	}
 
-	/*-------------------
-		Circular
-	--------------------*/
+	/**
+	 * Circular
+	 */
 
 	i.circular.basic.icon {
 		border-radius: 500px !important;
@@ -274,9 +272,9 @@
 		box-shadow: none;
 	}
 
-	/*-------------------
-			Square
-	--------------------*/
+	/**
+	 * Square
+	 */
 
 	i.square.basic.icon {
 		width: 2em;
@@ -293,9 +291,9 @@
 		box-shadow: none;
 	}
 
-	/*-------------------
-		Inverted
-	--------------------*/
+	/**
+	 * Inverted
+	 */
 
 	i.inverted.basic.icon {
 		background-color: palette(neutral, dark);
@@ -303,9 +301,9 @@
 	}
 
 
-	/*-------------------
-			Sizes
-	--------------------*/
+	/**
+	 * Sizes
+	 */
 
 	i.small.basic.icon {
 		font-size: 0.875em;

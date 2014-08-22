@@ -1,7 +1,7 @@
 @mixin segment-prototype {
-	/*******************************
-				Segment
-	*******************************/
+	/* Segment
+	========================================
+	======================================== */
 
 	.ui.segment {
 		background-color: palette(neutral, light);
@@ -20,9 +20,9 @@
 		box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
 	}
 
-	/*-------------------
-		Loose Coupling
-	--------------------*/
+	/**
+	 * Loose Coupling
+	 */
 
 	.ui.pointing.menu + .ui.attached.segment {
 		top: 1px;
@@ -40,42 +40,42 @@
 		border: none;
 	}
 
-	/*******************************
-				Types
-	*******************************/
+	/* Types
+	======================================== */
 
-	/*-------------------
-		Circular
-	--------------------*/
+	/**
+	 * Circular
+	 */
 
 	.ui.circular.segment {
 		padding: 2em;
 	}
 
-	/*-------------------
-		Raised
-	--------------------*/
+	/**
+	 * Raised
+	 */
 
 	.ui.raised.segment {
 		box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
 	}
 
-	/*******************************
-				States
-	*******************************/
+	/* States
+	======================================== */
 
+	/**
+		* Disabled
+		*/
 	.ui.disabled.segment {
 		opacity: 0.8;
 		color: palette(neutral, mid);
 	}
 
-	/*******************************
-			Variations
-	*******************************/
+	/* Variations
+	======================================== */
 
-	/*-------------------
-		Inverted
-	--------------------*/
+	/**
+	 * Inverted
+	 */
 
 	.ui.inverted.segment {
 		border: none;
@@ -93,9 +93,9 @@
 		color: palette(neutral, light);
 	}
 
-	/*-------------------
-		Ordinality
-	--------------------*/
+	/**
+	 * Ordinality
+	 */
 
 	.ui.primary.segment {
 		background-color: palette(neutral, light, 120);
@@ -121,9 +121,9 @@
 		color: palette(neutral, light, 110);
 	}
 
-	/*-------------------
-		Attached
-	--------------------*/
+	/**
+	 * Attached
+	 */
 
 	.ui.segment.attached {
 		top: -1px;

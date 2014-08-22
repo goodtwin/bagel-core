@@ -1,7 +1,7 @@
 @mixin label-src {
-  /*******************************
-              Label
-  *******************************/
+  /* Label
+  ========================================
+  ======================================== */
 
   .ui.label {
     display: inline-block;
@@ -48,18 +48,17 @@
   }
 
 
-  /*-------------------
-         Coupling
-  --------------------*/
+  /**
+   * Coupling
+   */
 
   .ui.segment > .bottom.attached.label:first-child ~ :last-child {
     margin-top: 0em;
   }
 
 
-  /*******************************
-               Types
-  *******************************/
+  /* Types
+  ======================================== */
 
   .ui.image.label {
     width: auto !important;
@@ -70,23 +69,22 @@
     vertical-align: top;
   }
 
-  /*******************************
-               States
-  *******************************/
+  /* States
+  ======================================== */
 
 
-  /*-------------------
-        Visible
-  --------------------*/
+  /**
+   * Visible
+   */
 
   .ui.labels.visible .label,
   .ui.label.visible {
     display: inline-block !important;
   }
 
-  /*-------------------
-        Hidden
-  --------------------*/
+  /**
+   * Hidden
+   */
 
   .ui.labels.hidden .label,
   .ui.label.hidden {
@@ -95,14 +93,13 @@
 
 
 
-  /*******************************
-             Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
 
-  /*-------------------
-           Tag
-  --------------------*/
+  /**
+   * Tag
+   */
 
   .ui.tag.labels .label,
   .ui.tag.label {
@@ -122,9 +119,9 @@
     content: '';
     top: 50%;
   }
-  /*-------------------
-         Ribbon
-  --------------------*/
+  /**
+   * Ribbon
+   */
 
   .ui.ribbon.label {
     position: relative;
@@ -142,9 +139,9 @@
     height: 0em;
   }
 
-  /*-------------------
-         Attached
-  --------------------*/
+  /**
+   * Attached
+   */
 
   .ui.top.attached.label,
   .ui.attached.label {
@@ -182,9 +179,9 @@
     width: auto;
   }
 
-  /*-------------------
-      Corner Label
-  --------------------*/
+  /**
+   * Corner Label
+   */
 
   .ui.corner.label {
     background-color: transparent;
@@ -253,9 +250,9 @@
 
 
 
-  /*-------------------
-         Fluid
-  --------------------*/
+  /**
+   * Fluid
+   */
 
   .ui.label.fluid,
   .ui.fluid.labels > .label {
@@ -263,9 +260,9 @@
   }
 
 
-  /*-------------------
-       Horizontal
-  --------------------*/
+  /**
+   * Horizontal
+   */
 
   .ui.horizontal.labels .label,
   .ui.horizontal.label {
@@ -273,9 +270,9 @@
   }
 
 
-  /*-------------------
-         Circular
-  --------------------*/
+  /**
+   * Circular
+   */
 
   .ui.circular.labels .label,
   .ui.circular.label {
@@ -283,9 +280,9 @@
     border-radius: 500rem;
   }
 
-  /*-------------------
-         Pointing
-  --------------------*/
+  /**
+   * Pointing
+   */
 
   .ui.pointing.label {
     position: relative;
@@ -300,12 +297,12 @@
     background-image: none;
     z-index: 2;
   }
-  /*--- Above ---*/
+  /* Above */
   .ui.pointing.label:before,
   .ui.pointing.above.label:before {
     left: 50%;
   }
-  /*--- Below ---*/
+  /* Below */
   .ui.pointing.below.label {
     margin-top: 0em;
   }
@@ -314,7 +311,7 @@
     right: auto;
     left: 50%;
   }
-  /*--- Left ---*/
+  /* Left */
   .ui.pointing.left.label {
     margin-top: 0em;
   }
@@ -324,7 +321,7 @@
     top: 50%;
     left: 0em;
   }
-  /*--- Right ---*/
+  /* Right */
   .ui.pointing.right.label {
     margin-top: 0em;
   }
@@ -334,9 +331,9 @@
     left: auto;
   }
 
-  /*------------------
-     Floating Label
-  -------------------*/
+  /**
+   * Floating Label
+   */
 
   .ui.floating.label {
     position: absolute;

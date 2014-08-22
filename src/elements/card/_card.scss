@@ -1,12 +1,7 @@
 @mixin card-src {
-  /*******************************
-              Standard
-  *******************************/
-
-
-  /*--------------
-        Cards
-  ---------------*/
+  /* Cards
+  ========================================
+  ======================================== */
 
   /* Force Clearing */
   .ui.cards:after {
@@ -18,9 +13,9 @@
     visibility: hidden;
   }
 
-  /*--------------
-        Card
-  ---------------*/
+  /* Card
+  ========================================
+  ======================================== */
 
   .ui.card {
     display: block;
@@ -32,9 +27,9 @@
     cursor: pointer;
   }
 
-  /*--------------
-        Images
-  ---------------*/
+  /**
+   * Images
+   */
 
   .ui.card > .image {
     display: block;
@@ -46,9 +41,9 @@
   }
 
 
-  /*--------------
-       Content
-  ---------------*/
+  /**
+   * Content
+   */
   .ui.card > .content > .name {
     display: block;
   }
@@ -61,19 +56,19 @@
     margin-bottom: 0em;
   }
 
-  /*--------------
-        Meta
-  ---------------*/
+  /**
+   * Meta
+   */
 
 
-  /*--------------
-       Labels
-  ---------------*/
+  /**
+   * Labels
+   */
 
 
-  /*--------------
-        Extra
-  ---------------*/
+  /**
+   * Extra
+   */
 
   .ui.card .extra {
     position: absolute;
@@ -91,9 +86,8 @@
   }
 
 
-  /*******************************
-             States
-  *******************************/
+  /* States
+  ======================================== */
 
   .ui.card:hover {
     cursor: pointer;
@@ -102,14 +96,13 @@
 
 
 
-  /*******************************
-             Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
 
-  /*--------------
-      Connected
-  ---------------*/
+  /**
+   * Connected
+   */
 
   .ui.connected.cards .card {
     float: none;
@@ -192,9 +185,9 @@
     padding-right: 0.1%;
   }
 
-  /*-------------------
-        Responsive
-  --------------------*/
+  /**
+   * Responsive
+   */
 
   @media only screen and (max-width : 768px) {
     .ui.stackable.cards {
@@ -209,9 +202,9 @@
     }
   }
 
-  /*--------------------
-        Horizontal
-  ---------------------*/
+  /**
+   * Horizontal
+   */
   .ui.horizontal.cards > .card,
   .ui.cards > .horizontal.card {
     display: table;
@@ -258,9 +251,9 @@
     max-width: 25px;
   }
 
-  /*--------------
-      card Count
-  ---------------*/
+  /**
+   * Card Count
+   */
 
 
   .ui.one.cards {

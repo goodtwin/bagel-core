@@ -1,20 +1,19 @@
 @mixin dropdown-prototype {
-	/*******************************
-				Dropdown
-	*******************************/
+	/* Dropdown
+	========================================
+	======================================== */
 
 	.ui.dropdown {
 		transition:width 0.2s ease;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	}
 
-	/*******************************
-				Content
-	*******************************/
+	/* Content
+	======================================== */
 
-	/*--------------
-		Menu
-	---------------*/
+	/**
+	 * Menu
+	 */
 
 	.ui.dropdown .menu {
 		background-color: palette(neutral, light);
@@ -24,9 +23,9 @@
 		transition: opacity 0.2s ease;
 	}
 
-	/*--------------
-		Icon
-	---------------*/
+	/**
+	 * Icon
+	 */
 
 	.ui.dropdown > .dropdown.icon {
 		margin: 0em 0em 0em 1em;
@@ -43,17 +42,17 @@
 		content: "\f0da"/*rtl:"\f0d9"*/;
 	}
 
-	/*--------------
-		Text
-	---------------*/
+	/**
+	 * Text
+	 */
 
 	.ui.dropdown > .text {
 		transition: color 0.2s ease;
 	}
 
-	/*--------------
-		Sub Menu
-	---------------*/
+	/**
+	 * Sub Menu
+	 */
 
 	.ui.dropdown .menu .item {
 		border: none;
@@ -75,9 +74,9 @@
 		border-top: none;
 	}
 
-	/*******************************
-				Coupling
-	*******************************/
+	/**
+	 * Coupling
+	 */
 
 	/* Opposite on last menu on right */
 	.ui.menu .right.menu .dropdown:last-child .menu,
@@ -92,9 +91,8 @@
 		margin: 0em;
 	}
 
-	/*******************************
-				States
-	*******************************/
+	/* States
+	======================================== */
 
 
 	/* Menu Item Hover */
@@ -121,23 +119,22 @@
 		color: palette(neutral, dark);
 	}
 
-	/*******************************
-			Variations
-	*******************************/
+	/* Variations
+	======================================== */
 
-	/*--------------
-		Simple
-	---------------*/
-	/* Displays without javascript */
+	/**
+	 * Simple
+   * Displays without javascript
+	 */
 
 	.ui.simple.dropdown .menu {
 		transition: opacity 0.2s ease-out;
 	}
 
-	/*--------------
-		Selection
-	---------------*/
-	/* Displays like a select box */
+	/**
+	 * Selection
+	 * Displays like a select box
+	 */
 
 	.ui.selection.dropdown {
 		background-color: palette(neutral, light);
@@ -183,9 +180,9 @@
 
 	/* Active */
 
-	/*--------------
-		Inline
-	---------------*/
+	/**
+	 * Inline
+	 */
 
 	.ui.inline.dropdown {
 		color: inherit;
@@ -205,9 +202,9 @@
 		margin-top: 0.5em !important;
 	}
 
-	/*--------------
-		Pointing
-	---------------*/
+	/**
+	 * Pointing
+	 */
 
 
 	.ui.pointing.dropdown .menu {

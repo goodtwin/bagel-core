@@ -1,14 +1,9 @@
 @mixin input-prototype {
-	/*******************************
-			Standard
-	*******************************/
+	/* Input
+	========================================
+	======================================== */
 
-
-	/*--------------------
-			Inputs
-	---------------------*/
-
-	.ui.input {
+  .ui.input {
 		color: rgba(0, 0, 0, 0.7);
 	}
 	.ui.input input {
@@ -27,9 +22,9 @@
 		-webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 	}
 
-	/*--------------------
-		Placeholder
-	---------------------*/
+	/**
+	 * Placeholder
+	 */
 
 	/* browsers require these rules separate */
 	.ui.input::-webkit-input-placeholder {
@@ -39,13 +34,12 @@
 		color: palette(neutral, mid);
 	}
 
-	/*******************************
-				States
-	*******************************/
+	/* States
+	======================================== */
 
-	/*--------------------
-			Active
-	---------------------*/
+	/**
+	 * Active
+	 */
 
 	.ui.input input:active,
 	.ui.input.down input {
@@ -53,17 +47,17 @@
 		background-color: palette(neutral, light);
 	}
 
-	/*--------------------
-			Loading
-	---------------------*/
+	/**
+	 * Loading
+	 */
 
 	.ui.loading.input > .icon {
 		background: url(../assets/images/loader-mini.gif) no-repeat 50% 50%;
 	}
 
-	/*--------------------
-			Focus
-	---------------------*/
+	/**
+	 * Focus
+	 */
 
 	.ui.input.focus input,
 	.ui.input input:focus  {
@@ -79,9 +73,9 @@
 		color: palette(neutral, mid);
 	}
 
-	/*--------------------
-			Error
-	---------------------*/
+	/**
+	 * Error
+	 */
 
 	.ui.input.error input {
 		background-color: palette(info, error, 5);
@@ -103,13 +97,12 @@
 		color: palette(info, error);
 	}
 
-	/*******************************
-			Variations
-	*******************************/
+	/* Variations
+	======================================== */
 
-	/*--------------------
-			Icon
-	---------------------*/
+	/**
+	 * Icon
+	 */
 
 	.ui.icon.input > .icon {
 		opacity: 0.5;
@@ -137,9 +130,9 @@
 		padding-right: 1.2em !important;
 	}
 
-	/*--------------------
-			Labeled
-	---------------------*/
+	/**
+	 * Labeled
+	 */
 
 	.ui.labeled.input .corner.label {
 		font-size: 0.7em;
@@ -157,9 +150,9 @@
 		margin-right: 1.25em;
 	}
 
-	/*--------------------
-			Action
-	---------------------*/
+	/**
+	 * Action
+	 */
 
 	.ui.action.input > input {
 		border-top-right-radius: 0px !important;
@@ -182,9 +175,9 @@
 	}
 
 
-	/*--------------------
-			Size
-	---------------------*/
+	/**
+	 * Size
+	 */
 
 	.ui.mini.input {
 		font-size: 0.8125em;

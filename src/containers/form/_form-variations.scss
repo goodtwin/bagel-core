@@ -1,29 +1,28 @@
 @mixin form-src-variations {
-  /*******************************
-             Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
 
-  /*--------------------
-        Fluid Width
-  ---------------------*/
+  /**
+   * Fluid Width
+   */
 
   .ui.form.fluid {
     width: 100%;
   }
 
 
-  /*--------------------------
-    Input w/ attached Button
-  ---------------------------*/
+  /**
+   * Input w/ attached Button
+   */
 
   .ui.form input.attached {
     width: auto;
   }
 
-  /*--------------------
-        Date Input
-  ---------------------*/
+  /**
+   * Date Input
+   */
 
   .ui.form .date.field > label {
     position: relative;
@@ -33,13 +32,13 @@
   }
 
 
-  /*--------------------
-      Inverted Colors
-  ---------------------*/
+  /**
+   * Inverted Colors
+   */
 
-  /*--------------------
-       Field Groups
-  ---------------------*/
+  /**
+   * Field Groups
+   */
 
   /* Grouped Vertically */
   .ui.form .grouped.fields .field {
@@ -48,9 +47,9 @@
   }
 
 
-  /*--------------------
-            Fields
-  ---------------------*/
+  /**
+   * Fields
+   */
 
   /* Split fields */
   .ui.form .fields {
@@ -119,9 +118,9 @@
   }
 
 
-  /*--------------------
-      Inline Fields
-  ---------------------*/
+  /**
+   * Inline Fields
+   */
 
   .ui.form .inline.fields .field > label,
   .ui.form .inline.fields .field > p,

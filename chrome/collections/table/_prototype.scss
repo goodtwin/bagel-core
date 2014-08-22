@@ -1,7 +1,7 @@
-/*******************************
-			Table
-*******************************/
 @mixin table-prototype {
+	/* Table
+	========================================
+	======================================== */
 
 	/* Table Content */
 	.ui.table th,
@@ -70,13 +70,12 @@
 		}
 	}
 
-	/*******************************
-				States
-	*******************************/
+	/* States
+	======================================== */
 
-	/*--------------
-		Hover
-	---------------*/
+	/**
+	 * Hover
+	 */
 
 	/* Sortable */
 	.ui.sortable.table th.disabled:hover {
@@ -94,9 +93,9 @@
 		color: palette(neutral, light);
 	}
 
-	/*--------------
-		Positive
-	---------------*/
+	/**
+	 * Positive
+	 */
 
 	.ui.table tr.positive,
 	.ui.table td.positive {
@@ -116,9 +115,9 @@
 		color: palette(info, success) !important;
 	}
 
-	/*--------------
-		Negative
-	---------------*/
+	/**
+	 * Negative
+	 */
 
 	.ui.table tr.negative,
 	.ui.table td.negative {
@@ -138,9 +137,9 @@
 		color: palette(info, error);
 	}
 
-	/*--------------
-		Error
-	---------------*/
+	/**
+	 * Error
+	 */
 
 	.ui.table tr.error,
 	.ui.table td.error {
@@ -161,9 +160,9 @@
 		color: palette(info, error);
 	}
 
-	/*--------------
-		Warning
-	---------------*/
+	/**
+	 * Warning
+	 */
 
 	.ui.table tr.warning,
 	.ui.table td.warning {
@@ -185,9 +184,9 @@
 	}
 
 
-	/*--------------
-		Active
-	---------------*/
+	/**
+	 * Active
+	 */
 
 	.ui.table tr.active,
 	.ui.table td.active {
@@ -200,9 +199,9 @@
 		color: palette(neutral, dark);
 	}
 
-	/*--------------
-		Disabled
-	---------------*/
+	/**
+	 * Disabled
+	 */
 
 	.ui.table tr.disabled td,
 	.ui.table tr td.disabled,
@@ -211,9 +210,9 @@
 		color:  palette(neutral, mid, 40);
 	}
 
-	/*--------------
-		Celled
-	---------------*/
+	/**
+	 * Celled
+	 */
 
 	.ui.celled.table {
 		color: palette(neutral, dark);
@@ -223,9 +222,9 @@
 		border: palette(neutral, dark);
 	}
 
-	/*--------------
-		Sortable
-	---------------*/
+	/**
+	 * Sortable
+	 */
 
 
 	.ui.sortable.table thead th:after {
@@ -246,9 +245,9 @@
 		content: '\25be';
 	}
 
-	/*--------------
-		Inverted
-	---------------*/
+	/**
+	 * Inverted
+	 */
 
 	/* Text Color */
 	.ui.inverted.table td {
@@ -264,17 +263,17 @@
 		background-color: palette(neutral, dark, 95);
 	}
 
-	/*--------------
-	   Definition
-	---------------*/
+	/**
+	 * Definition
+	 */
 
 	.ui.definition.table td:first-child {
 		font-weight: bold;
 	}
 
-	/*--------------
-		Basic
-	---------------*/
+	/**
+	 * Basic
+	 */
 
 	.ui.basic.table th {
 		padding: 0.5em;
@@ -286,9 +285,9 @@
 		padding: 0.8em 0.5em;
 	}
 
-	/*--------------
-		Padded
-	---------------*/
+	/**
+	 * Padded
+	 */
 
 	.ui.padded.table th,
 	.ui.padded.table td {
@@ -302,9 +301,9 @@
 		padding: 0.2em 0.5em;
 	}
 
-	/*--------------
-		Sizes
-	---------------*/
+	/**
+	 * Sizes
+	 */
 
 	/* Small */
 	.ui.small.table {

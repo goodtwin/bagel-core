@@ -1,7 +1,7 @@
 @mixin popup-prototype {
-	/*******************************
-				Popup
-	*******************************/
+	/* Popup
+	========================================
+	======================================== */
 
 	.ui.popup {
 		border: 1px solid rgba(0, 0, 0, 0.1);
@@ -31,13 +31,12 @@
 		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 	}
 
-	/*******************************
-				Types
-	*******************************/
+	/* Types
+	======================================== */
 
-	/*--------------
-		Spacing
-	---------------*/
+	/**
+	 * Spacing
+	 */
 
 	.ui.popup {
 		margin: 0em;
@@ -58,11 +57,11 @@
 		margin-left: -1.25em;
 	}
 
-	/*--------------
-		Pointer
-	---------------*/
+	/**
+	 * Pointer
+	 */
 
-	/*--- Below ---*/
+	/* Below */
 	.ui.bottom.center.popup:before {
 		margin-left: -0.4em;
 		top: -0.4em;
@@ -89,7 +88,7 @@
 		box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2);
 	}
 
-	/*--- Above ---*/
+	/* Above */
 	.ui.top.center.popup:before {
 		bottom: -0.4em;
 		margin-left: -0.4em;
@@ -111,27 +110,26 @@
 		margin-left: 0em;
 	}
 
-	/*--- Left Center ---*/
+	/* Left Center */
 	.ui.left.center.popup:before {
 		right: -0.35em;
 		margin-top: -0.4em;
 		box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
 	}
 
-	/*--- Right Center  ---*/
+	/* Right Center */
 	.ui.right.center.popup:before {
 		left: -0.35em;
 		margin-top: -0.4em;
 		box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
 	}
 
-	/*******************************
-				Variations
-	*******************************/
+	/* Variations
+	======================================== */
 
-	/*--------------
-		Size
-	---------------*/
+	/**
+	 * Size
+	 */
 
 	.ui.small.popup {
 		font-size: 0.75rem;
@@ -140,9 +138,9 @@
 		font-size: 1rem;
 	}
 
-	/*--------------
-		Colors
-	---------------*/
+	/**
+	 * Colors
+	 */
 
 	/* Inverted colors  */
 	.ui.inverted.popup {

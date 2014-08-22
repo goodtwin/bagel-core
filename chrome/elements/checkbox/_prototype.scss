@@ -1,21 +1,21 @@
 @mixin checkbox-prototype {
-	/*******************************
-			Checkbox
-	*******************************/
+	/** Checkbox
+	========================================
+	======================================== */
 
-	/*--------------
-		Standard
-	---------------*/
+	/**
+	 * Standard
+	 */
 
 
-	/*--- Content ---*/
+	/* Content */
 
 	.ui.checkbox {
 		min-width: 1em;
 		height: 1.25em;
 		line-height: 1em;
 
-		/*--- Box ---*/
+		/* Box */
 		.box,
 		label {
 			padding-left: 2em;
@@ -30,7 +30,7 @@
 			transition: background-color 0.3s ease;
 		}
 
-		/*--- Checkbox ---*/
+		/* Checkbox */
 		.box:after,
 		label:after {
 			width: 0.45em;
@@ -43,7 +43,7 @@
 			@extend i.icon.checkmark:before;
 		}
 
-		/*--- Inside Label ---*/
+		/* Inside Label */
 		label {
 			color: palette(neutral, dark);
 			transition: color 0.2s ease;
@@ -57,7 +57,7 @@
 			color: palette(neutral, dark);
 		}
 
-		/*--- Outside Label  ---*/
+		/* Outside Label */
 		+ label {
 			cursor: pointer;
 			opacity: 0.85;
@@ -68,26 +68,25 @@
 		}
 	}
 
-	/*******************************
-			States
-	*******************************/
+	/* States
+	======================================== */
 
 
-	/*--- Hover ---*/
+	/* Hover */
 	.ui.checkbox {
-		/*--- Hover ---*/
+		/* Hover */
 		.box:hover::before,
 		label:hover::before {
 			border: 1px solid rgba(0, 0, 0, 0.3);
 		}
 
-		/*--- Down ---*/
+		/* Down */
 		.box:active::before,
 		label:active::before {
 			background-color: palette(neutral, light);
 		}
 
-		/*--- Focus ---*/
+		/* Focus */
 		input:focus + .box:before,
 		input:focus + label:before {
 			border: 1px solid rgba(0, 0, 0, 0.3);
@@ -95,13 +94,12 @@
 	}
 
 
-	/*******************************
-			Variations
-	*******************************/
+	/* Variations
+	======================================== */
 	.ui.checkbox {
-		/*--------------
-			Sizes
-		---------------*/
+		/**
+		 * Sizes
+		 */
 		font-size: 1em;
 
 		&.large {
@@ -110,9 +108,9 @@
 		&.huge {
 			font-size: 1.5em;
 		}
-		/*--------------
-			Radio
-		---------------*/
+		/**
+		 * Radio
+		 */
 		&.radio .box:before,
 		&.radio label:before {
 			min-width: 1em;
@@ -130,9 +128,9 @@
 			content: '';
 			background-color: palette(neutral, dark);
 		}
-		/*--------------
-			Slider
-		---------------*/
+		/**
+		 * Slider
+		 */
 		&.slider {
 			cursor: pointer;
 			min-width: 3em;
@@ -195,9 +193,9 @@
 				background-color: palette(info, success);
 			}
 		}
-		/*--------------
-			Toggle
-		---------------*/
+		/**
+		 * Toggle
+		 */
 		&.toggle {
 
 			.box,

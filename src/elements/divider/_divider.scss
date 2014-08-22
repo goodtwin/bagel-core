@@ -1,7 +1,7 @@
 @mixin divider-src {
-  /*******************************
-              Divider
-  *******************************/
+  /* Divider
+  ========================================
+  ======================================== */
 
   .ui.divider {
     line-height: 1;
@@ -19,9 +19,9 @@
   }
 
 
-  /*--------------
-      Vertical
-  ---------------*/
+  /**
+   * Vertical
+   */
 
   .ui.vertical.divider {
     position: absolute;
@@ -50,9 +50,9 @@
     bottom: 0px;
   }
 
-  /*--------------
-      Horizontal
-  ---------------*/
+  /**
+   * Horizontal
+   */
 
   .ui.horizontal.divider {
     position: relative;
@@ -81,31 +81,30 @@
     right: 0%;
   }
 
-  /*--------------
-        Icon
-  ---------------*/
+  /**
+   * Icon
+   */
 
   .ui.divider > .icon {
     vertical-align: middle;
   }
 
 
-  /*******************************
-              Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
 
-  /*--------------
-      Fitted
-  ---------------*/
+  /**
+   * Fitted
+   */
 
   .ui.fitted.divider {
     margin: 0em;
   }
 
-  /*--------------
-      Clearing
-  ---------------*/
+  /**
+   * Clearing
+   */
 
   .ui.clearing.divider {
     clear: both;

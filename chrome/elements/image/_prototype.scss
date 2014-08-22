@@ -1,39 +1,37 @@
 @mixin image-prototype {
-	/*******************************
-				Image
-	*******************************/
+	/* Image
+	========================================
+	======================================== */
 
 	.ui.image {
 		background-color: palette(neutral, mid);
 	}
 
-	/*******************************
-				States
-	*******************************/
+	/* States
+	======================================== */
 
-	/*--------------
-		Disabled
-	---------------*/
+	/**
+	 * Disabled
+	 */
 	.ui.disabled.image {
 		opacity: 0.3;
 	}
 
-	/*******************************
-			Variations
-	*******************************/
+	/* Variations
+	======================================== */
 
-	/*--------------
-		Rounded
-	---------------*/
+	/**
+	 * Rounded
+	 */
 	.ui.rounded.images .image,
 	.ui.rounded.images img,
 	.ui.rounded.image img,
 	.ui.rounded.image {
 		border-radius: 0.3125em;
 	}
-	/*--------------
-		Circular
-	---------------*/
+	/**
+	 * Circular
+	 */
 	.ui.circular.images .image,
 	.ui.circular.images img,
 	.ui.circular.image img,
@@ -41,9 +39,9 @@
 		border-radius: 500rem;
 	}
 
-	/*--------------
-		Avatar
-	---------------*/
+	/**
+	 * Avatar
+	 */
 
 	.ui.avatar.images .image,
 	.ui.avatar.images img,
@@ -55,9 +53,9 @@
 		border-radius: 500rem;
 	}
 
-	/*-------------------
-		Floated
-	--------------------*/
+	/**
+	 * Floated
+	 */
 
 	.ui.floated.image,
 	.ui.floated.images {
@@ -70,9 +68,9 @@
 		margin-left: 1em;
 	}
 
-	/*--------------
-		Sizes
-	---------------*/
+	/**
+	 * Sizes
+	 */
 
 	.ui.tiny.images .image,
 	.ui.tiny.images img,
@@ -111,9 +109,8 @@
 		font-size: 1.2rem;
 	}
 
-	/*******************************
-				Groups
-	*******************************/
+	/* Groups
+	======================================== */
 
 	.ui.images {
 		margin: 0em -0.25rem 0rem;

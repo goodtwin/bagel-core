@@ -1,7 +1,7 @@
 @mixin sidebar-prototype {
-  /*******************************
-              Sidebar
-  *******************************/
+  /* Sidebar
+  ========================================
+  ======================================== */
 
   .ui.sidebar {
     transition:
@@ -9,22 +9,21 @@
       margin-top 0.3s ease;
   }
 
-  /*******************************
-             Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
-  /*-------------------
-        Formatted
-  --------------------*/
+  /**
+   * Formatted
+   */
 
   .ui.styled.sidebar {
     background-color: palette(neutral, light);
     box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
   }
 
-  /*-------------------
-         Floating
-  --------------------*/
+  /**
+   * Floating
+   */
 
   .ui.floating.sidebar {
     box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2);

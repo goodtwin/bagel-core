@@ -1,11 +1,7 @@
 @mixin menu-prototype {
-	/*******************************
-				Standard
-	*******************************/
-
-	/*--------------
-		Menu
-	---------------*/
+	/* Menu
+	========================================
+	======================================== */
 
 	.ui.menu {
 		margin: 1rem 0rem;
@@ -28,9 +24,9 @@
 		;
 	}
 
-	/*--------------
-		Colors
-	---------------*/
+	/**
+	 * Colors
+	 */
 
 	/* Text Color */
 	.ui.menu .item,
@@ -63,9 +59,9 @@
 		color: palette(neutral, dark);
 	}
 
-	/*--------------
-		Items
-	---------------*/
+	/**
+	 * Items
+	 */
 
 	.ui.menu .item {
 		padding: 0.83em 0.95em;
@@ -77,9 +73,9 @@
 		margin: 0em;
 	}
 
-	/*--------------
-		Borders
-	---------------*/
+	/**
+	 * Borders
+	 */
 
 	.ui.menu .item:before {
 		background-image: linear-gradient(
@@ -89,9 +85,9 @@
 		;
 	}
 
-	/*--------------
-	Text Content
-	---------------*/
+	/**
+	 * Text Content
+	 */
 
 	.ui.menu .text.item > *,
 	.ui.menu .item > p:only-child {
@@ -99,9 +95,9 @@
 		color: palette(neutral, dark);
 	}
 
-	/*--------------
-		Button
-	---------------*/
+	/**
+	 * Button
+	 */
 
 	.ui.menu:not(.vertical) .item > .button {
 		top: -0.05em;
@@ -111,9 +107,9 @@
 		font-size: 0.875em;
 	}
 
-	/*--------------
-		Inputs
-	---------------*/
+	/**
+	 * Inputs
+	 */
 
 	.ui.menu:not(.vertical) .item > .input {
 		margin-top: -0.85em;
@@ -161,9 +157,9 @@
 		padding-top: 0.8em;
 	}
 
-	/*--------------
-		Header
-	---------------*/
+	/**
+	 * Header
+	 */
 
 	.ui.menu .header.item {
 		background-color: palette(neutral, dark);
@@ -173,9 +169,9 @@
 		font-weight: bold;
 	}
 
-	/*--------------
-		Dropdowns
-	---------------*/
+	/**
+	 * Dropdowns
+	 */
 
 	.ui.menu .dropdown .menu .item .icon {
 		margin: 0em 0.75em 0em 0em;
@@ -190,9 +186,9 @@
 		color: palette(neutral, dark);
 	}
 
-	/*--------------
-		Labels
-	---------------*/
+	/**
+	 * Labels
+	 */
 
 	.ui.menu .item > .label {
 		background-color: palette(neutral, mid);
@@ -204,13 +200,12 @@
 		padding: 0.3em 0.8em;
 	}
 
-	/*******************************
-				States
-	*******************************/
+	/* States
+	======================================== */
 
-	/*--------------
-		Hover
-	---------------*/
+	/**
+	 * Hover
+	 */
 
 	.ui.link.menu .item:hover,
 	.ui.menu .link.item:hover,
@@ -225,9 +220,9 @@
 		border-bottom-left-radius: 0em;
 	}
 
-	/*--------------
-		Down
-	---------------*/
+	/**
+	 * Down
+	 */
 
 	.ui.link.menu .item:active,
 	.ui.menu .link.item:active,
@@ -236,9 +231,9 @@
 		background-color: palette(neutral, mid);
 	}
 
-	/*--------------
-		Active
-	---------------*/
+	/**
+	 * Active
+	 */
 
 	.ui.menu .active.item  {
 		background-color: palette(neutral, mid);
@@ -260,31 +255,30 @@
 		box-shadow: none;
 	}
 
-	/*--------------
-		Disabled
-	---------------*/
+	/**
+	 * Disabled
+	 */
 
 	.ui.menu .item.disabled,
 	.ui.menu .item.disabled:hover {
 		color: palette(neutral, mid);
 	}
 
-	/*--------------------
-		Loading
-	---------------------*/
+	/**
+	 * Loading
+	 */
 
 	/* On Form */
 	.ui.menu.loading:after {
 		background: palette(neutral, light) url(../assets/images/loader-large.gif) no-repeat 50% 50%;
 	}
 
-	/*******************************
-				Types
-	*******************************/
+	/* Types
+	======================================== */
 
-	/*--------------
-		Vertical
-	---------------*/
+	/**
+	 * Vertical
+	 */
 
 	.ui.vertical.menu .item {
 		border-top: none;
@@ -305,7 +299,7 @@
 		margin: 0em 0.25em 0em 0em;
 	}
 
-	/*--- Border ---*/
+	/* Border */
 	.ui.vertical.menu .item:before {
 		background-image: linear-gradient(to right,
 			rgba(0, 0, 0, 0.03) 0%,
@@ -314,7 +308,7 @@
 		;
 	}
 
-	/*--- Dropdown ---*/
+	/* Dropdown */
 	.ui.vertical.menu .dropdown.item > i {
 		float: right;
 		content: "\f0da";
@@ -338,7 +332,7 @@
 		box-shadow: none;
 	}
 
-	/*--- Sub Menu ---*/
+	/* Sub Menu */
 	.ui.vertical.menu .item > .menu {
 		margin: 0.5em -0.95em 0em;
 	}
@@ -347,9 +341,9 @@
 		font-size: 0.875em;
 	}
 
-	/*--------------
-		Tiered
-	---------------*/
+	/**
+	 * Tiered
+	 */
 
 	.ui.tiered.menu > .sub.menu > .item {
 		color: palette(neutral, dark);
@@ -401,9 +395,9 @@
 		box-shadow: none;
 	}
 
-	/*--------------
-		Tabular
-	---------------*/
+	/**
+	 * Tabular
+	 */
 
 	.ui.tabular.menu {
 		background-color: transparent;
@@ -441,9 +435,9 @@
 		margin: 1px 0px 0px 1px;
 	}
 
-	/*--------------
-	Pagination
-	---------------*/
+	/**
+	 * Pagination
+	 */
 
 	.ui.pagination.menu .item {
 		min-width: 3em;
@@ -458,9 +452,9 @@
 		box-shadow: none;
 	}
 
-	/*--------------
-	Secondary
-	---------------*/
+	/**
+	 * Secondary
+	 */
 
 	.ui.secondary.menu {
 		background-color: transparent;
@@ -514,9 +508,9 @@
 		box-shadow: none;
 	}
 
-	/*---------------------
-	Secondary Pointing
-	-----------------------*/
+	/**
+	 * Secondary Pointing
+	 */
 
 	.ui.secondary.pointing.menu {
 		border-bottom: 3px solid palette(neutral, dark);
@@ -568,9 +562,9 @@
 		box-shadow: none;
 	}
 
-	/*---------------------
-	Secondary Vertical
-	-----------------------*/
+	/**
+	 * Secondary Vertical
+	 */
 
 	.ui.secondary.vertical.pointing.menu {
 		border: none;
@@ -640,18 +634,18 @@
 		color: palette(neutral, light);
 	}
 
-	/*---------------------
-	Inverted Vertical
-	----------------------*/
+	/**
+	 * Inverted Vertical
+	 */
 
 	.ui.secondary.inverted.vertical.pointing.menu {
 		border-right: 3px solid palette(neutral, dark);
 		border-bottom: none;
 	}
 
-	/*--------------
-		Text Menu
-	---------------*/
+	/**
+	 * Text Menu
+	 */
 
 	.ui.text.menu {
 		background-color: transparent;
@@ -677,7 +671,7 @@
 	}
 
 
-	/*--- vertical text ---*/
+	/* vertical text */
 	.ui.vertical.text.menu {
 		margin: 1rem 0em;
 	}
@@ -694,12 +688,12 @@
 		margin: 0.8em 0em;
 	}
 
-	/*--- hover ---*/
+	/* hover */
 	.ui.text.menu .item:hover {
 		background-color: transparent;
 	}
 
-	/*--- active ---*/
+	/* active */
 	.ui.text.menu .active.item {
 		background-color: transparent;
 		padding: 0em;
@@ -724,16 +718,16 @@
 		background-color: transparent;
 	}
 
-	/*--------------
-		Icon Only
-	---------------*/
+	/**
+	 * Icon Only
+	 */
 
 	.ui.icon.menu > .item {
 		text-align: center;
 		color: palette(neutral, dark);
 	}
 
-	/*--- inverted ---*/
+	/* inverted */
 	.ui.inverted.icon.menu .item {
 		color: palette(neutral, light);
 	}
@@ -741,9 +735,9 @@
 		color: palette(neutral, light);
 	}
 
-	/*--------------
-	Labeled Icon
-	---------------*/
+	/**
+	 * Labeled Icon
+	 */
 
 	.ui.labeled.icon.menu {
 		text-align: center;
@@ -753,13 +747,12 @@
 		margin: 0em auto 0.3em !important;
 	}
 
-	/*******************************
-			Variations
-	*******************************/
+	/* Variations
+	======================================== */
 
-	/*--------------
-		Inverted
-	---------------*/
+	/**
+	 *Inverted
+	 */
 
 	.ui.inverted.menu {
 		background-color: palette(neutral, dark);
@@ -788,7 +781,7 @@
 		color: palette(neutral, mid);
 	}
 
-	/*--- Hover ---*/
+	/* Hover */
 	.ui.link.inverted.menu .item:hover,
 	.ui.inverted.menu .link.item:hover,
 	.ui.inverted.menu a.item:hover,
@@ -802,7 +795,7 @@
 		color: palette(neutral, light);
 	}
 
-	/*--- Down ---*/
+	/* Down */
 	.ui.inverted.menu a.item:active,
 	.ui.inverted.menu .dropdown.item:active,
 	.ui.inverted.menu .link.item:active,
@@ -810,7 +803,7 @@
 		background-color: palette(neutral, mid);
 	}
 
-	/*--- Active ---*/
+	/* Active */
 	.ui.inverted.menu .active.item {
 		box-shadow: none !important;
 		background-color: palette(neutral, mid);
@@ -824,7 +817,7 @@
 		color: palette(neutral, light);
 	}
 
-	/*--- Pointers ---*/
+	/* Pointers */
 	.ui.inverted.pointing.menu .active.item:after {
 		background-color: palette(neutral, mid);
 		box-shadow: none;
@@ -833,9 +826,9 @@
 		background-color: palette(neutral, mid);
 	}
 
-	/*--------------
-		Selection
-	---------------*/
+	/**
+	 * Selection
+	 */
 
 	.ui.selection.menu > .item {
 		color: palette(neutral, dark);
@@ -857,9 +850,9 @@
 		color: palette(neutral, light);
 	}
 
-	/*--------------
-		Floated
-	---------------*/
+	/**
+	 * Floated
+	 */
 
 	.ui.floated.menu {
 		margin: 0rem 0.5rem 0rem 0rem;
@@ -881,9 +874,9 @@
 		padding-right: 0.95em;
 	}
 
-	/*--------------
-		Fixed
-	---------------*/
+	/**
+	 * Fixed
+	 */
 
 	/* Coupling with Grid */
 	.ui.fixed.menu + .ui.grid {
@@ -891,9 +884,9 @@
 	}
 
 
-	/*-------------------
-		Pointing
-	--------------------*/
+	/**
+	 * Pointing
+	 */
 
 	.ui.pointing.menu .active.item:after {
 		bottom: -0.3em;
@@ -934,17 +927,17 @@
 		background-color: palette(neutral, light);
 	}
 
-	/*--------------
-		Attached
-	---------------*/
+	/**
+	 * Attached
+	 */
 
 	.ui.menu.attached {
 		box-shadow: 0px 0px 0px 1px palette(neutral, light);
 	}
 
-	/*--------------
-		Sizes
-	---------------*/
+	/**
+	 * Sizes
+	 */
 
 	.ui.small.menu .item {
 		font-size: 0.875rem;

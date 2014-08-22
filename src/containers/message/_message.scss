@@ -1,7 +1,7 @@
 @mixin message-src {
-  /*******************************
-              Message
-  *******************************/
+  /* Message
+  ========================================
+  ======================================== */
 
   .ui.message {
     position: relative;
@@ -16,9 +16,9 @@
   }
 
 
-  /*--------------
-       Content
-  ---------------*/
+  /**
+   * Content
+   */
 
   /* block with headers */
   .ui.message .header {
@@ -63,9 +63,8 @@
 
 
 
-  /*******************************
-              States
-  *******************************/
+  /* States
+  ======================================== */
 
   .ui.message.visible,
   .ui.header.visible {
@@ -76,22 +75,21 @@
     display: none;
   }
 
-  /*******************************
-              Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
-  /*--------------
-      Compact
-  ---------------*/
+  /**
+   * Compact
+   */
 
   .ui.compact.message {
     display: inline-block;
   }
 
 
-  /*--------------
-      Attached
-  ---------------*/
+  /**
+   * Attached
+   */
 
   .ui.attached.message {
     margin-left: -1px;
@@ -110,9 +108,9 @@
   }
 
 
-  /*--------------
-        Icon
-  ---------------*/
+  /**
+   * Icon
+   */
 
   .ui.icon.message {
     display: table;

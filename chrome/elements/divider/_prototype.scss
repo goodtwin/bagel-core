@@ -1,7 +1,7 @@
 @mixin divider-prototype {
-	/*******************************
-				Divider
-	*******************************/
+	/* Divider
+	========================================
+	======================================== */
 
 	.ui.divider {
 		margin: 1rem 0rem;
@@ -19,9 +19,9 @@
 		color: rgba(0, 0, 0, 0.8);
 	}
 
-	/*--------------
-		Vertical
-	---------------*/
+	/**
+	 * Vertical
+	 */
 	.ui.vertical.divider {
 		margin: 0% 0% 0% -3%;
 		width: 6%;
@@ -35,9 +35,9 @@
 		}
 	}
 
-	/*--------------
-		Horizontal
-	---------------*/
+	/**
+	 * Horizontal
+	 */
 	.ui.horizontal.divider {
 		margin: 1rem 1.5rem;
 		padding: 0em;
@@ -56,21 +56,20 @@
 		}
 	}
 
-	/*--------------
-		Icon
-	---------------*/
+	/**
+	 * Icon
+	 */
 	.ui.divider > .icon {
 		margin: 0em;
 		font-size: 1rem;
 	}
 
-	/*******************************
-				Variations
-	*******************************/
+	/* Variations
+	======================================== */
 
-	/*--------------
-		Inverted
-	---------------*/
+	/**
+	 * Inverted
+	 */
 
 	.ui.divider.inverted {
 		color: palette(neutral, light);
@@ -89,9 +88,9 @@
 		border-right-color: palette(neutral, mid);
 	}
 
-	/*--------------
-		Section
-	---------------*/
+	/**
+	 * Section
+	 */
 
 	.ui.section.divider {
 		margin-top: 2rem;

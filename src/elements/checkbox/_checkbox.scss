@@ -1,14 +1,9 @@
 @mixin checkbox-src {
-  /*******************************
-             Checkbox
-  *******************************/
+  /* Checkbox
+  ========================================
+  ======================================== */
 
-  /*--------------
-      Standard
-  ---------------*/
-
-
-  /*--- Content ---*/
+  /* Content */
 
   .ui.checkbox {
     position: relative;
@@ -25,7 +20,7 @@
   }
 
 
-  /*--- Box ---*/
+  /* Box */
 
   .ui.checkbox .box,
   .ui.checkbox label {
@@ -42,7 +37,7 @@
     content: '';
   }
 
-  /*--- Checkbox ---*/
+  /* Checkbox */
   .ui.checkbox .box:after,
   .ui.checkbox label:after {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -58,17 +53,16 @@
     left: 0;
   }
 
-  /*--- Outside Label  ---*/
+  /* Outside Label */
   .ui.checkbox + label {
     vertical-align: middle;
   }
 
 
-  /*******************************
-             States
-  *******************************/
+  /* States
+  ======================================== */
 
-  /*--- Active ---*/
+  /* Active */
   .ui.checkbox input:checked + .box:after,
   .ui.checkbox input:checked + label:after {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -76,7 +70,7 @@
     opacity: 1;
   }
 
-  /*--- Disabled ---*/
+  /* Disabled */
   .ui.disabled.checkbox + .box:after,
   .ui.checkbox input[disabled] + .box:after,
   .ui.disabled.checkbox label,
@@ -86,14 +80,13 @@
   }
 
 
-  /*******************************
-            Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
 
-  /*--------------
-       Radio
-  ---------------*/
+  /**
+   * Radio
+   */
 
   .ui.radio.checkbox .box:before,
   .ui.radio.checkbox label:before {
@@ -108,9 +101,9 @@
     border-radius: 500px;
   }
 
-  /*--------------
-       Slider
-  ---------------*/
+  /**
+   * Slider
+   */
 
   .ui.slider.checkbox {
     cursor: pointer;
@@ -157,9 +150,9 @@
 
 
 
-  /*--------------
-       Toggle
-  ---------------*/
+  /**
+   * Toggle
+   */
 
   .ui.toggle.checkbox {
     cursor: pointer;

@@ -1,11 +1,7 @@
 @mixin menu-src {
-  /*******************************
-              Standard
-  *******************************/
-
-  /*--------------
-        Menu
-  ---------------*/
+  /* Menu
+  ========================================
+  ======================================== */
 
   .ui.menu {
     font-size: 0px;
@@ -33,14 +29,9 @@
     text-decoration: none;
   }
 
-  /*--------------
-      Colors
-  ---------------*/
-
-
-  /*--------------
-        Items
-  ---------------*/
+  /**
+   * Items
+   */
 
   .ui.menu .item {
     position: relative;
@@ -58,9 +49,9 @@
   }
 
 
-  /*--------------
-      Borders
-  ---------------*/
+  /**
+   * Borders
+   */
 
   .ui.menu .item:before {
     position: absolute;
@@ -80,9 +71,9 @@
     left: 0px;
   }
 
-  /*--------------
-    Text Content
-  ---------------*/
+  /**
+   * Text Content
+   */
 
   .ui.menu .text.item > *,
   .ui.menu .item > p:only-child {
@@ -96,18 +87,18 @@
   }
 
 
-  /*--------------
-       Button
-  ---------------*/
+  /**
+   * Button
+   */
 
   .ui.menu:not(.vertical) .item > .button {
     position: relative;
   }
 
 
-  /*--------------
-       Inputs
-  ---------------*/
+  /**
+   * Inputs
+   */
 
   .ui.menu:not(.vertical) .item > .input {
     width: 100%;
@@ -115,17 +106,17 @@
   }
 
 
-  /*--------------
-       Header
-  ---------------*/
+  /**
+   * Header
+   */
 
   .ui.menu .header.item {
     margin: 0em;
   }
 
-  /*--------------
-      Dropdowns
-  ---------------*/
+  /**
+   * Dropdowns
+   */
 
   .ui.menu .dropdown .menu .item .icon {
     float: none;
@@ -153,17 +144,17 @@
   }
 
 
-  /*--------------
-       Labels
-  ---------------*/
+  /**
+   * Labels
+   */
 
   .ui.menu .item > .label {
     vertical-align: baseline;
   }
 
-  /*--------------
-        Images
-  ---------------*/
+  /**
+   * Images
+   */
 
   .ui.menu .item > img:only-child {
     display: block;
@@ -171,13 +162,12 @@
     margin: 0em auto;
   }
 
-  /*******************************
-               States
-  *******************************/
+  /* States
+  ======================================== */
 
-  /*--------------
-        Hover
-  ---------------*/
+  /**
+   * Hover
+   */
 
   .ui.link.menu .item:hover,
   .ui.menu .link.item:hover,
@@ -187,17 +177,17 @@
   }
 
 
-  /*--------------
-        Down
-  ---------------*/
+  /**
+   * Down
+   */
 
-  /*--------------
-       Active
-  ---------------*/
+  /**
+   * Active
+   */
 
-  /*--------------
-       Disabled
-  ---------------*/
+  /**
+   * Disabled
+   */
 
   .ui.menu .item.disabled,
   .ui.menu .item.disabled:hover {
@@ -206,9 +196,9 @@
   }
 
 
-  /*--------------------
-       Loading
-  ---------------------*/
+  /**
+   * Loading
+   */
 
   /* On Form */
   .ui.menu.loading {
@@ -225,13 +215,12 @@
   }
 
 
-  /*******************************
-               Types
-  *******************************/
+  /* Types
+  ======================================== */
 
-  /*--------------
-      Vertical
-  ---------------*/
+  /**
+   * Vertical
+   */
 
   .ui.vertical.menu .item {
     display: block;
@@ -242,7 +231,7 @@
     float: none;
   }
 
-  /*--- Border ---*/
+  /* Border */
   .ui.vertical.menu .item:before {
     position: absolute;
     content: '';
@@ -256,22 +245,22 @@
     background-image: none !important;
   }
 
-  /*--- Dropdown ---*/
+  /* Dropdown */
 
   .ui.vertical.menu .dropdown.item .menu {
     top: 0% !important;
   }
 
 
-  /*--- Sub Menu ---*/
+  /* Sub Menu */
   .ui.vertical.menu .item > .menu > .item:before {
     display: none;
   }
 
 
-  /*--------------
-       Tiered
-  ---------------*/
+  /**
+   * Tiered
+   */
 
   .ui.tiered.menu > .menu .item.active:after {
     position: absolute;
@@ -295,9 +284,9 @@
   }
 
 
-  /*--------------
-       Tabular
-  ---------------*/
+  /**
+   * Tabular
+   */
 
   /* Active */
   .ui.tabular.menu .active.item {
@@ -311,9 +300,9 @@
   }
 
 
-  /*--------------
-     Pagination
-  ---------------*/
+  /**
+   * Pagination
+   */
 
   .ui.pagination.menu {
     margin: 0em;
@@ -329,9 +318,9 @@
   }
 
 
-  /*--------------
-     Secondary
-  ---------------*/
+  /**
+   * Secondary
+   */
 
   .ui.secondary.menu > .menu > .item,
   .ui.secondary.menu > .item {
@@ -361,9 +350,9 @@
     margin: 0em;
   }
 
-  /*---------------------
-     Secondary Pointing
-  -----------------------*/
+  /**
+   * Secondary Pointing
+   */
 
   /* Item Types */
   .ui.secondary.pointing.menu > .menu > .item:after,
@@ -371,22 +360,22 @@
     display: none;
   }
 
-  /*---------------------
-     Secondary Vertical
-  -----------------------*/
+  /**
+   * Secondary Vertical
+   */
 
-  /*--------------
-      Inverted
-  ---------------*/
+  /**
+   * Inverted
+   */
 
-  /*---------------------
-     Inverted Vertical
-  ----------------------*/
+  /**
+   * Inverted Vertical
+   */
 
 
-  /*--------------
-      Text Menu
-  ---------------*/
+  /**
+   * Text Menu
+   */
 
   .ui.text.menu > .item {
     height: auto !important;
@@ -395,12 +384,12 @@
     display: none !important;
   }
 
-  /*--- fluid text ---*/
+  /* fluid text */
   .ui.text.item.menu .item {
     margin: 0em;
   }
 
-  /*--- vertical text ---*/
+  /* vertical text */
   .ui.vertical.text.menu:first-child {
     margin-top: 0rem;
   }
@@ -408,14 +397,14 @@
     margin-bottom: 0rem;
   }
 
-  /*--- hover ---*/
+  /* hover */
   .ui.text.menu .item:hover {
     opacity: 1;
   }
 
-  /*--------------
-      Icon Only
-  ---------------*/
+  /**
+   * Icon Only
+   */
 
   .ui.icon.menu,
   .ui.vertical.icon.menu {
@@ -446,9 +435,9 @@
     float: none;
   }
 
-  /*--------------
-     Labeled Icon
-  ---------------*/
+  /**
+   * Labeled Icon
+   */
 
   .ui.labeled.icon.menu > .item > .icon {
     display: block;
@@ -456,25 +445,12 @@
 
 
 
-  /*******************************
-             Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
-
-
-  /*--------------
-      Inverted
-  ---------------*/
-
-
-  /*--------------
-      Selection
-  ---------------*/
-
-
-  /*--------------
-       Floated
-  ---------------*/
+  /**
+   * Floated
+   */
 
   .ui.floated.menu {
     float: left;
@@ -484,10 +460,9 @@
   }
 
 
-
-  /*--------------
-       Fitted
-  ---------------*/
+  /**
+   * Fitted
+   */
 
   .ui.fitted.menu .item,
   .ui.fitted.menu .item .menu .item,
@@ -495,9 +470,9 @@
     padding: 0em;
   }
 
-  /*--------------
-     Borderless
-  ---------------*/
+  /**
+   * Borderless
+   */
 
   .ui.borderless.menu .item:before,
   .ui.borderless.menu .item .menu .item:before,
@@ -505,9 +480,9 @@
     background-image: none;
   }
 
-  /*-------------------
-         Compact
-  --------------------*/
+  /**
+   * Compact
+   */
 
   .ui.compact.menu {
     display: inline-block;
@@ -521,9 +496,9 @@
     display: block;
   }
 
-  /*-------------------
-          Fluid
-  --------------------*/
+  /**
+   * Fluid
+   */
 
   .ui.menu.fluid,
   .ui.vertical.menu.fluid {
@@ -532,9 +507,9 @@
   }
 
 
-  /*-------------------
-        Evenly Sized
-  --------------------*/
+  /**
+   * Evenly Sized
+   */
 
   .ui.item.menu,
   .ui.item.menu .item {
@@ -578,9 +553,9 @@
     width: percentage(1/12);
   }
 
-  /*--------------
-       Fixed
-  ---------------*/
+  /**
+   * Fixed
+   */
 
   .ui.menu.fixed {
     position: fixed;
@@ -620,9 +595,9 @@
   }
 
 
-  /*-------------------
-         Pointing
-  --------------------*/
+  /**
+   * Pointing
+   */
 
   .ui.pointing.menu .active.item:after {
     position: absolute;
@@ -641,14 +616,11 @@
   }
 
 
-  /*--------------
-      Attached
-  ---------------*/
+  /**
+   * Attached
+   */
 
   .ui.menu.attached {
     margin: 0rem;
   }
-  /*--------------
-       Sizes
-  ---------------*/
 }

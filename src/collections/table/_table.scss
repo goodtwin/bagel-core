@@ -1,9 +1,10 @@
 @mixin table-src {
-  /*******************************
-               Table
-  *******************************/
+  /* Table
+  ========================================
+  ======================================== */
 
-  /* Prototype */
+  /* Prototype
+  ======================================== */
   .ui.table {
     width: 100%;
     border-collapse: collapse;
@@ -45,7 +46,6 @@
 
 
   /* Responsive */
-
   @media only screen and (max-width : 768px) {
     .ui.table {
       display: block;
@@ -69,14 +69,10 @@
     }
   }
 
-  /*******************************
-            Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
-  /*--------------
-    Column Count
-  ---------------*/
-
+  /* Column Count */
   .ui.two.column.table td {
     width: percentage(1/2);
   }
@@ -190,9 +186,9 @@
   }
 
 
-  /*--------------
-       Celled
-  ---------------*/
+  /**
+   * Celled
+   */
 
   .ui.celled.table tbody tr,
   .ui.celled.table tfoot tr {
@@ -209,9 +205,9 @@
     border-right: none;
   }
 
-  /*--------------
-      Sortable
-  ---------------*/
+  /**
+   * Sortable
+   */
 
   .ui.sortable.table thead th {
     cursor: pointer;
@@ -222,17 +218,17 @@
     user-select: none;
   }
 
-  /*--------------
-     Collapsing
-  ---------------*/
+  /**
+   * Collapsing
+   */
 
   .ui.collapsing.table {
     width: auto;
   }
 
-  /*--------------
-        Basic
-  ---------------*/
+  /**
+   * Basic
+   */
 
   .ui.basic.table th {
     background-color: transparent;

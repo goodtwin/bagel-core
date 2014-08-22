@@ -1,22 +1,7 @@
-/*
- * # Semantic - Form
- * http://github.com/jlukic/semantic-ui/
- *
- *
- * Copyright 2013 Contributors
- * Released under the MIT license
- * http://opensource.org/licenses/MIT
- *
- */
-
 @mixin form-src {
-  /*******************************
-             Standard
-  *******************************/
-
-  /*--------------------
-          Form
-  ---------------------*/
+  /* Form
+  ========================================
+  ======================================== */
 
   .ui.form {
     position: relative;
@@ -29,29 +14,29 @@
     margin-bottom: 0em;
   }
 
-  /*--------------------
-          Content
-  ---------------------*/
+  /**
+   * Content
+   */
 
-  /*--------------------
-          Field
-  ---------------------*/
+  /**
+   * Field
+   */
 
   .ui.form .field {
     clear: both;
   }
 
-  /*--------------------
-          Labels
-  ---------------------*/
+  /**
+   * Labels
+   */
 
   .ui.form .field > label {
     display: block;
   }
 
-  /*--------------------
-      Standard Inputs
-  ---------------------*/
+  /**
+   * Standard Inputs
+   */
 
 
   .ui.form textarea,
@@ -82,18 +67,18 @@
     vertical-align: top;
   }
 
-  /*--------------------
-         Dividers
-  ---------------------*/
+  /**
+   * Dividers
+   */
 
   .ui.form .divider {
     clear: both;
   }
 
 
-  /*--------------------
-     Types of Messages
-  ---------------------*/
+  /**
+   * Types of Messages
+   */
 
   .ui.form .info.message,
   .ui.form .warning.message,
@@ -106,9 +91,9 @@
     margin-top: 0px;
   }
 
-  /*--------------------
-     Validation Prompt
-  ---------------------*/
+  /**
+   * Validation Prompt
+   */
 
   .ui.form .field .prompt.label {
     white-space: nowrap;

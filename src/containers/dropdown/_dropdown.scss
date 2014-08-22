@@ -1,7 +1,7 @@
 @mixin dropdown-src {
-  /*******************************
-              Dropdown
-  *******************************/
+  /* Dropdown
+  ========================================
+  ======================================== */
 
   .ui.dropdown {
     cursor: pointer;
@@ -11,14 +11,10 @@
   }
 
 
-  /*******************************
-              Content
-  *******************************/
+  /* Content
+  ======================================== */
 
-  /*--------------
-       Menu
-  ---------------*/
-
+  /* Menu */
   .ui.dropdown .menu {
     cursor: auto;
     position: absolute;
@@ -30,10 +26,7 @@
     z-index: 11;
   }
 
-  /*--------------
-        Icon
-  ---------------*/
-
+  /* Icon */
   .ui.dropdown > .dropdown.icon {
     width: auto;
   }
@@ -43,10 +36,7 @@
   }
 
 
-  /*--------------
-        Text
-  ---------------*/
-
+  /* Text */
   .ui.dropdown > .text {
     display: inline-block;
   }
@@ -57,10 +47,7 @@
   }
 
 
-  /*--------------
-      Sub Menu
-  ---------------*/
-
+  /* Sub Menu */
   .ui.dropdown .menu .menu {
     top: 0% !important;
     left: 100% !important;
@@ -79,15 +66,8 @@
     display: none;
   }
 
-
-  /*******************************
-              Coupling
-  *******************************/
-
-
-  /*******************************
-              States
-  *******************************/
+  /* States
+  ======================================== */
 
   /* Dropdown Visible */
   .ui.visible.dropdown > .menu {
@@ -115,14 +95,13 @@
   }
 
 
-  /*******************************
-             Variations
-  *******************************/
+  /* Variations
+  ======================================== */
 
-  /*--------------
-       Simple
-  ---------------*/
-  /* Displays without javascript */
+  /**
+   * Simple
+   * Displays without javascript
+   */
 
   .ui.simple.dropdown .menu:before,
   .ui.simple.dropdown .menu:after {
@@ -169,10 +148,10 @@
   }
 
 
-  /*--------------
-      Selection
-  ---------------*/
-  /* Displays like a select box */
+  /**
+   * Selection
+   * Displays like a select box
+   */
 
   .ui.selection.dropdown {
     cursor: pointer;
@@ -207,16 +186,12 @@
     opacity: 1;
   }
 
-  /* Visible */
-
   /* Active */
   .ui.active.selection.dropdown > .dropdown.icon {
     opacity: 1;
   }
 
-  /*--------------
-        Fluid
-  ---------------*/
+  /* Fluid */
 
   .ui.fluid.dropdown {
     display: block;
@@ -225,28 +200,23 @@
     float: right;
   }
 
-  /*--------------
-       Inline
-  ---------------*/
+  /* Inline */
 
   .ui.inline.dropdown {
     cursor: pointer;
     display: inline-block;
   }
 
-  /*--------------
-      Floating
-  ---------------*/
+  /* Floating */
 
   .ui.floating.dropdown .menu {
     left: 0;
     right: auto;
   }
 
-  /*--------------
-       Pointing
-  ---------------*/
-
+  /**
+   * Pointing
+   */
 
   .ui.pointing.dropdown .menu {
     top: 100%;
@@ -262,7 +232,6 @@
   }
 
   /* Directions */
-
   .ui.pointing.dropdown .menu:after {
     left: 50%;
   }
