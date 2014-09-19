@@ -14,7 +14,7 @@
     "url": "git://github.com/goodtwin/bagel-core.git"
   },
   "dependencies": {
-    "bagel-authoring": "git://github.com/goodtwin/bagel-authoring.git#v0.1.6",
+    "bagel-authoring": "git://github.com/goodtwin/bagel-authoring.git#v0.1.7",
     "bagel-theme-prototype": "git://github.com/goodtwin/bagel-theme-prototype.git#v0.1.4"
   },
   "devDependencies": {
