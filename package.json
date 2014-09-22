@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "bagel-authoring": "git://github.com/goodtwin/bagel-authoring.git#v0.1.7",
-    "bagel-theme-prototype": "git://github.com/goodtwin/bagel-theme-prototype.git#v0.1.4"
+    "bagel-theme-prototype": "git://github.com/cherihung/bagel-theme-prototype.git#develop"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
