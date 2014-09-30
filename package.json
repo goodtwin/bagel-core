@@ -1,6 +1,6 @@
 {
   "name": "bagel-core",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "title": "Bagel UI - Core Components",
   "description": "Bagel UI Core UI Components",
   "homepage": "http://goodtwin.co",
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "bagel-authoring": "git://github.com/goodtwin/bagel-authoring.git#v0.1.7",
-    "bagel-theme-prototype": "git://github.com/goodtwin/bagel-theme-prototype.git#v0.1.4"
+    "bagel-theme-prototype": "git://github.com/goodtwin/bagel-theme-prototype.git#v0.1.5"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
