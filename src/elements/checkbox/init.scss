@@ -1,5 +1,5 @@
 @import "checkbox";
 
-@if user(checkbox) {
+@if use(checkbox) {
   @include checkbox-src;
 }
