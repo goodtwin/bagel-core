@@ -1,0 +1,47 @@
+@mixin grid-src {
+	/**
+		* @name Grid
+		* @description Simple, flexible, nestable grid
+		* @section core.collections.grid
+		*
+		* @state .flush - No padding/margn between grid items
+		* @state .auto - No grid item width: auto
+		*
+		* @markup
+		*   <div class="ui grid {{modifier}}">
+		*    <div class="item">
+		*       ITEM
+		*     </div>
+		*   </div>
+		*
+		*/
+	.ui.grid {
+	    @extend %bare-list;
+	    margin-left: -base(grid-gutter);
+
+		> .item,
+		> .row > .item {
+		    display: inline-block;
+		    padding-left: base(grid-gutter);
+		    vertical-align: top;
+		    width: 100%;
+		}
+
+		&.flush {
+			margin-left: 0;
+
+			> .item,
+			> .row > .item {
+				padding-left: 0;
+			}
+		}
+
+		&.auto {
+
+			> .item,
+			> .row > .item {
+				width: auto;
+			}
+		}
+	}
+}

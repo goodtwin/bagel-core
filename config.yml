@@ -62,6 +62,18 @@ table:
   include: true
   theme:
     prototype: true
+list:
+  include: true
+  theme:
+    prototype: true
+grid:
+  include: true
+  theme:
+    prototype: true
+media:
+  include: true
+  theme:
+    prototype: true
 mediaquery:
   palm:
     include: true

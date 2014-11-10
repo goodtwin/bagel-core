@@ -1,0 +1,38 @@
+@mixin list-src {
+	/**
+		* @name List
+		* @description <ul>, <ol>, <li>
+		* @section core.collections.list
+		*
+		* @state .bare - Removes padding, margin, and list style
+		*
+		* @markup
+		*   <ul class="ui list {{modifier}}">
+		*    <li>ITEM</li>
+		*    <li>ITEM</li>
+		*    <li>ITEM</li>
+		*    <li>ITEM</li>
+		*   </ul>
+		*
+		*/
+	%bare-list {
+		margin:  0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.ui.list {
+		list-style: default;
+
+		li {
+			> ul,
+			> ol {
+					margin-bottom: 0;
+			}
+		}
+
+		&.bare {
+			@extend %bare-list;
+		}
+	}
+}
