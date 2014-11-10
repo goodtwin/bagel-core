@@ -70,7 +70,7 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
-        loadPath: ['./', 'node_modules/', 'node_modules/bagel-authoring/node_modules/']
+        loadPath: ['./']
       },
       styleguide: {
         files : {
@@ -83,6 +83,17 @@ module.exports = function (grunt) {
         }
       }
     },
+    bagel_sass_path : {
+			gt: {
+				options: {
+					chrome: [
+            './',
+					  'src/',
+					  'chrome/'
+					]
+				}
+			}
+		},
     shared_config: {
       style: {
         options: {
@@ -126,29 +137,25 @@ module.exports = function (grunt) {
         files: ['**/*.hbs'],
         tasks: ['assemble:docs']
       }
+    },
+    dss: {
+      docs: {
+        files: {
+          'dist/docs/': 'dist/style/*.css'
+        },
+        options: {
+          css_include: 'dist/style/style.css'
+        }
+      }
     }
   });
 
 require('load-grunt-tasks')(grunt);
 grunt.loadNpmTasks('assemble');
 
-grunt.registerTask('bagel:dirs',
-  'used to create an array of bagel paths for use in sass pathing',
-  function(){
-    var loadPaths = grunt.file.expand({}, [
-      './',
-      'node_modules/',
-      '**/node_modules/bagel-*/',
-      '**/node_modules/bagel-*/node_modules/'
-    ]);
-    grunt.log.write(loadPaths.join(", "));
-    grunt.config.set('sass.options.loadPath', loadPaths);
-
-  });
-
 grunt.registerTask('default', ['build']);
-grunt.registerTask('dist', ['sass:dist', 'myth:dist']);
+grunt.registerTask('dist', ['bagel_sass_path','sass:dist', 'myth:dist']);
 grunt.registerTask('docs', ['copy:docs', 'sass:styleguide', 'myth:docs', 'assemble']);
-grunt.registerTask('build', ['clean', 'shared_config', 'bagel:dirs', 'docs', 'dist']);
+grunt.registerTask('build', ['clean', 'shared_config', 'bagel_sass_path', 'docs', 'dist']);
 
 };

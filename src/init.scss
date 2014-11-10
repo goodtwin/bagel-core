@@ -19,6 +19,7 @@
 /*------------------------------------
   Collections
 ------------------------------------*/
+@import "collections/list/init";
 @import "collections/grid/init";
 @import "collections/table/init";
 
@@ -27,6 +28,7 @@
 ------------------------------------*/
 @import "containers/dropdown/init";
 @import "containers/form/init";
+@import "containers/media/init";
 @import "containers/menu/init";
 @import "containers/message/init";
 @import "containers/popup/init";

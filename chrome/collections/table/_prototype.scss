@@ -45,27 +45,27 @@
 
 	/* Responsive */
 
-	@media only screen and (max-width : 768px) {
+	@include media-query (palm) {
 
-		.ui.table tr > td {
+		.ui.responsive.table tr > td {
 			padding: 0.25em 0.75em;
 			box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05) !important;
 		}
-		.ui.table td:first-child {
+		.ui.responsive.table td:first-child {
 			font-weight: bold;
 			padding-top: 1em;
 		}
-		.ui.table td:last-child {
+		.ui.responsive.table td:last-child {
 			box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset !important;
 			padding-bottom: 1em;
 		}
 
 		/* Clear BG Colors */
-		.ui.table tr > td.warning,
-		.ui.table tr > td.error,
-		.ui.table tr > td.active,
-		.ui.table tr > td.positive,
-		.ui.table tr > td.negative {
+		.ui.responsive.table tr > td.warning,
+		.ui.responsive.table tr > td.error,
+		.ui.responsive.table tr > td.active,
+		.ui.responsive.table tr > td.positive,
+		.ui.responsive.table tr > td.negative {
 			background-color: transparent !important;
 		}
 	}
@@ -219,7 +219,7 @@
 	}
 	.ui.celled.table th,
 	.ui.celled.table td {
-		border: palette(neutral, dark);
+		border-color: palette(neutral, dark);
 	}
 
 	/**
