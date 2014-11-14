@@ -1,20 +1,27 @@
 @mixin dropdown-prototype {
-	/* Dropdown
-	========================================
-	======================================== */
-
+	/**
+		* @name Dropdown
+		* @description Dropdowns (non select replacement)
+		*
+		* @section components.dropdown.-
+		*
+		*
+		* @markup
+		* <div class="ui simple dropdown">
+		* 	<div class="text">Select</div>
+		* 	<i class="dropdown icon"></i>
+		* 	<div class="menu">
+		* 		<div class="item">Edit</div>
+		* 		<div class="item">Remove</div>
+		* 		<div class="item">Hide</div>
+		* 	</div>
+		* </div>
+		*/
 	.ui.dropdown {
 		transition:width 0.2s ease;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	}
-
-	/* Content
-	======================================== */
-
-	/**
-	 * Menu
-	 */
-
+	// menu
 	.ui.dropdown .menu {
 		background-color: palette(neutral, light);
 		font-size: 0.875em;
@@ -22,15 +29,10 @@
 		box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
 		transition: opacity 0.2s ease;
 	}
-
-	/**
-	 * Icon
-	 */
-
+	// icon
 	.ui.dropdown > .dropdown.icon {
 		margin: 0em 0em 0em 1em;
 	}
-
 	.ui.dropdown > .dropdown.icon:before {
 		content: "\f0d7";
 	}
@@ -41,19 +43,11 @@
 	.ui.dropdown .menu .item .dropdown.icon:before {
 		content: "\f0da"/*rtl:"\f0d9"*/;
 	}
-
-	/**
-	 * Text
-	 */
-
+	// text
 	.ui.dropdown > .text {
 		transition: color 0.2s ease;
 	}
-
-	/**
-	 * Sub Menu
-	 */
-
+	// sub menu
 	.ui.dropdown .menu .item {
 		border: none;
 		border-top: 1px solid palette(neutral, mid);
@@ -73,12 +67,7 @@
 	.ui.dropdown .menu .item:first-child {
 		border-top: none;
 	}
-
-	/**
-	 * Coupling
-	 */
-
-	/* Opposite on last menu on right */
+	// Coupling
 	.ui.menu .right.menu .dropdown:last-child .menu,
 	.ui.buttons > .ui.dropdown:last-child .menu {
 		left: auto;
@@ -91,16 +80,12 @@
 		margin: 0em;
 	}
 
-	/* States
-	======================================== */
-
-
-	/* Menu Item Hover */
+	// States
+	// Hover
 	.ui.dropdown .menu .item:hover {
 		background-color: palette(neutral, light, 110);
 	}
-
-	/* Menu Item Active */
+	// Active
 	.ui.dropdown .menu .active.item {
 		box-shadow: none;
 		background-color: palette(neutral, mid) !important;
@@ -108,8 +93,6 @@
 		border-color: transparent !important;
 		box-shadow: none;
 	}
-
-	/* Default Text */
 	.ui.dropdown > .default.text,
 	.ui.default.dropdown > .text {
 		color: palette(neutral, dark);
@@ -118,24 +101,48 @@
 	.ui.default.dropdown:hover > .text {
 		color: palette(neutral, dark);
 	}
-
-	/* Variations
-	======================================== */
-
+	// Variations
 	/**
-	 * Simple
-   * Displays without javascript
-	 */
-
+		* @name Dropdown - Simple
+		* @description Simple dropdown is one that can be opened with JavaScript.
+		*
+		* @section components.dropdown.simple
+		*
+		*
+		* @markup
+		* <div class="ui simple dropdown">
+		* 	<div class="text">today</div>
+		* 	<i class="dropdown icon"></i>
+		* 	<div class="menu">
+		* 		<div class="item" data-text="today">Today</div>
+		* 		<div class="item" data-text="this week">This Week</div>
+		* 		<div class="item" data-text="this month">This Month</div>
+		* 	</div>
+		* </div>
+		*/
 	.ui.simple.dropdown .menu {
 		transition: opacity 0.2s ease-out;
 	}
 
 	/**
-	 * Selection
-	 * Displays like a select box
-	 */
-
+		* @name Dropdown - Selection
+		* @description Select tag like dropdown (does not replace select element)
+		*
+		* @section components.dropdown.selection
+		*
+		*
+		* @markup
+		* <div class="ui simple selection dropdown">
+		* 	<div class="text">Select</div>
+		* 	<i class="dropdown icon"></i>
+		* 	<div class="menu">
+		* 		<div class="item">Edit</div>
+		* 		<div class="item">Remove</div>
+		* 		<div class="item">Hide</div>
+		* 	</div>
+		* </div>
+		*/
+	// Selection - Displays like a select box
 	.ui.selection.dropdown {
 		background-color: palette(neutral, light);
 		padding: 0.5em 1em;
@@ -143,18 +150,15 @@
 		color: palette(neutral, dark);
 		box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) !important;
 	}
-
 	.ui.selection.dropdown > .dropdown.icon {
 		opacity: 0.7;
 		margin: 0.2em 0em 0.2em 1.25em;
 		transition: opacity 0.2s ease-out;
 	}
-
 	.ui.selection.dropdown,
 	.ui.selection.dropdown .menu {
 		transition: box-shadow 0.2s ease-out;
 	}
-
 	.ui.selection.dropdown .menu {
 		max-height: 312px;
 		box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.2);
@@ -163,27 +167,38 @@
 		height: 2.5em;
 		margin-right: 0.5em;
 	}
-
-	/* Hover */
+	// Hover
 	.ui.selection.dropdown:hover {
 		box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
 	}
 	.ui.selection.dropdown:hover .menu {
 		box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.2);
 	}
-
-	/* Visible */
+	// Visible
 	.ui.visible.selection.dropdown {
 		border-bottom-left-radius: 0em !important;
 		border-bottom-right-radius: 0em !important;
 	}
 
-	/* Active */
-
 	/**
-	 * Inline
-	 */
-
+		* @name Dropdown - Inline
+		* @description Inline dropdown
+		*
+		* @section components.dropdown.inline
+		*
+		*
+		* @markup
+		* <div class="ui simple inline dropdown">
+		* 	<div class="text">today</div>
+		* 	<i class="dropdown icon"></i>
+		* 	<div class="menu">
+		* 		<div class="item" data-text="today">Today</div>
+		* 		<div class="item" data-text="this week">This Week</div>
+		* 		<div class="item" data-text="this month">This Month</div>
+		* 	</div>
+		* </div>
+		*/
+	// Inline
 	.ui.inline.dropdown {
 		color: inherit;
 	}
@@ -197,73 +212,8 @@
 		cursor: auto;
 		margin-top: 0.25em;
 	}
-
+	// Floating
 	.ui.floating.dropdown .menu {
 		margin-top: 0.5em !important;
-	}
-
-	/**
-	 * Pointing
-	 */
-
-
-	.ui.pointing.dropdown .menu {
-		margin-top: 0.75em;
-	}
-
-	.ui.pointing.dropdown .menu:after {
-		width: 0.5em;
-		height: 0.5em;
-		box-shadow: -1px -1px 0px 1px rgba(0, 0, 0, 0.05);
-		background-image: none;
-		background-color: palette(neutral, light);
-		transform: rotate(45deg);
-	}
-
-	.ui.pointing.dropdown .menu .active.item:first-child {
-		background: transparent linear-gradient(transparent, rgba(0, 0, 0, 0.03));
-	}
-
-	/* Directions */
-
-	.ui.pointing.dropdown .menu:after {
-		top: -0.25em;
-		margin: 0em 0em 0em -0.25em;
-	}
-	.ui.top.left.pointing.dropdown .menu {
-		margin: 0.75em 0em 0em;
-	}
-	.ui.top.left.pointing.dropdown .menu:after {
-		top: -0.25em;
-		left: 1.25em;
-		transform: rotate(45deg);
-	}
-	.ui.top.right.pointing.dropdown .menu {
-		margin: 0.75em 0em 0em;
-	}
-	.ui.top.right.pointing.dropdown .menu:after {
-		top: -0.25em;
-		right: 1.25em;
-		transform: rotate(45deg);
-	}
-
-	.ui.left.pointing.dropdown .menu {
-		margin: 0em 0em 0em 0.75em;
-	}
-	.ui.left.pointing.dropdown .menu:after {
-		top: 1em;
-		left: -0.25em;
-		margin: 0em 0em 0em 0em;
-		transform: rotate(-45deg);
-	}
-
-	.ui.right.pointing.dropdown .menu {
-		margin: 0em 0.75em 0em 0em;
-	}
-	.ui.right.pointing.dropdown .menu:after {
-		top: 1em;
-		right: -0.25em;
-		margin: 0em 0em 0em 0em;
-		transform: rotate(135deg);
 	}
 }

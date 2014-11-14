@@ -105,9 +105,9 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      hbs: {
-        files: ['**/*.hbs'],
-        tasks: ['assemble:docs']
+      css: {
+        files: ['chrome/**/*.scss', 'src/**/*.scss'],
+        tasks: ['build']
       }
     },
     bagel_pattern_lib: {

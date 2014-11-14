@@ -1,28 +1,45 @@
 @mixin form-prototype {
-	/* Form
-	========================================
-	======================================== */
-
 	/**
-	 * Content
-	 */
-
+		* @name Form
+		* @description Form containers and styles. Includes styles for fieldsets and their contents, as well as form messaging.
+		*
+		* @section components.form.index
+		*
+		*
+		* @markup
+		* <form class="ui form">
+		* 	<fieldset class="field">
+		* 		<label>Username</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="text" placeholder="Username">
+		* 			<i class="user icon"></i>
+		* 			<div class="ui corner label">
+		* 				<i class="icon asterisk"></i>
+		* 			</div>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Password</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="password">
+		* 			<i class="lock icon"></i>
+		* 			<div class="ui corner label">
+		* 				<i class="icon asterisk"></i>
+		* 			</div>
+		* 		</div>
+		* 	</fieldset>
+		* 	<input type="submit" class="ui blue submit button" value="Login"/>
+		* </form>
+		*/
+	.ui.form fieldset {
+		border: none;
+	}
 	.ui.form > p {
 		margin: 1em 0;
 	}
-
-	/**
-	 * Field
-	 */
-
 	.ui.form .field {
 		margin: 0em 0em 1em;
 	}
-
-	/**
-	 * Labels
-	 */
-
 	.ui.form .field > label {
 		color: palette(neutral, dark);
 		margin: 0em 0em 0.3em;
@@ -30,9 +47,104 @@
 	}
 
 	/**
-	 * Standard Inputs
-	 */
-
+		* @name Form - Inputs
+		* @description All of the following inputs (and textarea) are modified by the form.
+		*
+		* @section components.form.inputs
+		*
+		*
+		* @markup
+		* <form class="ui form segment">
+		* 	<fieldset class="field">
+		* 		<label>Text Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="text" placeholder="Username">
+		* 			<i class="user icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Password Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="password">
+		* 			<i class="lock icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Email Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="email">
+		* 			<i class="mail icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Date Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="date">
+		* 			<i class="calendar icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Number Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="number">
+		* 			<i class="signal icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Phone Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="tel">
+		* 			<i class="phone icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Url Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="url">
+		* 			<i class="url icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Textarea Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<textarea></textarea>
+		* 		</div>
+		*		</fieldset>
+		* 	<fieldset class="field">
+		* 		<div class="ui checkbox">
+		* 			<input type="checkbox" name="checkbox" id="checkbox" />
+		* 			<label for="checkbox">Checkbox</label>
+		* 		</div>
+		* 	</fieldset>
+		*		<fieldset class="grouped inline fields">
+		*			<div class="field">
+		*				<div class="ui radio checkbox">
+		*					<input type="radio" name="fruit" id="apples" checked />
+		*					<label for="apples">Apples</label>
+		*				</div>
+		*			</div>
+		*			<div class="field">
+		*				<div class="ui radio checkbox">
+		*					<input type="radio" name="fruit" id="oranges" />
+		*					<label for="oranges">Oranges</label>
+		*				</div>
+		*			</div>
+		*			<div class="field">
+		*				<div class="ui radio checkbox">
+		*					<input type="radio" name="fruit" id="pears" />
+		*					<label for="pears">Pears</label>
+		*				</div>
+		*			</div>
+		*			<div class="field">
+		*				<div class="ui radio checkbox">
+		*					<input type="radio" name="fruit" id="grapefruit" />
+		*					<label for="grapefruit">Grapefruit</label>
+		*				</div>
+		*			</div>
+		*		</fieldset>
+		* 	<input type="submit" class="ui blue submit button" value="Login"/>
+		* </form>
+		*/
 	.ui.form textarea,
 	.ui.form input[type="text"],
 	.ui.form input[type="email"],
@@ -55,8 +167,16 @@
 		-webkit-appearance: none;
 		-webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 		box-sizing: border-box;
-	}
 
+		&:focus {
+			color: palette(neutral, dark);
+			border-color: palette(neutral, mid);
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+			-webkit-appearance: none;
+			box-shadow: 0.3em 0em 0em 0em rgba(0, 0, 0, 0.2) inset;
+		}
+	}
 	.ui.textarea,
 	.ui.form textarea {
 		line-height: 1.33;
@@ -68,75 +188,54 @@
 
 
 	/**
-	 * Dividers
-	 */
-
-	.ui.form .divider {
-		margin: 1em 0em;
-	}
-
-	/**
-	 * Types of Messages
-	 */
-
-	/**
-	 * Validation Prompt
-	 */
-
-	.ui.form .inline.field .prompt {
-		margin-top: 0em;
-		margin-left: 1em;
-	}
-	.ui.form .inline.field .prompt:before {
-		margin-top: -0.3em;
-	}
-
-	/* States
-	======================================== */
-
-
-	/**
-	 * Focus
-	 */
-
-	.ui.form input[type="text"]:focus,
-	.ui.form input[type="email"]:focus,
-	.ui.form input[type="date"]:focus,
-	.ui.form input[type="password"]:focus,
-	.ui.form input[type="number"]:focus,
-	.ui.form input[type="url"]:focus,
-	.ui.form input[type="tel"]:focus,
-	.ui.form textarea:focus{
-		color: palette(neutral, dark);
-		border-color: palette(neutral, mid);
-		border-bottom-left-radius: 0;
-		border-top-left-radius: 0;
-		-webkit-appearance: none;
-		box-shadow: 0.3em 0em 0em 0em rgba(0, 0, 0, 0.2) inset;
-	}
-
-	/**
-	 * Error
-	 */
-
-	/**
-	 * Warning
-	 */
-
-	/* On Field(s) */
+		* @name Form - Errors
+		* @description Form input error styles. In order to show messages in regards to the error, the form must have a class of error
+		*
+		* @section components.form.error
+		*
+		*
+		* @markup
+		* <form class="ui form error">
+		* 	<div class="ui error message">
+		* 		<div class="header">We noticed some issues</div>
+		* 	</div>
+		* 	<fieldset class="error field">
+		* 		<label>Text Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="text" placeholder="Username">
+		* 			<i class="user icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Email Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="email">
+		* 			<i class="mail icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="error field">
+		* 		<label>Password Field</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="password">
+		* 			<i class="lock icon"></i>
+		* 		</div>
+		* 		<div class="ui message">Here is a prompt for the user about how to fix the error.</div>
+		* 	</fieldset>
+		* 	<input type="submit" class="ui blue submit button" value="Login"/>
+		* </form>
+		*/
+	// Error
 	.ui.form .fields.error .field label,
 	.ui.form .field.error label,
 	.ui.form .fields.error .field .input,
 	.ui.form .field.error .input {
 		color: palette(info, error);
 	}
-
 	.ui.form .fields.error .field .corner.label,
 	.ui.form .field.error .corner.label {
 		border-color: palette(info, error);
 		color: palette(neutral, light);
 	}
-
 	.ui.form .fields.error .field textarea,
 	.ui.form .fields.error .field input[type="text"],
 	.ui.form .fields.error .field input[type="email"],
@@ -176,11 +275,7 @@
 		box-shadow: 0.3em 0em 0em 0em palette(info, error) inset;
 	}
 
-	/**
-	 * Empty (Placeholder)
-	 */
-
-	/* browsers require these rules separate */
+	// Empty (Placeholder)
 	.ui.form ::-webkit-input-placeholder {
 		color: palette(neutral, mid);
 	}
@@ -193,8 +288,7 @@
 	.ui.form :focus::-moz-placeholder {
 		color: palette(neutral, mid);
 	}
-
-	/* Error Placeholder */
+	// Error Placeholder
 	.ui.form .error ::-webkit-input-placeholder {
 		color: palette(info, error);
 	}
@@ -209,9 +303,38 @@
 	}
 
 	/**
-	 * Disabled
-	 */
-
+		* @name Form - Disabled Inputs
+		* @description Form containers and styles. Includes styles for fieldsets and their contents, as well as form messaging.
+		*
+		* @section components.form.disabled
+		*
+		*
+		* @markup
+		* <form class="ui form">
+		* 	<fieldset class="disabled field">
+		* 		<label>Username</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="text" placeholder="Username" disabled>
+		* 			<i class="user icon"></i>
+		* 			<div class="ui corner label">
+		* 				<i class="icon asterisk"></i>
+		* 			</div>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Password</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="password">
+		* 			<i class="lock icon"></i>
+		* 			<div class="ui corner label">
+		* 				<i class="icon asterisk"></i>
+		* 			</div>
+		* 		</div>
+		* 	</fieldset>
+		* 	<input type="submit" class="ui blue submit button" value="Login"/>
+		* </form>
+		*/
+	// Disabled
 	.ui.form .field :disabled,
 	.ui.form .field.disabled {
 		opacity: 0.5;
@@ -221,32 +344,38 @@
 	}
 
 	/**
-	 * Loading State
-	 */
-
+		* @name Form - Loading
+		* @description Form loading indication.
+		*
+		* @section components.form.disabled
+		*
+		*
+		* @markup
+		* <form class="ui loading form">
+		* 	<fieldset class="field">
+		* 		<label>Username</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="text" placeholder="Username">
+		* 			<i class="user icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Password</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="password">
+		* 			<i class="lock icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<input type="submit" class="ui blue submit button" value="Login"/>
+		* </form>
+		*/
+	// Loading State
 	.ui.form.loading:after {
 		background: palette(neutral, light) url(../assets/images/loader-large.gif) no-repeat 50% 50%;
 	}
 
-	/*Variations
-	======================================== */
-
-
-	/**
-	 * Fluid Width
-	 */
-
-	.ui.form.fluid {
-		width: 100%;
-	}
-
-	/**
-	 * Input w/ attached Button
-	 */
-
-	/**
-	 * Date Input
-	 */
+	// Variations
+	// Date Input
 	.ui.form .date.field > label:after {
 		top: 2em;
 		right: 0.5em;
@@ -256,38 +385,7 @@
 		color: palette(neutral, mid);
 	}
 
-
-	/**
-	 * Inverted Colors
-	 */
-
-	.ui.inverted.form label {
-		color: palette(neutral, light);
-	}
-	.ui.inverted.form .field.error textarea,
-	.ui.inverted.form .field.error input[type="text"],
-	.ui.inverted.form .field.error input[type="email"],
-	.ui.inverted.form .field.error input[type="date"],
-	.ui.inverted.form .field.error input[type="password"],
-	.ui.inverted.form .field.error input[type="number"],
-	.ui.inverted.form .field.error input[type="url"],
-	.ui.inverted.form .field.error input[type="tel"]{
-		background-color: palette(info, error, 25);
-	}
-
-	.ui.inverted.form .ui.checkbox label {
-		color: palette(neutral, light, 110);
-	}
-	.ui.inverted.form .ui.checkbox label:hover,
-	.ui.inverted.form .ui.checkbox .box:hover {
-		color: palette(neutral, light);
-	}
-
-	/**
-	 * Field Groups
-	 */
-
-	/* Grouped Vertically */
+	// Grouped Vertically
 	.ui.form .grouped.fields {
 		margin: 0em 0em 1em;
 	}
@@ -295,23 +393,45 @@
 		margin: 0.5em 0em;
 		padding: 0em;
 	}
-	/**
-	 * Fields
-	 */
 
+	// Fields
 	.ui.form .fields > .field:first-child {
 		border-left: none;
 		box-shadow: none;
 	}
 
 	/**
-	 * Inline Fields
-	 */
+		* @name Form - Inline Fields
+		* @description inline fields of form elements
+		*
+		* @section components.form.inline
+		*
+		*
+		* @markup
+		* <form class="ui form">
+		* 	<div class="inline fields">
+		* 		<fieldset class="field">
+		* 			<label>Username</label>
+		* 			<div class="ui left labeled icon input">
+		* 				<input type="text" placeholder="Username">
+		* 				<i class="user icon"></i>
+		* 			</div>
+		* 		</fieldset>
+		* 		<fieldset class="field">
+		* 			<label>Password</label>
+		* 			<div class="ui left labeled icon input">
+		* 				<input type="password">
+		* 				<i class="lock icon"></i>
+		* 			</div>
+		* 		</fieldset>
+		* 	</div>
+		* 	<input type="submit" class="ui blue submit button" value="Login"/>
+		* </form>
+		*/
 	.ui.form .inline.fields .field {
 		min-height: 1.3em;
 		margin-right: 0.5em;
 	}
-
 	.ui.form .inline.fields .field > label,
 	.ui.form .inline.fields .field > p,
 	.ui.form .inline.fields .field > input,
@@ -320,26 +440,43 @@
 	.ui.form .inline.field > input {
 		font-size: 1em;
 	}
-
 	.ui.form .inline.fields .field > input,
 	.ui.form .inline.field > input {
 		font-size: 0.875em;
 	}
-
 	.ui.form .inline.fields .field > :first-child,
 	.ui.form .inline.field > :first-child {
 		margin: 0em 0.5em 0em 0em;
 	}
 
-
-
 	/**
-	 * Sizes
-	 */
-
-	/* Standard */
+		* @name Form - Small
+		* @description Small form variation.
+		*
+		* @section components.form.small
+		*
+		*
+		* @markup
+		* <form class="ui small form">
+		* 	<fieldset class="field">
+		* 		<label>Username</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="text" placeholder="Username">
+		* 			<i class="user icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<fieldset class="field">
+		* 		<label>Password</label>
+		* 		<div class="ui left labeled icon input">
+		* 			<input type="password">
+		* 			<i class="lock icon"></i>
+		* 		</div>
+		* 	</fieldset>
+		* 	<input type="submit" class="ui blue submit button" value="Login"/>
+		* </form>
+		*/
 	.ui.small.form {
-	font-size: 0.875em;
+		font-size: 0.875em;
 	}
 	.ui.small.form textarea,
 	.ui.small.form input[type="text"],
@@ -350,11 +487,6 @@
 	.ui.small.form input[type="url"],
 	.ui.small.form input[type="tel"],
 	.ui.small.form label{
-	font-size: 1em;
-	}
-
-	/* Large */
-	.ui.large.form {
-	font-size: 1.125em;
+		font-size: 1em;
 	}
 }
