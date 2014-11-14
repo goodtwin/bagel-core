@@ -79,30 +79,4 @@
     bottom: auto;
     right: auto;
   }
-
-  /* States
-  ======================================== */
-
-  .ui.loading.popup {
-    display: block;
-    visibility: hidden;
-  }
-
-  .ui.animating.popup,
-  .ui.visible.popup {
-    display: block;
-  }
-
-
-  /* Variations
-  ======================================== */
-
-  /**
-   * Size
-   */
-
-
-  /**
-   * Colors
-   */
 }
