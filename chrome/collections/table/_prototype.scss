@@ -1,16 +1,47 @@
 @mixin table-prototype {
-	/* Table
-	========================================
-	======================================== */
-
-	/* Table Content */
+  /**
+    * @name Table
+    * @description Responsive tables
+		*
+    * @section components.table.0
+    *
+    *
+    * @markup
+		* <table class="ui table segment">
+		* 	<thead>
+		* 		<th>Name</th>
+		* 		<th>Status</th>
+		* 		<th>Notes</th>
+		* 	</thead>
+		* 	<tbody>
+		* 		<tr>
+		* 			<td>John</td>
+		* 			<td>Approved</td>
+		* 			<td>None</td>
+		* 		</tr>
+		* 		<tr>
+		* 			<td>Jamie</td>
+		* 			<td>Approved</td>
+		* 			<td>Requires call</td>
+		* 		</tr>
+		* 		<tr>
+		* 			<td>Jill</td>
+		* 			<td>Denied</td>
+		* 			<td>None</td>
+		* 		</tr>
+		* 	</tbody>
+		* 	<tfoot>
+		* 		<th colspan="3">
+		* 			<div class="ui blue labeled icon button"><i class="user icon"></i> Add User</div>
+		* 		</th>
+		* 	</tfoot>
+		* </table>
+	  */
 	.ui.table th,
 	.ui.table tr,
 	.ui.table td {
 		transition: all 0.1s ease-out;
 	}
-
-	/* Headers */
 	.ui.table thead {
 		border-bottom: 1px solid palette(neutral, mid);
 	}
@@ -23,13 +54,9 @@
 		color: rgba(0, 0, 0, 0.8);
 		padding: 0.5em 0.7em;
 	}
-
-	/* Table Cells */
 	.ui.table td {
 		padding: 0.40em 0.7em;
 	}
-
-	/* Footer */
 	.ui.table tfoot {
 		border-top: 1px solid palette(neutral, mid);
 	}
@@ -37,13 +64,9 @@
 		font-weight: normal;
 		font-style: italic;
 	}
-
-	/* Table Striping */
 	.ui.table tbody tr:nth-child(2n) {
 		background-color: palette(neutral, mid, 50);
 	}
-
-	/* Responsive */
 
 	@include media-query (palm) {
 
@@ -59,8 +82,6 @@
 			box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset !important;
 			padding-bottom: 1em;
 		}
-
-		/* Clear BG Colors */
 		.ui.responsive.table tr > td.warning,
 		.ui.responsive.table tr > td.error,
 		.ui.responsive.table tr > td.active,
@@ -70,14 +91,6 @@
 		}
 	}
 
-	/* States
-	======================================== */
-
-	/**
-	 * Hover
-	 */
-
-	/* Sortable */
 	.ui.sortable.table th.disabled:hover {
 		cursor: auto;
 		text-align: left;
@@ -87,16 +100,58 @@
 		background-color: palette(neutral, mid, 110);
 	}
 
-	/* Inverted Sortable */
-	.ui.inverted.sortable.table thead th:hover {
-		background-color: palette(neutral, dark, 110);
-		color: palette(neutral, light);
-	}
-
 	/**
-	 * Positive
-	 */
-
+		* @name Table - Row Styles
+		* @description Positive/Negative/Error/Warning/Active/Disabled
+		*
+		* @section components.table.positive
+		*
+		* @markup
+		* <table class="ui table segment">
+		* 	<thead>
+		* 		<th>Name</th>
+		* 		<th>Status</th>
+		* 		<th>Notes</th>
+		* 	</thead>
+		* 	<tbody>
+		* 		<tr>
+		* 			<td>No Name Specified</td>
+		* 			<td>Unknown</td>
+		* 			<td>None</td>
+		* 		</tr>
+		* 		<tr class="positive">
+		* 			<td>Jimmy</td>
+		* 			<td><i class="icon checkmark"></i> Approved</td>
+		* 			<td>None</td>
+		* 		</tr>
+		* 		<tr>
+		* 			<td>Jamie</td>
+		* 			<td>Unknown</td>
+		* 			<td class="negative"><i class="icon close"></i> Requires call</td>
+		* 		</tr>
+		* 		<tr class="error">
+		* 			<td>Jill</td>
+		* 			<td>Unknown</td>
+		* 			<td>None</td>
+		* 		</tr>
+		* 		<tr class="warning">
+		* 			<td>Jack</td>
+		* 			<td>Unknown</td>
+		* 			<td>None</td>
+		* 		</tr>
+		* 		<tr class="active">
+		* 			<td>Jack</td>
+		* 			<td>Unknown</td>
+		* 			<td>None</td>
+		* 		</tr>
+		* 		<tr class="disabled">
+		* 			<td>Jack</td>
+		* 			<td>Unknown</td>
+		* 			<td>None</td>
+		* 		</tr>
+		* 	</tbody>
+		* </table>
+		*/
 	.ui.table tr.positive,
 	.ui.table td.positive {
 		box-shadow: 2px 0px 0px palette(info, success) inset;
@@ -115,10 +170,6 @@
 		color: palette(info, success) !important;
 	}
 
-	/**
-	 * Negative
-	 */
-
 	.ui.table tr.negative,
 	.ui.table td.negative {
 		box-shadow: 2px 0px 0px palette(info, error) inset;
@@ -136,10 +187,6 @@
 		background-color: palette(info, error, 5);
 		color: palette(info, error);
 	}
-
-	/**
-	 * Error
-	 */
 
 	.ui.table tr.error,
 	.ui.table td.error {
@@ -160,10 +207,6 @@
 		color: palette(info, error);
 	}
 
-	/**
-	 * Warning
-	 */
-
 	.ui.table tr.warning,
 	.ui.table td.warning {
 		box-shadow: 2px 0px 0px palette(info, warning) inset;
@@ -183,11 +226,6 @@
 		color: palette(info, warning);
 	}
 
-
-	/**
-	 * Active
-	 */
-
 	.ui.table tr.active,
 	.ui.table td.active {
 		box-shadow: 2px 0px 0px rgba(50, 50, 50, 0.9) inset;
@@ -199,20 +237,12 @@
 		color: palette(neutral, dark);
 	}
 
-	/**
-	 * Disabled
-	 */
-
 	.ui.table tr.disabled td,
 	.ui.table tr td.disabled,
 	.ui.table tr.disabled:hover td,
 	.ui.table tr:hover td.disabled {
 		color:  palette(neutral, mid, 40);
 	}
-
-	/**
-	 * Celled
-	 */
 
 	.ui.celled.table {
 		color: palette(neutral, dark);
@@ -223,10 +253,43 @@
 	}
 
 	/**
-	 * Sortable
-	 */
-
-
+		* @name Table - Sortable
+		* @description Tables can be sortable
+		*
+		* @section components.table.sortable
+		*
+		*
+		* @markup
+		* 	<table class="ui sortable table segment">
+		* 		<thead>
+		* 			<th>Name</th>
+		* 			<th>Status</th>
+		* 			<th>Notes</th>
+		* 		</thead>
+		* 		<tbody>
+		* 			<tr>
+		* 				<td>John</td>
+		* 				<td>No Action</td>
+		* 				<td>None</td>
+		* 			</tr>
+		* 			<tr>
+		* 				<td>Jamie</td>
+		* 				<td class="positive">Approved</td>
+		* 				<td class="warning">Requires call</td>
+		* 			</tr>
+		* 			<tr>
+		* 				<td>Jill</td>
+		* 				<td class="negative">Denied</td>
+		* 				<td>None</td>
+		* 			</tr>
+		* 		</tbody>
+		* 		<tfoot>
+		* 			<th>3 People</th>
+		* 			<th>2 Approved</th>
+		* 			<th></th>
+		* 		</tfoot>
+		* 	</table>
+		*/
 	.ui.sortable.table thead th:after {
 		display: inline-block;
 		content: '';
@@ -246,35 +309,43 @@
 	}
 
 	/**
-	 * Inverted
-	 */
-
-	/* Text Color */
-	.ui.inverted.table td {
-		color: palette(neutral, light);
-	}
-	.ui.inverted.table th {
-		background-color: palette(neutral, dark, 150);
-		color: palette(neutral, light);
-	}
-
-	/* Stripes */
-	.ui.inverted.table tbody tr:nth-child(2n) {
-		background-color: palette(neutral, dark, 95);
-	}
-
-	/**
-	 * Definition
-	 */
-
-	.ui.definition.table td:first-child {
-		font-weight: bold;
-	}
-
-	/**
-	 * Basic
-	 */
-
+		* @name Table - Basic
+		* @description Tables can be basic
+		*
+		* @section components.table.basic
+		*
+		*
+		* @markup
+		* 	<table class="ui basic table segment">
+		* 		<thead>
+		* 			<th>Name</th>
+		* 			<th>Status</th>
+		* 			<th>Notes</th>
+		* 		</thead>
+		* 		<tbody>
+		* 			<tr>
+		* 				<td>John</td>
+		* 				<td>No Action</td>
+		* 				<td>None</td>
+		* 			</tr>
+		* 			<tr>
+		* 				<td>Jamie</td>
+		* 				<td class="positive">Approved</td>
+		* 				<td class="warning">Requires call</td>
+		* 			</tr>
+		* 			<tr>
+		* 				<td>Jill</td>
+		* 				<td class="negative">Denied</td>
+		* 				<td>None</td>
+		* 			</tr>
+		* 		</tbody>
+		* 		<tfoot>
+		* 			<th>3 People</th>
+		* 			<th>2 Approved</th>
+		* 			<th></th>
+		* 		</tfoot>
+		* 	</table>
+		*/
 	.ui.basic.table th {
 		padding: 0.5em;
 	}
@@ -285,38 +356,14 @@
 		padding: 0.8em 0.5em;
 	}
 
-	/**
-	 * Padded
-	 */
-
 	.ui.padded.table th,
 	.ui.padded.table td {
 		padding: 0.8em 1em;
 	}
-
 	.ui.compact.table th {
 		padding: 0.3em 0.5em;
 	}
 	.ui.compact.table td {
 		padding: 0.2em 0.5em;
-	}
-
-	/**
-	 * Sizes
-	 */
-
-	/* Small */
-	.ui.small.table {
-		font-size: 0.875em;
-	}
-
-	/* Standard */
-	.ui.table {
-		font-size: 1em;
-	}
-
-	/* Large */
-	.ui.large.table {
-		font-size: 1.1em;
 	}
 }

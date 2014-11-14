@@ -17,29 +17,6 @@ module.exports = function (grunt) {
   grunt.initConfig({
     globalConfig: globalConfig,
     pkg: grunt.file.readJSON('./package.json'),
-    assemble : {
-      docs: {
-        options: {
-          assets: '<%= globalConfig.docs  %>/assets',
-          flatten: false,
-          partials: ['<%= globalConfig.docs  %>/partials/*.hbs'],
-          layout: '<%= globalConfig.docs  %>/layouts/default.hbs',
-          data: ['<%= globalConfig.docs  %>/data/*.{json,yml}','config.{json,yml}']
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= globalConfig.styleguide  %>',
-          src: ['**/*.hbs'],
-          dest: '<%= globalConfig.dist.docs  %>'
-        },
-        {
-          expand: true,
-          src: ['**/node_modules/bagel-*/guide/**/*.hbs'],
-          flatten: true,
-          dest: '<%= globalConfig.dist.docs  %>'
-        }]
-      }
-    },
     clean: {
       docs: {
         files : [
@@ -71,11 +48,6 @@ module.exports = function (grunt) {
     sass: {
       options: {
         loadPath: ['./']
-      },
-      styleguide: {
-        files : {
-          '<%= globalConfig.dist.docs  %>/stylesheets/styleguide.css': '<%= globalConfig.styleguide  %>/guide.scss'
-        }
       },
       dist: {
         files : {
@@ -138,7 +110,7 @@ module.exports = function (grunt) {
         tasks: ['assemble:docs']
       }
     },
-    dss: {
+    bagel_pattern_lib: {
       docs: {
         files: {
           'dist/docs/': 'dist/style/*.css'
@@ -155,7 +127,7 @@ grunt.loadNpmTasks('assemble');
 
 grunt.registerTask('default', ['build']);
 grunt.registerTask('dist', ['bagel_sass_path','sass:dist', 'myth:dist']);
-grunt.registerTask('docs', ['copy:docs', 'sass:styleguide', 'myth:docs', 'assemble']);
-grunt.registerTask('build', ['clean', 'shared_config', 'bagel_sass_path', 'docs', 'dist']);
+grunt.registerTask('docs', ['copy:docs', 'myth:docs', 'bagel_pattern_lib']);
+grunt.registerTask('build', ['clean', 'shared_config', 'bagel_sass_path', 'dist', 'docs']);
 
 };

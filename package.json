@@ -32,6 +32,6 @@
     "grunt-shared-config": "~0.3.7",
     "assemble": "~0.4.41",
     "grunt-bagel-sass-path": "git://github.com/goodtwin/grunt-bagel-sass-path.git#v0.1.0",
-    "grunt-dss": "git://github.com/goodtwin/grunt-dss.git#25ddcfd2635b77ab25f188bf78a6c2f4a4c07b6d"
+    "grunt-bagel-pattern-lib": "git://github.com/goodtwin/grunt-bagel-pattern-lib.git#v0.1.0"
   }
 }
