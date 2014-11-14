@@ -1,8 +1,4 @@
 @mixin divider-prototype {
-	/* Divider
-	========================================
-	======================================== */
-
 	.ui.divider {
 		margin: 1rem 0rem;
 		border-top: 1px solid palette(neutral, mid);
@@ -18,10 +14,6 @@
 		text-transform: uppercase;
 		color: rgba(0, 0, 0, 0.8);
 	}
-
-	/**
-	 * Vertical
-	 */
 	.ui.vertical.divider {
 		margin: 0% 0% 0% -3%;
 		width: 6%;
@@ -31,13 +23,8 @@
 		&:after {
 			border-left: 1px solid palette(neutral, mid);
 			border-right: 1px solidpalette(neutral, light);
-			height: 80%;
 		}
 	}
-
-	/**
-	 * Horizontal
-	 */
 	.ui.horizontal.divider {
 		margin: 1rem 1.5rem;
 		padding: 0em;
@@ -47,53 +34,10 @@
 			border-top: 1px solid palette(neutral, mid);
 			border-bottom: 1px solid palette(neutral, light);
 		}
-
-		&:before {
-			margin-left: -1.5rem;
-		}
-		&:after {
-			margin-right: -1.5rem;
-		}
 	}
-
-	/**
-	 * Icon
-	 */
 	.ui.divider > .icon {
 		margin: 0em;
 		font-size: 1rem;
 	}
 
-	/* Variations
-	======================================== */
-
-	/**
-	 * Inverted
-	 */
-
-	.ui.divider.inverted {
-		color: palette(neutral, light);
-	}
-
-	.ui.vertical.inverted.divider,
-	.ui.horizontal.inverted.divider {
-		color: palette(neutral, light);
-	}
-	.ui.divider.inverted,
-	.ui.divider.inverted:after,
-	.ui.divider.inverted:before {
-		border-top-color: palette(neutral, dark);
-		border-bottom-color: palette(neutral, mid);
-		border-left-color: palette(neutral, dark);
-		border-right-color: palette(neutral, mid);
-	}
-
-	/**
-	 * Section
-	 */
-
-	.ui.section.divider {
-		margin-top: 2rem;
-		margin-bottom: 2rem;
-	}
 }

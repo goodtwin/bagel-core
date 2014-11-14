@@ -1,9 +1,62 @@
 @mixin card-src {
-  /* Cards
-  ========================================
-  ======================================== */
-
-  /* Force Clearing */
+  /**
+    * @name Cards
+    * @description A card is a container, most typically of media-like content. Card elements are an image and content sections as direct children. Within the content section you can utilize the media element, or the meta, name, and description fields. There is also an extra field for content below the card.
+    *
+    * @section components.card.default
+    *
+    *
+    * @markup
+    * 	<div class="ui cards">
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Cute Dog</div>
+    * 				<p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+    * 				<div class="extra">
+    * 						199 votes
+    * 				</div>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="meta">5 days ago</div>
+    * 				<div class="name">Faithful Dog</div>
+    * 				<p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+    * 				<div class="extra">
+    * 						311 votes
+    * 				</div>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Silly Dog</div>
+    * 				<p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+    * 				<div class="extra">
+    * 						522 votes
+    * 				</div>
+    * 			</div>
+    * 		</div>
+    * 	</div>
+    */
+  // Force Clearing
   .ui.cards:after {
     display: block;
     content: ' ';
@@ -12,10 +65,6 @@
     overflow: hidden;
     visibility: hidden;
   }
-
-  /* Card
-  ========================================
-  ======================================== */
 
   .ui.card {
     display: block;
@@ -27,10 +76,6 @@
     cursor: pointer;
   }
 
-  /**
-   * Images
-   */
-
   .ui.card > .image {
     display: block;
     position: relative;
@@ -40,10 +85,6 @@
     width: 100%;
   }
 
-
-  /**
-   * Content
-   */
   .ui.card > .content > .name {
     display: block;
   }
@@ -55,20 +96,6 @@
   .ui.card > .content > .description p:last-child {
     margin-bottom: 0em;
   }
-
-  /**
-   * Meta
-   */
-
-
-  /**
-   * Labels
-   */
-
-
-  /**
-   * Extra
-   */
 
   .ui.card .extra {
     position: absolute;
@@ -85,25 +112,59 @@
     float: right;
   }
 
-
-  /* States
-  ======================================== */
-
   .ui.card:hover {
     cursor: pointer;
     z-index: 5;
   }
 
-
-
-  /* Variations
-  ======================================== */
-
-
   /**
-   * Connected
-   */
-
+    * @name Cards - Connected
+    * @description Cards can be connected to each other.
+    *
+    * @section components.card.connected
+    *
+    *
+    * @markup
+    * 	<div class="ui connected cards">
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Cute Dog</div>
+    * 				<p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="meta">5 days ago</div>
+    * 				<div class="name">Faithful Dog</div>
+    * 				<p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Silly Dog</div>
+    * 				<p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+    * 			</div>
+    * 		</div>
+    * 	</div>
+    */
   .ui.connected.cards .card {
     float: none;
     display: table-cell;
@@ -186,9 +247,50 @@
   }
 
   /**
-   * Responsive
-   */
-
+    * @name Cards - Stackable
+    * @description Stackable cards adjust on mobile and tablet sizes.
+    *
+    * @section components.card.stackable
+    *
+    *
+    * @markup
+    * 	<div class="ui three stackable cards">
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Cute Dog</div>
+    * 				<p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="meta">5 days ago</div>
+    * 				<div class="name">Faithful Dog</div>
+    * 				<p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Silly Dog</div>
+    * 				<p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+    * 			</div>
+    * 		</div>
+    * 	</div>
+    */
   @media only screen and (max-width : 768px) {
     .ui.stackable.cards {
       display: block !important;
@@ -203,8 +305,50 @@
   }
 
   /**
-   * Horizontal
-   */
+    * @name Cards - Horizontal
+    * @description Cards can be laid out horizontally.
+    *
+    * @section components.card.horizontal
+    *
+    *
+    * @markup
+    * 	<div class="ui horizontal cards">
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Cute Dog</div>
+    * 				<p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="meta">5 days ago</div>
+    * 				<div class="name">Faithful Dog</div>
+    * 				<p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Silly Dog</div>
+    * 				<p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+    * 			</div>
+    * 		</div>
+    * 	</div>
+    */
   .ui.horizontal.cards > .card,
   .ui.cards > .horizontal.card {
     display: table;
@@ -252,10 +396,62 @@
   }
 
   /**
-   * Card Count
-   */
-
-
+    * @name Cards - Rows
+    * @description Cards can be explicitly sized into rows (one through twelve).
+    *
+    * @section components.card.stackable
+    *
+    *
+    * @markup
+    * 	<div class="ui four stackable cards">
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Cute Dog</div>
+    * 				<p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="meta">5 days ago</div>
+    * 				<div class="name">Faithful Dog</div>
+    * 				<p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Silly Dog</div>
+    * 				<p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+    * 			</div>
+    * 		</div>
+    * 		<div class="ui card">
+    * 			<div class="image">
+    * 				<img src="../../assets/images/photo.jpg">
+    * 				<a class="like ui corner label">
+    * 					<i class="like icon"></i>
+    * 				</a>
+    * 			</div>
+    * 			<div class="content">
+    * 				<div class="name">Silly Dog</div>
+    * 				<p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+    * 			</div>
+    * 		</div>
+    * 	</div>
+    */
   .ui.one.cards {
     margin-left: -2%;
     margin-right: -2%;

@@ -1,7 +1,4 @@
 @mixin button-prototype {
-	/* Button
-	========================================
-	======================================== */
 
 	.ui.button {
 		background-color: palette(neutral, mid);
@@ -10,35 +7,40 @@
 		text-transform: uppercase;
 		font-weight: bold;
 		font-style: normal;
-		-webkit-tap-highlight-color: rgba(0,0,0, 0);
-	}
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
 
-	/* States
-	======================================== */
-	.ui.button {
-		/**
-		 * Active
-		 */
 		&.active{
 			background-color: palette(neutral, mid, 105);
 		}
-		/**
-		 * Hover
-		 */
 		&:hover,
 		&.active:hover  {
 			background-color: palette(neutral, mid, 110);
 		}
-		/**
-		 * Down
-		 */
 		&:active,
 		&.active:active {
 			background-color: palette(neutral, mid, 120);
 		}
-		/**
-		 * Loading
-		 */
+		> .icon {
+			margin-right: 0.6em;
+		}
+	}
+
+	/**
+		* @name Button - States
+		* @description A button can be loading, or disabled.
+		*
+		* @section components.button.states
+		*
+		*
+		* @markup
+		* 	<div class="ui loading button">
+		* 		Follow
+		* 	</div>
+		* 	<div class="ui disabled button">
+		* 		Follow
+		* 	</div>
+		*/
+	.ui.button {
 		&.loading {
 			position: relative;
 			cursor: default;
@@ -55,15 +57,11 @@
 				content: '';
 				background: transparent url(../assets/images/loader-mini.gif) no-repeat 50% 50%;
 			}
-
 			&.labeled.icon .icon {
 				background-color: transparent;
 				box-shadow: none;
 			}
 		}
-		/**
-		 * Disabled
-		 */
 		&.disabled,
 		&.disabled:hover,
 		&.disabled.active {
@@ -72,12 +70,71 @@
 		}
 	}
 
-	/* Types
-	======================================== */
+	/**
+		* @name Button - Basic
+		* @description A basic button is one that typically 'looks' more basic to the user, most often achieve through transparent background and no border.
+		*
+		* @section components.button.basic
+		*
+		*
+		* @markup
+		* 	<div class="ui basic button">
+		* 		Follow
+		* 	</div>
+		* 	<div class="ui basic icon button">
+		* 		<i class="photo icon"></i>
+		* 	</div>
+		*/
+	.ui.basic.buttons .button,
+	.ui.basic.button {
+		background-color: transparent !important;
+		color: palette(button, primary, 110);
+		text-transform: none;
+	}
+
 	.ui.button {
-		/**
-		 * Primary
-		 */
+		&.labeled.icon > .button > .icon,
+		&.labeled.icon > .icon {
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+	}
+
+	/**
+		* @name Button - Circular
+		* @description A button with a cirular border
+		*
+		* @section components.button.basic
+		*
+		*
+		* @markup
+		* 	<div class="ui circular button">
+		* 		Follow
+		* 	</div>
+		* 	<div class="ui circular icon button">
+		* 		<i class="photo icon"></i>
+		* 	</div>
+		*/
+	.ui.circular.button {
+		border-radius: 10em;
+	}
+	/**
+		* @name Button - Ordinality
+		* @description Buttons are often referenced in terms of their importance via ordinality.
+		*
+		* @section components.button.ordinality
+		*
+		*
+		* @markup
+		* 	<div class="ui primary labeled icon button">
+		* 		<i class="photo icon"></i>
+		* 		My Photos
+		* 	</div>
+		* 	<div class="ui secondary labeled icon button">
+		* 		<i class="photo icon"></i>
+		* 		My Photos
+		* 	</div>
+		*/
+	.ui.button {
 		&.primary {
 			background-color: palette(button, primary);
 
@@ -85,14 +142,10 @@
 			&.active {
 				background-color: palette(button, primary, 110);
 			}
-
 			&:active {
 				background-color: palette(button, primary, 105);
 			}
 		}
-		/**
-		 * Secondary
-		 */
 		&.secondary {
 			background-color: palette(button, secondary);
 
@@ -100,15 +153,49 @@
 			&.active {
 				background-color: palette(button, secondary, 110);
 			}
-
 			&:active {
 				background-color: palette(button, secondary, 105);
 			}
 		}
-		/**
-		 * Social
-		 */
-		/* Facebook */
+	}
+	/**
+		* @name Button - Social
+		* @description Social buttons contain styles related to their respective brands.
+		*
+		* @section components.button.social
+		*
+		*
+		* @markup
+		* 	<div class="ui facebook button">
+		* 		<i class="facebook icon"></i>
+		* 		Facebook
+		* 	</div>
+		* 	<div class="ui twitter button">
+		* 		<i class="twitter icon"></i>
+		* 		Twitter
+		* 	</div>
+		* 	<div class="ui google plus button">
+		* 		<i class="google plus icon"></i>
+		* 		Google Plus
+		* 	</div>
+		* 	<div class="ui pinterest button">
+		* 		<i class="pinterest icon"></i>
+		* 		Pinterest
+		* 	</div>
+		* 	<div class="ui linkedin button">
+		* 		<i class="linkedin icon"></i>
+		* 		LinkedIn
+		* 	</div>
+		* 	<div class="ui instagram button">
+		* 		<i class="instagram icon"></i>
+		* 		Instagram
+		* 	</div>
+		* 	<div class="ui youtube button">
+		* 		<i class="youtube icon"></i>
+		* 		YouTube
+		* 	</div>
+		*/
+	.ui.button {
 		&.facebook {
 			background-color: palette(social, facebook);
 
@@ -120,8 +207,6 @@
 				background-color: palette(social, facebook, 105);
 			}
 		}
-
-		/* Twitter */
 		&.twitter {
 			background-color: palette(social, twitter);
 
@@ -133,8 +218,6 @@
 				background-color: palette(social, twitter, 105);
 			}
 		}
-
-		/* Google Plus */
 		&.google.plus {
 			background-color: palette(social, googleplus);
 
@@ -146,8 +229,6 @@
 				background-color: palette(social, googleplus, 105);
 			}
 		}
-
-		/* LinkedIn */
 		&.linkedin {
 			background-color: palette(social, linkedin);
 
@@ -159,8 +240,6 @@
 				background-color: palette(social, linkedin, 105);
 			}
 		}
-
-		/* YouTube */
 		&.youtube {
 			background-color: palette(social, youtube);
 
@@ -172,8 +251,6 @@
 				background-color: palette(social, youtube, 105);
 			}
 		}
-
-		/* Instagram */
 		&.instagram {
 			background-color: palette(social, instagram);
 
@@ -185,8 +262,6 @@
 				background-color: palette(social, instagram, 105)
 			}
 		}
-
-		/* Pinterest */
 		&.pinterest {
 			background-color: palette(social, pinterest);
 
@@ -198,101 +273,133 @@
 				background-color: palette(social, pinterest, 105);
 			}
 		}
-
-		/* Positive */
+	}
+	/**
+		* @name Button - Status
+		* @description Buttons are often referenced in terms of their importance via ordinality.
+		*
+		* @section components.button.status
+		*
+		*
+		* @markup
+		* 	<div class="ui positive labeled icon button">
+		* 		<i class="photo icon"></i>
+		* 		My Photos
+		* 	</div>
+		* 	<div class="ui negative labeled icon button">
+		* 		<i class="photo icon"></i>
+		* 		My Photos
+		* 	</div>
+		*/
+	.ui.button {
 		&.positive {
 			background-color: palette(info, success);
-
 			&:hover {
 				background-color: palette(info, success, 110);
 			}
-
 			&:active {
 				background-color: palette(info, success, 105);
 			}
 		}
-
-		/* negative */
 		&.negative {
 			background-color: palette(info, error);
-
 			&:hover {
 				background-color: palette(info, error, 110);
 			}
-
 			&:active {
 				background-color: palette(info, error, 105);
 			}
 		}
-		/**
-		 * Icon
-		 */
-		> .icon {
-			margin-right: 0.6em;
-		}
 	}
 
-	/* Variations
-	======================================== */
-	.ui.button, .ui.buttons {
-		/**
-		 * Sizes
-		 */
-		font-size: 1rem;
+	/**
+		* @name Button - Group Sizes
+		* @description Buttons groups can sized together.
+		*
+		* @section components.button.groups-sizes
+		*
+		*
+		* @markup
+		* 	<div class="mv">
+		* 		<div class="ui mini buttons">
+		* 			<div class="ui button">Left</div>
+		* 			<div class="ui button">Middle</div>
+		* 			<div class="ui button">Right</div>
+		* 		</div>
+		* 	</div>
+		* 	<div class="mv">
+		* 		<div class="ui tiny buttons">
+		* 			<div class="ui button">Left</div>
+		* 			<div class="ui button">Middle</div>
+		* 			<div class="ui button">Right</div>
+		* 		</div>
+		* 	</div>
+		* 	<div class="mv">
+		* 		<div class="ui small buttons">
+		* 			<div class="ui button">Left</div>
+		* 			<div class="ui button">Middle</div>
+		* 			<div class="ui button">Right</div>
+		* 		</div>
+		* 	</div>
+		* 	<div class="mv">
+		* 		<div class="ui large buttons">
+		* 			<div class="ui button">Left</div>
+		* 			<div class="ui button">Middle</div>
+		* 			<div class="ui button">Right</div>
+		* 		</div>
+		* 	</div>
+		* 	<div class="mv">
+		* 		<div class="ui big buttons">
+		* 			<div class="ui button">Left</div>
+		* 			<div class="ui button">Middle</div>
+		* 			<div class="ui button">Right</div>
+		* 		</div>
+		* 	</div>
+		* 	<div class="mv">
+		* 		<div class="ui huge buttons">
+		* 			<div class="ui button">Left</div>
+		* 			<div class="ui button">Middle</div>
+		* 			<div class="ui button">Right</div>
+		* 		</div>
+		* 	</div>
+		* 	<div class="mv">
+		* 		<div class="ui massive buttons">
+		* 			<div class="ui button">Left</div>
+		* 			<div class="ui button">Middle</div>
+		* 			<div class="ui button">Right</div>
+		* 		</div>
+		* 	</div>
+		*/
+	.ui.buttons {
 
 		&.mini,
 		&.mini .button {
 			font-size: 0.8rem;
 		}
-
 		&.tiny,
 		&.tiny .button {
 			font-size: 0.875em;
 		}
-
 		&.small,
 		&.small .button {
 			font-size: 0.875rem;
 		}
-
 		&.large,
 		&.large .button {
 			font-size: 1.125rem;
 		}
-
 		&.big,
 		&.big .button {
 			font-size: 1.25rem;
 		}
-
 		&.huge,
 		&.huge .button {
 			font-size: 1.375rem;
 		}
-
 		&.massive,
 		&.massive .button {
 			font-size: 1.5rem;
 			font-weight: bold;
-		}
-		/**
-		 * Toggle
-		 */
-		/* Toggle (Modifies active state to give affordances) */
-		&.toggle .active.button,
-		&.toggle.active {
-			background-color: palette(info, success) !important;
-
-			&:hover {
-				background-color: palette(info, success, 110) !important;
-			}
-		}
-		/**
-		 * Labeled Icon
-		 */
-		&.labeled.icon > .button > .icon,
-		&.labeled.icon > .icon {
-			background-color: rgba(0, 0, 0, 0.05);
 		}
 	}
 }
