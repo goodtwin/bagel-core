@@ -6,7 +6,8 @@
   $globalConfig: $defaultConfig!global;
 }
 
-@import "bagel-authoring/init";
+@import "bagel-functions/init.scss";
+@import "bagel-layout/init.scss";
 @import "bagel-theme-prototype/init";
 @import "src/init";
 @import "chrome/init";

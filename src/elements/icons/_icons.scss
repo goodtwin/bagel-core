@@ -1,57 +1,5 @@
 @mixin icons-src {
-
-  /*******************************
-               Icon
-  *******************************
-
-  i.icon {
-    display: inline-block;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-  }
-
-
-  /*--------------
-      Aliases
-  ---------------*/
-
-
-  /*--------------
-     Spacing Fix
-  ---------------*/
-
-  /*******************************
-               Types
-  *******************************/
-
-
-
-  /*******************************
-               States
-  *******************************/
-
-
-  /*******************************
-             Variations
-  *******************************/
-
-
-  /*-------------------
-           Link
-  --------------------*/
-
-
-  /*-------------------
-        Circular
-  --------------------*/
-
-
-  /*-------------------
-        Flipped
-  --------------------*/
-
+  // Flipped
   i.flipped.icon,
   i.horizontally.flipped.icon {
     transform: scale(-1, 1);
@@ -60,16 +8,12 @@
     transform: scale(1, -1);
   }
 
-  /*-------------------
-        Rotated
-  --------------------*/
-
+  // Rotated
   i.rotated.icon,
   i.right.rotated.icon,
   i.clockwise.rotated.icon {
     transform: rotate(90deg);
   }
-
   i.left.rotated.icon,
   i.counterclockwise.rotated.icon {
     transform: rotate(-90deg);

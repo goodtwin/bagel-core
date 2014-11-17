@@ -1,43 +1,172 @@
 @mixin sidebar-prototype {
-  /* Sidebar
-  ========================================
-  ======================================== */
-
+  /**
+    * @name Sidebar
+    * @description A sidebar is a content area off the viewport by default. A user action (e.g. a navigation icon being clicked) typically opens/closes the sidebar. Often the sidebar is combined with the menu component.
+    *
+    * @section components.sidebar.index
+    *
+    *
+    * @markup
+		* 	<div id="indexSidebar" class="ui left sidebar vertical menu">
+		* 	  <div class="header item">Left Sidebar menu</div>
+		* 	  <a class="item">One</a>
+		* 	  <a class="item">Two</a>
+		* 	  <a class="item">Three</a>
+		* 	</div>
+    */
   .ui.sidebar {
     transition:
       margin-left 0.3s ease,
       margin-top 0.3s ease;
   }
 
-  /* Variations
-  ======================================== */
-
   /**
-   * Formatted
-   */
-
-  .ui.styled.sidebar {
-    background-color: palette(neutral, light);
-    box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
-  }
-
-  /**
-   * Floating
-   */
-
+    * @name Sidebar - Floating
+    * @description A sidebar can appear to be floating.
+    *
+    * @section components.sidebar.floating
+    *
+    *
+    * @markup
+    * 	<div id="leftFloatingSidebar" class="ui left floating sidebar vertical menu">
+    * 	  <div class="header item">Left Sidebar menu</div>
+    * 	  <a class="item">One</a>
+    * 	  <a class="item">Two</a>
+    * 	  <a class="item">Three</a>
+    * 	</div>
+    * 	<div id="rightFloatingSidebar" class="ui right floating sidebar vertical menu">
+    * 	  <div class="header item">Right Sidebar menu</div>
+    * 	  <a class="item">One</a>
+    * 	  <a class="item">Two</a>
+    * 	  <a class="item">Three</a>
+    * 	</div>
+    * 	<div id="topFloatingSidebar" class="ui top floating sidebar menu">
+    * 	  <div class="header item">Top Sidebar menu</div>
+    * 	  <a class="item">One</a>
+    * 	  <a class="item">Two</a>
+    * 	  <a class="item">Three</a>
+    * 	</div>
+    * 	<div id="bottomFloatingSidebar" class="ui bottom floating sidebar menu">
+    * 	  <div class="header item">Bottom Sidebar menu</div>
+    * 	  <a class="item">One</a>
+    * 	  <a class="item">Two</a>
+    * 	  <a class="item">Three</a>
+    * 	</div>
+    */
   .ui.floating.sidebar {
     box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2);
   }
-
   .ui.right.floating.sidebar {
     box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.2);
   }
-
   .ui.top.floating.sidebar {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   }
-
   .ui.bottom.floating.sidebar {
     box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.2);
   }
+
+  /**
+    * @name Sidebar - Position
+    * @description A sidebar can be off any of the viewport edges.
+    *
+    * @section components.sidebar.position
+    *
+    *
+    * @markup
+    * 	<div id="leftSidebar" class="ui left sidebar vertical menu">
+    * 	  <div class="header item">Left Sidebar menu</div>
+    * 	  <a class="item">One</a>
+    * 	  <a class="item">Two</a>
+    * 	  <a class="item">Three</a>
+    * 	</div>
+    * 	<div id="rightSidebar" class="ui right sidebar vertical menu">
+    * 	  <div class="header item">Right Sidebar menu</div>
+    * 	  <a class="item">One</a>
+    * 	  <a class="item">Two</a>
+    * 	  <a class="item">Three</a>
+    * 	</div>
+    * 	<div id="topSidebar" class="ui top sidebar menu">
+    * 	  <div class="header item">Top Sidebar menu</div>
+    * 	  <a class="item">One</a>
+    * 	  <a class="item">Two</a>
+    * 	  <a class="item">Three</a>
+    * 	</div>
+    * 	<div id="bottomSidebar" class="ui bottom sidebar menu">
+    * 	  <div class="header item">Bottom Sidebar menu</div>
+    * 	  <a class="item">One</a>
+    * 	  <a class="item">Two</a>
+    * 	  <a class="item">Three</a>
+    * 	</div>
+    */
+
+  /**
+    * @name Sidebar - Sizes
+    * @description A sidebar can be a myriad of sizes
+    *
+    * @section components.sidebar.sizes
+    *
+    *
+    * @markup
+    * 	<div id="veryThinSidebar" class="ui very thin sidebar">
+		* 	  <div class="ui fluid vertical icon buttons">
+		* 	    <div class="ui facebook button">
+		* 	      <i class="facebook icon"></i>
+		* 	    </div>
+		* 	    <div class="ui twitter button">
+		* 	      <i class="twitter icon"></i>
+		* 	    </div>
+		* 	    <div class="ui google plus button">
+		* 	      <i class="google plus icon"></i>
+		* 	    </div>
+    *     </div>
+		* 	</div>
+    * 	<div id="thinSidebar" class="ui thin sidebar">
+		* 	  <h3 class="ui header">Share</h3>
+		* 	  <div class="ui fluid vertical labeled icon buttons">
+		* 	    <div class="ui facebook button">
+		* 	      <i class="facebook icon"></i>
+		* 	      Facebook
+		* 	    </div>
+		* 	    <div class="ui twitter button">
+		* 	      <i class="twitter icon"></i>
+		* 	      Twitter
+		* 	    </div>
+		* 	    <div class="ui google plus button">
+		* 	      <i class="google plus icon"></i>
+		* 	      Google
+		* 	    </div>
+		* 	  </div>
+    * 	</div>
+    * 	<div id="wideSidebar" class="ui wide sidebar">
+		* 		<h3 class="ui header">You Might Like</h3>
+		* 		<div class="ui fluid vertical menu">
+		* 		  <a class="item">
+		* 		    <i class="chat outline icon"></i>
+		* 		    More by this author
+		* 		  </a>
+		* 		  <a class="item">
+		* 		    <i class="text file icon"></i>
+		* 		    Suggested Articles
+		* 		  </a>
+		* 		</div>
+    * 	</div>
+    * 	<div id="veryWideSidebar" class="ui very wide sidebar">
+		* 		<h3 class="ui header">Contact Us</h3>
+		* 		<div class="ui form">
+		* 		  <div class="field">
+		* 		    <label>Name</label>
+		* 		    <div class="ui icon input">
+		* 		      <i class="user icon"></i>
+		* 		      <input type="text" data-placeholder="Name">
+		* 		    </div>
+		* 		  </div>
+		* 		  <div class="field">
+		* 		    <label>Message</label>
+		* 		    <textarea></textarea>
+		* 		  </div>
+		* 		  <div class="ui black fluid button">Submit</div>
+		* 		</div>
+    * 	</div>
+    */
 }

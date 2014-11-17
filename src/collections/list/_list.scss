@@ -1,0 +1,43 @@
+@mixin list-src {
+	/**
+		* @name List
+		* @description <ul>, <ol>, <li>
+		* @section components.list.index
+		*
+		*
+		* @markup
+		*   <ul class="ui list">
+		*    <li>ITEM</li>
+		*    <li>ITEM</li>
+		*    <li>ITEM</li>
+		*    <li>ITEM</li>
+		*   </ul>
+		*   <ol class="ui list">
+		*    <li>ITEM 1</li>
+		*    <li>ITEM 2</li>
+		*    <li>ITEM 3</li>
+		*    <li>ITEM 4</li>
+		*   </ol>
+		*
+		*/
+	%bare-list {
+		margin:  0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.ui.list {
+		list-style: default;
+
+		li {
+			> ul,
+			> ol {
+					margin-bottom: 0;
+			}
+		}
+
+		&.bare {
+			@extend %bare-list;
+		}
+	}
+}

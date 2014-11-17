@@ -1,11 +1,20 @@
 @mixin popup-prototype {
-	/* Popup
-	========================================
-	======================================== */
-
+	/**
+		* @name Popup
+		* @description A popup (tooltip) provides the user with contextual information about an element. You'll need to choose/write the appopriate JavaScript to show/hide tooltips.
+		*
+		* @section components.popup.index
+		*
+		*
+		* @markup
+		* 	<div class="position-containment pv">
+		*			<div class="ui sample popup">Hey There! Im A Popup!</div>
+		* 	</div>
+		*/
 	.ui.popup {
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		max-width: 250px;
+		margin: 0em 0em 0.75em;
 		background-color: palette(neutral, light);
 		padding: 0.8em 1.2em;
 		font-size: 0.875rem;
@@ -13,31 +22,60 @@
 		font-style: normal;
 		color: palette(neutral, dark);
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-	}
 
-	.ui.popup .header {
-		padding: 0em 0em 0.5em;
-		font-size: 1.125em;
-		line-height: 1.2;
-		font-weight: bold;
+		&.sample {
+			display: block !important;
+			left: 0;
+			right: auto;
+		}
+		&:before {
+			bottom: -0.45em;
+			margin-left: -0.4em;
+			width: 0.75em;
+			height: 0.75rem;
+			background-image: none;
+			background-color: palette(neutral, light);
+			transform: rotate(45deg);
+			box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+		}
 	}
-
-	.ui.popup:before {
-		width: 0.75em;
-		height: 0.75rem;
-		background-image: none;
-		background-color: palette(neutral, light);
-		transform: rotate(45deg);
-		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-	}
-
-	/* Types
-	======================================== */
 
 	/**
-	 * Spacing
-	 */
-
+		* @name Popup - Positions
+		* @description A popup can appear in many positions around an element
+		*
+		* @section components.popup.positions
+		*
+		*
+		* @markup
+		* 	<div class="position-containment mv pv">
+		*			<div class="ui sample popup">Hey There! Im A Popup!</div>
+		* 	</div>
+		* 	<div class="position-containment mv pv">
+		*			<div class="ui sample top center popup">Hey There! Im A Popup!</div>
+		* 	</div>
+		* 	<div class="position-containment mv pv">
+		*			<div class="ui sample top left popup">Hey There! Im A Popup!</div>
+		* 	</div>
+		* 	<div class="position-containment mv pv">
+		*			<div class="ui sample top right popup">Hey There! Im A Popup!</div>
+		* 	</div>
+		* 	<div class="position-containment mv pv">
+		*			<div class="ui sample bottom center popup">Hey There! Im A Popup!</div>
+		* 	</div>
+		* 	<div class="position-containment mv pv">
+		*			<div class="ui sample bottom left popup">Hey There! Im A Popup!</div>
+		* 	</div>
+		* 	<div class="position-containment mv pv">
+		*			<div class="ui sample bottom right popup">Hey There! Im A Popup!</div>
+		* 	</div>
+		* 	<div class="position-containment mv pv">
+		*			<div class="ui sample left center popup">Hey There! Im A Popup!</div>
+		* 	</div>
+		* 	<div class="position-containment mv pv">
+		*			<div class="ui sample right center popup">Hey There! Im A Popup!</div>
+		* 	</div>
+		*/
 	.ui.popup {
 		margin: 0em;
 	}
@@ -57,17 +95,13 @@
 		margin-left: -1.25em;
 	}
 
-	/**
-	 * Pointer
-	 */
-
-	/* Below */
+	// Pointer Position
+	// Below
 	.ui.bottom.center.popup:before {
 		margin-left: -0.4em;
 		top: -0.4em;
 		box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2);
 	}
-
 	.ui.bottom.left.popup {
 		margin-right: -2em;
 	}
@@ -77,7 +111,6 @@
 		margin-left: 0em;
 		box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2);
 	}
-
 	.ui.bottom.right.popup {
 		margin-left: -2em;
 	}
@@ -87,8 +120,7 @@
 		margin-left: 0em;
 		box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2);
 	}
-
-	/* Above */
+	// Above
 	.ui.top.center.popup:before {
 		bottom: -0.4em;
 		margin-left: -0.4em;
@@ -109,52 +141,16 @@
 		left: 1em;
 		margin-left: 0em;
 	}
-
-	/* Left Center */
+	// Left Center
 	.ui.left.center.popup:before {
 		right: -0.35em;
 		margin-top: -0.4em;
 		box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
 	}
-
-	/* Right Center */
+	// Right Center
 	.ui.right.center.popup:before {
-		left: -0.35em;
+		left: -0;
 		margin-top: -0.4em;
 		box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
-	}
-
-	/* Variations
-	======================================== */
-
-	/**
-	 * Size
-	 */
-
-	.ui.small.popup {
-		font-size: 0.75rem;
-	}
-	.ui.large.popup {
-		font-size: 1rem;
-	}
-
-	/**
-	 * Colors
-	 */
-
-	/* Inverted colors  */
-	.ui.inverted.popup {
-		background-color: palette(neutral, dark);
-		border: none;
-		color: palette(neutral, light);
-		box-shadow: none;
-	}
-	.ui.inverted.popup .header {
-		background-color: palette(neutral, dark, 125);
-		color: palette(neutral, light);
-	}
-	.ui.inverted.popup:before {
-		background-color: palette(neutral, dark);
-		box-shadow: none;
 	}
 }

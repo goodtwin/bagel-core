@@ -1,0 +1,106 @@
+@mixin badge-prototype {
+	.ui.badge {
+		margin: -0.25em 0.25em 0em;
+		background-color: palette(neutral, light);
+		border-color: palette(neutral, light);
+		padding: 0.5em 0.8em;
+		color: palette(neutral, dark);
+		text-transform: uppercase;
+		font-weight: normal;
+		transition: background 0.1s linear;
+
+		a {
+			color: inherit;
+			opacity: 0.8;
+			transition: 0.2s opacity ease;
+		}
+		.detail {
+			margin-left: 0.5em;
+			font-weight: bold;
+			opacity: 0.8;
+		}
+		.delete.icon {
+			margin: 0em 0em 0em 0.5em;
+			opacity: 0.7;
+			transition: background 0.1s linear;
+		}
+	}
+
+	// Coupling
+	// Padding on next content after a badge
+	.ui.segment > .attached.badge:first-child + * {
+		margin-top: 2.5em;
+	}
+	.ui.segment > .bottom.attached.badge:first-child ~ :last-child {
+		margin-bottom: 2.5em;
+	}
+
+	// States
+	.ui.badge.disabled {
+		opacity: 0.5;
+	}
+	a.ui.badges .badge:hover,
+	a.ui.badge:hover {
+		background-color: palette(neutral, light);
+		border-color: palette(neutral, light);
+		color: palette(neutral, dark);
+
+		&:before {
+			background-color: palette(neutral, light);
+			color: palette(neutral, dark);
+		}
+	}
+
+	.ui.corner.badge {
+		width: 3em;
+		height: 3em;
+		transition: color 0.2s ease;
+
+		&:after {
+			border-right: 3em solid transparent;
+			border-bottom: 3em solid transparent;
+			border-right-color: inherit;
+			transition: border-color 0.2s ease;
+		}
+		.icon {
+			font-size: 0.875em;
+			margin: 0.5em 0em 0em 1.25em;
+		}
+		.text {
+			font-weight: bold;
+			margin: 0.5em 0em 0em 1em;
+			width: 2.5em;
+			font-size: 0.875em;
+			transform: rotate(45deg);
+		}
+	}
+
+	.ui.left.corner.badge:after {
+		border-top: 3em solid transparent;
+		border-right: 3em solid transparent;
+		border-top-color: inherit;
+	}
+	.ui.left.corner.badge .icon {
+		margin: 0.5em 0em 0em -1em;
+	}
+	.ui.left.corner.badge .text {
+		margin: 0.5em 0em 0em -1em;
+		transform: rotate(-45deg);
+	}
+	.ui.corner.badge:hover {
+	background-color: transparent;
+	}
+
+	.ui.circular.badges .badge,
+	.ui.circular.badge {
+		min-height: 1em;
+		max-height: 2em;
+		padding: 0.5em !important;
+		line-height: 1em;
+	}
+	.ui.floating.badge {
+		top: -1em;
+		margin: 0em 0em 0em -1.5em !important;
+	}
+
+}

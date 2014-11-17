@@ -1,0 +1,191 @@
+@mixin badge-src {
+  /**
+    * @name Badge
+    * @description A badge gives extra context to, or a description of, other content.
+    *
+    * @section components.badge.index
+    *
+    *
+    * @markup
+    * 	<div class="ui badge">
+    * 		<i class="photo icon"></i> 11
+    * 	</div>
+    * 	<div class="ui badge">
+    * 		Photos
+    * 		<a href="#">
+    * 			<i class="photo icon"></i> 11
+    * 		</a>
+    * 	</div>
+    * 	<div class="ui badge">
+    * 		Some Tag
+    * 		<i class="delete icon"></i>
+    * 	</div>
+    */
+  .ui.badge {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .ui.badge:first-child {
+    margin-left: 0em;
+  }
+  .ui.badge:last-child {
+    margin-right: 0em;
+  }
+
+  a.ui.badge {
+    cursor: pointer;
+  }
+  .ui.badge a {
+    cursor: pointer;
+  }
+  .ui.badge a:hover {
+    opacity: 1;
+  }
+  .ui.badge .detail {
+    display: inline-block;
+  }
+  .ui.badge .icon {
+    width: auto;
+  }
+  .ui.badge .delete.icon {
+    cursor: pointer;
+  }
+  .ui.badge .delete.icon:hover {
+    opacity: 1;
+  }
+
+  // Coupling
+  .ui.segment > .bottom.attached.badge:first-child ~ :last-child {
+    margin-top: 0em;
+  }
+
+
+  // States
+  .ui.badges.visible .badge,
+  .ui.badge.visible {
+    display: inline-block !important;
+  }
+  .ui.badges.hidden .badge,
+  .ui.badge.hidden {
+    display: none !important;
+  }
+
+  /**
+    * @name Badge - Corner
+    * @description A badge can live on the corner of a container.
+    *
+    * @section components.badge.corner
+    *
+    *
+    * @markup
+    * 	<div class="position-containment">
+    * 		<a class="ui left corner badge">
+    * 			<div class="text">New</div>
+    * 		</a>
+    * 		<img src="http://place-hoff.com/500/400">
+    * 		</div>
+    * 	</div>
+    */
+  .ui.corner.badge {
+    background-color: transparent;
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    z-index: 10;
+    margin: 0em;
+    padding: 0em;
+    text-align: center;
+  }
+  .ui.corner.badge:after {
+    position: absolute;
+    content: "";
+    right: 0em;
+    top: 0em;
+    z-index: -1;
+    width: 0em;
+    height: 0em;
+    border-top: 0em solid transparent;
+    border-left: 0em solid transparent;
+  }
+
+  .ui.corner.badge .text {
+    display: inline-block;
+    text-align: center;
+  }
+
+  // Coupling
+  .ui.rounded.image > .ui.corner.badge,
+  .ui.input > .ui.corner.badge,
+  .ui.segment > .ui.corner.badge {
+    overflow: hidden;
+  }
+  .ui.segment > .ui.corner.badge {
+    top: -1px;
+    right: -1px;
+  }
+  .ui.segment > .ui.left.corner.badge {
+    right: auto;
+    left: -1px;
+  }
+  .ui.input > .ui.corner.badge{
+    top: 1px;
+    right: 1px;
+  }
+  .ui.input > .ui.right.corner.badge {
+    right: auto;
+    left: 1px;
+  }
+  .ui.left.corner.badge,
+  .ui.left.corner.badge:after {
+    right: auto;
+    left: 0em;
+  }
+  .ui.left.corner.badge:after {
+    border-bottom: 0em solid transparent;
+    border-left: 0em solid transparent;
+  }
+
+  /**
+    * @name Badge - Circular
+    * @description A circular badge can be appear within a circle.
+    *
+    * @section components.badge.circular
+    *
+    *
+    * @markup
+		* 	<a class="ui circular badge">
+		* 	  12
+		* 	</a>
+		* 	<a class="ui circular badge">
+		* 	  6
+		* 	</a>
+		* 	<a class="ui circular badge">
+		* 	  64
+		* 	</a>
+    */
+  .ui.circular.badges .badge,
+  .ui.circular.badge {
+    text-align: center;
+    border-radius: 500rem;
+  }
+
+  /**
+    * @name Badge - Floating
+    * @description A badge can be floated over content.
+    *
+    * @section components.badge.floating
+    *
+    *
+    * @markup
+		* 	 <a class="position-containment p item">
+		* 	   <i class="icon photos"></i> Photos
+		* 	   <div class="ui floating badge">27</div>
+		* 	 </a>
+    */
+  .ui.floating.badge {
+    position: absolute;
+    z-index: 100;
+    left: 100%;
+  }
+}

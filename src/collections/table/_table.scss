@@ -1,78 +1,83 @@
 @mixin table-src {
-  /* Table
-  ========================================
-  ======================================== */
-
-  /* Prototype
-  ======================================== */
+  /**
+    * @name Table
+    * @description Responsive tables
+    *
+    * @section components.table.-
+    *
+    *
+    * @markup
+    * <table class="ui table segment">
+    * 	<thead>
+    * 		<th>Name</th>
+    * 		<th>Status</th>
+    * 		<th>Notes</th>
+    * 	</thead>
+    * 	<tbody>
+    * 		<tr>
+    * 			<td>John</td>
+    * 			<td>Approved</td>
+    * 			<td>None</td>
+    * 		</tr>
+    * 		<tr>
+    * 			<td>Jamie</td>
+    * 			<td>Approved</td>
+    * 			<td>Requires call</td>
+    * 		</tr>
+    * 		<tr>
+    * 			<td>Jill</td>
+    * 			<td>Denied</td>
+    * 			<td>None</td>
+    * 		</tr>
+    * 	</tbody>
+    * 	<tfoot>
+    * 		<th colspan="3">
+    * 			<div class="ui labeled icon button"><i class="user icon"></i> Add User</div>
+    * 		</th>
+    * 	</tfoot>
+    * </table>
+    */
   .ui.table {
     width: 100%;
     border-collapse: collapse;
   }
 
-  /* Table Content */
   .ui.table th,
   .ui.table tr,
   .ui.table td {
     border-collapse: collapse;
   }
-
-  /* Headers */
   .ui.table th {
     cursor: auto;
     vertical-align: middle;
   }
-
-  /* Table Cells */
   .ui.table td {
     vertical-align: middle;
   }
 
-  /* Icons */
-  .ui.table > .icon {
-    vertical-align: baseline;
-  }
-  .ui.table > .icon:only-child {
-    margin: 0em;
-  }
-
-  /* Table Segment */
-  .ui.table.segment:after {
-    display: none;
-  }
-  .ui.table.segment.stacked:after {
-    display: block;
-  }
-
-
-  /* Responsive */
-  @media only screen and (max-width : 768px) {
-    .ui.table {
+  @include media-query(palm) {
+    .ui.responsive.table {
       display: block;
       padding: 0em;
     }
-    .ui.table thead,
-    .ui.table tfoot {
+    .ui.responsive.table thead,
+    .ui.responsive.table tfoot {
       display: none;
     }
-    .ui.table tbody {
+    .ui.responsive.table tbody {
       display: block;
     }
-    .ui.table tr {
+    .ui.responsive.table tr {
       display: block;
     }
 
-    .ui.table tr > td {
+    .ui.responsive.table tr > td {
       width: 100% !important;
       display: block;
       border: none !important;
     }
   }
 
-  /* Variations
-  ======================================== */
-
-  /* Column Count */
   .ui.two.column.table td {
     width: percentage(1/2);
   }
@@ -119,96 +124,88 @@
     width: percentage(1/16);
   }
 
-  /* Column Width */
-  .ui.table th.one.wide,
-  .ui.table td.one.wide {
-    width: 6.25%;
-  }
-  .ui.table th.two.wide,
-  .ui.table td.two.wide {
-    width: percentage(1/8);
-  }
-  .ui.table th.three.wide,
-  .ui.table td.three.wide {
-    width: 18.75%;
-  }
-  .ui.table th.four.wide,
-  .ui.table td.four.wide {
-    width: percentage(1/4);
-  }
-  .ui.table th.five.wide,
-  .ui.table td.five.wide {
-    width: 31.25%;
-  }
-  .ui.table th.six.wide,
-  .ui.table td.six.wide {
-    width: percentage(3/8);
-  }
-  .ui.table th.seven.wide,
-  .ui.table td.seven.wide {
-    width: 43.75%;
-  }
-  .ui.table th.eight.wide,
-  .ui.table td.eight.wide {
-    width: percentage(1/2);
-  }
-  .ui.table th.nine.wide,
-  .ui.table td.nine.wide {
-    width: 56.25%;
-  }
-  .ui.table th.ten.wide,
-  .ui.table td.ten.wide {
-    width: percentage(5/8);
-  }
-  .ui.table th.eleven.wide,
-  .ui.table td.eleven.wide {
-    width: 68.75%;
-  }
-  .ui.table th.twelve.wide,
-  .ui.table td.twelve.wide {
-    width: percentage(3/4);
-  }
-  .ui.table th.thirteen.wide,
-  .ui.table td.thirteen.wide {
-    width: 81.25%;
-  }
-  .ui.table th.fourteen.wide,
-  .ui.table td.fourteen.wide {
-    width: percentage(6/8);
-  }
-  .ui.table th.fifteen.wide,
-  .ui.table td.fifteen.wide {
-    width: 93.75%;
-  }
-  .ui.table th.sixteen.wide,
-  .ui.table td.sixteen.wide {
-    width: percentage(1/1);
-  }
-
-
   /**
-   * Celled
-   */
-
-  .ui.celled.table tbody tr,
-  .ui.celled.table tfoot tr {
-    border: none;
-  }
-
-  /* Coupling with segment */
-  .ui.celled.table.segment th:first-child,
-  .ui.celled.table.segment td:first-child {
-    border-left: none;
-  }
-  .ui.celled.table.segment th:last-child,
-  .ui.celled.table.segment td:last-child {
-    border-right: none;
+    * @name Table - Celled
+    * @description Tables can be celled
+    *
+    * @section components.table.celled
+    *
+    *
+    * @markup
+    * 	<table class="ui celled table">
+    * 		<thead>
+    * 			<th>Name</th>
+    * 			<th>Status</th>
+    * 			<th>Notes</th>
+    * 		</thead>
+    * 		<tbody>
+    * 			<tr>
+    * 				<td>John</td>
+    * 				<td>No Action</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jamie</td>
+    * 				<td class="positive">Approved</td>
+    * 				<td class="warning">Requires call</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jill</td>
+    * 				<td class="negative">Denied</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 		</tbody>
+    * 		<tfoot>
+    * 			<th>3 People</th>
+    * 			<th>2 Approved</th>
+    * 			<th></th>
+    * 		</tfoot>
+    * 	</table>
+    */
+  .ui.celled.table td,
+  .ui.celled.table th {
+    border-width: 1px;
+    border-style: solid;
   }
 
   /**
-   * Sortable
-   */
-
+    * @name Table - Sortable
+    * @description Tables can be sortable
+    *
+    * @section components.table.sortable
+    *
+    *
+    * @markup
+    * 	<table class="ui sortable table segment">
+    * 		<thead>
+    * 			<th>Name</th>
+    * 			<th>Status</th>
+    * 			<th>Notes</th>
+    * 		</thead>
+    * 		<tbody>
+    * 			<tr>
+    * 				<td>John</td>
+    * 				<td>No Action</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jamie</td>
+    * 				<td class="positive">Approved</td>
+    * 				<td class="warning">Requires call</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jill</td>
+    * 				<td class="negative">Denied</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 		</tbody>
+    * 		<tfoot>
+    * 			<th>3 People</th>
+    * 			<th>2 Approved</th>
+    * 			<th></th>
+    * 		</tfoot>
+    * 	</table>
+    */
   .ui.sortable.table thead th {
     cursor: pointer;
     white-space: nowrap;
@@ -219,17 +216,43 @@
   }
 
   /**
-   * Collapsing
-   */
-
-  .ui.collapsing.table {
-    width: auto;
-  }
-
-  /**
-   * Basic
-   */
-
+    * @name Table - Basic
+    * @description Tables can be basic
+    *
+    * @section components.table.basic
+    *
+    *
+    * @markup
+    * 	<table class="ui basic table segment">
+    * 		<thead>
+    * 			<th>Name</th>
+    * 			<th>Status</th>
+    * 			<th>Notes</th>
+    * 		</thead>
+    * 		<tbody>
+    * 			<tr>
+    * 				<td>John</td>
+    * 				<td>No Action</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jamie</td>
+    * 				<td class="positive">Approved</td>
+    * 				<td class="warning">Requires call</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jill</td>
+    * 				<td class="negative">Denied</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 		</tbody>
+    * 		<tfoot>
+    * 			<th>3 People</th>
+    * 			<th>2 Approved</th>
+    * 			<th></th>
+    * 		</tfoot>
+    * 	</table>
+    */
   .ui.basic.table th {
     background-color: transparent;
   }

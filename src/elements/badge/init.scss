@@ -1,0 +1,5 @@
+@import "badge";
+
+@if use(badge) {
+  @include badge-src;
+}

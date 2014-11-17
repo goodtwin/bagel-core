@@ -1,8 +1,16 @@
 @mixin button-src {
-  /* Button
-  ========================================
-  ======================================== */
-
+  /**
+    * @name Button
+    * @description A button is a clickable element, typically with hover and pressed states.
+    *
+    * @section components.button.index
+    *
+    *
+    * @markup
+    * 	<div class="ui button">
+    * 		Follow
+    * 	</div>
+    */
   .ui.button {
     cursor: pointer;
     display: inline-block;
@@ -17,127 +25,22 @@
     user-select: none;
   }
 
-  /* Types
-  ======================================== */
-
   /**
-   * Animated
-   */
-
-  .ui.animated.button {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .ui.animated.button .visible.content {
-    position: relative;
-  }
-  .ui.animated.button .hidden.content {
-    position: absolute;
-    width: 100%;
-  }
-
-  /* Horizontal */
-  .ui.animated.button .visible.content,
-  .ui.animated.button .hidden.content {
-    transition: right 0.3s ease 0s;
-  }
-  .ui.animated.button .visible.content {
-    left: auto;
-    right: 0%;
-  }
-  .ui.animated.button .hidden.content {
-    top: 50%;
-    left: auto;
-    right: -100%;
-    margin-top: -0.55em;
-  }
-  .ui.animated.button:hover .visible.content {
-    left: auto;
-    right: 200%;
-  }
-  .ui.animated.button:hover .hidden.content {
-    left: auto;
-    right: 0%;
-  }
-
-  /* Vertical */
-  .ui.vertical.animated.button .visible.content,
-  .ui.vertical.animated.button .hidden.content {
-    transition: top 0.3s ease 0s, transform 0.3s ease 0s;
-  }
-  .ui.vertical.animated.button .visible.content {
-    transform: translateY(0%);
-    right: auto;
-  }
-  .ui.vertical.animated.button .hidden.content {
-    top: -100%;
-    left: 0%;
-    right: auto;
-  }
-  .ui.vertical.animated.button:hover .visible.content {
-    transform: translateY(200%);
-    right: auto;
-  }
-  .ui.vertical.animated.button:hover .hidden.content {
-    top: 50%;
-    right: auto;
-  }
-
-  /* Fade */
-  .ui.fade.animated.button .visible.content,
-  .ui.fade.animated.button .hidden.content {
-    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-  }
-  .ui.fade.animated.button .visible.content {
-    left: auto;
-    right: auto;
-    opacity: 1;
-    transform: scale(1);
-  }
-  .ui.fade.animated.button .hidden.content {
-    opacity: 0;
-    left: 0%;
-    right: auto;
-    transform: scale(1.2);
-  }
-  .ui.fade.animated.button:hover .visible.content {
-    left: auto;
-    right: auto;
-    opacity: 0;
-    transform: scale(0.7);
-  }
-  .ui.fade.animated.button:hover .hidden.content {
-    left: 0%;
-    right: auto;
-    opacity: 1;
-    transform: scale(1);
-  }
-
-
-  /* Variations
-  ======================================== */
-
-
-  /**
-   * Floated
-   */
-
-  .ui.left.floated.buttons,
-  .ui.left.floated.button {
-    float: left;
-    margin-right: 0.25em;
-  }
-  .ui.right.floated.buttons,
-  .ui.right.floated.button {
-    float: right;
-    margin-left: 0.25em;
-  }
-
-  /**
-   * Icon Only
-   */
-
+    * @name Button - Icon
+    * @description A button can include an icon.
+    *
+    * @section components.button.icon
+    *
+    *
+    * @markup
+    * 	<div class="ui icon button">
+    * 		<i class="photo icon"></i>
+    * 	</div>
+    * 	<div class="ui labeled icon button">
+    * 		<i class="photo icon"></i>
+    * 		My Photos
+    * 	</div>
+    */
   .ui.icon.buttons .button,
   .ui.icon.button {
     padding: 0.8em;
@@ -147,31 +50,12 @@
     margin: 0em;
     vertical-align: top;
   }
-
-
-
-  /**
-   * Basic
-   */
-
-  .ui.basic.buttons .button,
-  .ui.basic.button {
-    background-color: transparent !important;
-    text-transform: none;
-  }
-
-
-  /**
-   * Labeled Icon
-   */
-
   .ui.labeled.icon.buttons .button,
   .ui.labeled.icon.button {
     position: relative;
     padding-left: 4em !important;
     padding-right: 1.4em !important;
   }
-
   .ui.labeled.icon.buttons > .button > .icon,
   .ui.labeled.icon.button > .icon {
     position: absolute;
@@ -183,7 +67,6 @@
     text-align: center;
     line-height: 1;
   }
-
   .ui.right.labeled.icon.button {
     padding-left: 1.4em !important;
     padding-right: 4em !important;
@@ -199,22 +82,7 @@
     right: 0em;
   }
 
-
-
-
-  /**
-   * Circular
-   */
-
-  .ui.circular.button {
-    border-radius: 10em;
-  }
-
-
-  /**
-   * Attached
-   */
-
+  // Attached
   .ui.attached.button {
        display: block;
 
@@ -235,12 +103,9 @@
   .attached.ui.buttons {
     margin: 0px;
 
-      /* Bottom Side */
       &.bottom {
         margin-top: -1px;
       }
-
-      /* Left Side */
       &.left {
           margin-left: -1px;
 
@@ -249,8 +114,6 @@
             margin-left: -1px;
           }
       }
-
-      /* Right Side */
       &.right,
       &.right .button {
           margin-right: -1px;
@@ -263,9 +126,32 @@
       }
   }
 
-
-
-  /* Fluid */
+  /**
+    * @name Button - Fluid Groups
+    * @description Buttons can take up the size of their container with each button taking a percentage of the width (from 2 to 12 buttons).
+    *
+    * @section components.button.groups-fluid
+    *
+    *
+    * @markup
+    * 	<div class="mv">
+    * 		<div class="ui three fluid buttons">
+    * 			<div class="ui button">One</div>
+    * 			<div class="ui button">Two</div>
+    * 			<div class="ui button">Three</div>
+    * 		</div>
+    * 	</div>
+    * 	<div class="mv">
+    * 		<div class="ui six fluid buttons">
+    * 			<div class="ui button">One</div>
+    * 			<div class="ui button">Two</div>
+    * 			<div class="ui button">Three</div>
+    * 			<div class="ui button">Four</div>
+    * 			<div class="ui button">Five</div>
+    * 			<div class="ui button">Six</div>
+    * 		</div>
+    * 	</div>
+    */
   .ui.fluid.buttons,
   .ui.button.fluid,
   .ui.fluid.buttons > .button {
@@ -318,14 +204,11 @@
         width: percentage(1/12);
       }
   }
-
-  /* Fluid Vertical Buttons */
   .ui.fluid.vertical.buttons,
   .ui.fluid.vertical.buttons > .button {
     display: block;
     width: auto;
   }
-
   .ui.\32.vertical.buttons > .button,
   .ui.two.vertical.buttons > .button {
     height: 50%;
@@ -371,10 +254,29 @@
     height: 8.3333%;
   }
 
-
-  /* Groups
-  ======================================== */
-
+  /**
+    * @name Button - Groups
+    * @description Buttons are often grouped together with a unifying structure. Buttons can also be grouped to be layed out vertically.
+    *
+    * @section components.button.groups
+    *
+    *
+    * @markup
+    * 	<div class="mv">
+    * 		<div class="ui buttons">
+    * 			<div class="ui button">Left</div>
+    * 			<div class="ui button">Middle</div>
+    * 			<div class="ui button">Right</div>
+    * 		</div>
+    * 	</div>
+    * 	<div class="mv">
+    * 		<div class="ui vertical buttons">
+    * 			<div class="ui button">Top</div>
+    * 			<div class="ui button">Middle</div>
+    * 			<div class="ui button">Bottom</div>
+    * 		</div>
+    * 	</div>
+    */
   .ui.buttons {
       display: inline-block;
       vertical-align: middle;
@@ -386,7 +288,6 @@
         clear: both;
         visibility: hidden;
       }
-
       .button {
           float: left;
 
@@ -394,8 +295,6 @@
               margin-left: 0em;
           }
       }
-
-      /* Vertical  Style */
       &.vertical {
         display: inline-block;
 

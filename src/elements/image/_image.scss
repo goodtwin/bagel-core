@@ -1,8 +1,19 @@
 @mixin image-src {
-  /* Image
-  ========================================
-  ======================================== */
-
+  /**
+    * @name Image
+    * @description The image class helps standardize the look and feel of images throughout the web experience. The image class can be set on a container of the img tag, or on the img tag itself.
+    *
+    * @section components.images.index
+    *
+    *
+    * @markup
+    *   <div class="mv pv position-containment">
+    *     <div class="ui image">
+    *       <img src="http://placekitten.com/1000/1000" alt="test image" />
+    *     </div>
+    *   </div>
+    *   <img src="http://placekitten.com/1000/1000" alt="test image" class="ui image" />
+    */
   .ui.image {
     position: relative;
     display: inline-block;
@@ -18,68 +29,143 @@
     max-width: 100%;
     height: auto;
   }
-
-  /* States
-  ======================================== */
-
-
   .ui.disabled.image {
     cursor: default;
   }
-
-
-  /* Variations
-  ======================================== */
-
   /**
-   * Fluid
-   */
-
-  .ui.fluid.images,
-  .ui.fluid.image,
-  .ui.fluid.images img,
-  .ui.fluid.image img {
-    display: block;
-    width: 100%;
+    * @name Image - Variations
+    * @description Image supports specific styles and structure for avatars, rounded, and circular images.
+    *
+    * @section components.images.variations
+    *
+    *
+    * @markup
+    *   <div class="ui avatar image">
+    *     <img src="http://lorempixel.com/400/400/" alt="test image" />
+    *   </div>
+    *   <div class="ui rounded image">
+    *     <img src="http://lorempixel.com/400/400/" alt="test image" />
+    *   </div>
+    *   </div>
+    *     <div class="ui circular image">
+    *       <img src="http://lorempixel.com/400/400/" alt="test image" />
+    *     </div>
+    *   </div>
+    */
+  .ui.rounded.images .image,
+  .ui.rounded.images img,
+  .ui.rounded.image img,
+  .ui.rounded.image {
+    border-radius: 0.3125em;
   }
-
-
-  /**
-   * Avatar
-   */
-
+  .ui.circular.images .image,
+  .ui.circular.images img,
+  .ui.circular.image img,
+  .ui.circular.image {
+    border-radius: 500rem;
+  }
   .ui.avatar.images .image,
   .ui.avatar.images img,
   .ui.avatar.image img,
   .ui.avatar.image {
-      display: inline-block;
+    display: inline-block;
+    margin-right: 0.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 500rem;
   }
-
-
-
   /**
-   * Floated
-   */
-
-  .ui.floated.image,
-  .ui.floated.images {
-    float: left;
-  }
-  .ui.right.floated.images,
-  .ui.right.floated.image {
-    float: right;
-  }
-
-
-  /* Groups
-  ======================================== */
-
+    * @name Image - Groups
+    * @description Images can tie multiple images together.
+    *
+    * @section components.images.groups
+    *
+    *
+    * @markup
+    *   <div class="mv pv position-containment">
+    *     <div class="ui images">
+    *       <img src="http://lorempixel.com/400/400/" alt="test image" class="image" />
+    *       <img src="http://lorempixel.com/400/400/" alt="test image" class="image" />
+    *       <img src="http://lorempixel.com/400/400/" alt="test image" class="image" />
+    *     </div>
+    *   </div>
+    */
   .ui.images {
     font-size: 0em;
   }
-
   .ui.images .image,
   .ui.images img {
     display: inline-block;
+  }
+  .ui.images {
+    margin: 0em -0.25rem 0rem;
+  }
+  .ui.images .image,
+  .ui.images img {
+    margin: 0em 0.25em 0.5em;
+  }
+
+  /**
+    * @name Image - Sizes
+    * @description Images can be forced to a size
+    *
+    * @section components.images.sizes
+    *
+    *
+    * @markup
+    *   <div class="ui tiny image">
+    *     <img src="http://placekitten.com/1000/1000" alt="test image" />
+    *   </div>
+    *   <div class="ui mini image">
+    *     <img src="http://placekitten.com/1000/1000" alt="test image" />
+    *   </div>
+    *   <div class="ui small image">
+    *     <img src="http://placekitten.com/1000/1000" alt="test image" />
+    *   </div>
+    *   <div class="ui medium image">
+    *     <img src="http://placekitten.com/1000/1000" alt="test image" />
+    *   </div>
+    *   <div class="ui large image">
+    *     <img src="http://placekitten.com/1000/1000" alt="test image" />
+    *   </div>
+    *   <div class="ui huge image">
+    *     <img src="http://placekitten.com/1000/1000" alt="test image" />
+    *   </div>
+    */
+  .ui.tiny.images .image,
+  .ui.tiny.images img,
+  .ui.tiny.image {
+    width: 20px;
+    font-size: 0.7rem;
+  }
+  .ui.mini.images .image,
+  .ui.mini.images img,
+  .ui.mini.image {
+    width: 35px;
+    font-size: 0.8rem;
+  }
+  .ui.small.images .image,
+  .ui.small.images img,
+  .ui.small.image {
+    width: 80px;
+    font-size: 0.9rem;
+  }
+  .ui.medium.images .image,
+  .ui.medium.images img,
+  .ui.medium.image {
+    width: 300px;
+    font-size: 1rem;
+  }
+  .ui.large.images .image,
+  .ui.large.images img,
+  .ui.large.image {
+    width: 450px;
+    font-size: 1.1rem;
+  }
+  .ui.huge.images .image,
+  .ui.huge.images img,
+  .ui.huge.image {
+    width: 600px;
+    font-size: 1.2rem;
   }
 }

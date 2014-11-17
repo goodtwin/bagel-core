@@ -8,36 +8,10 @@
     height: auto;
   }
 
-  .ui.message:first-child {
-    margin-top: 0em;
-  }
-  .ui.message:last-child {
-    margin-bottom: 0em;
-  }
-
 
   /**
    * Content
    */
-
-  /* block with headers */
-  .ui.message .header {
-    margin: 0em;
-  }
-
-  /* block with paragraphs */
-  .ui.message p:first-child {
-    margin-top: 0em;
-  }
-  .ui.message p:last-child {
-    margin-bottom: 0em;
-  }
-  .ui.message > :first-child {
-    margin-top: 0em;
-  }
-  .ui.message > :last-child {
-    margin-bottom: 0em;
-  }
 
   /* block with child list */
   .ui.message ul.list li {
@@ -48,17 +22,11 @@
     height: 100%;
     vertical-align: baseline;
   }
-  .ui.message ul.list li:first-child {
-    margin-top: 0em;
-  }
 
   /* dismissable block */
   .ui.message > .close.icon {
     cursor: pointer;
     position: absolute;
-  }
-  .ui.message > .close.icon:hover {
-    opacity: 1;
   }
 
 

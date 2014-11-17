@@ -1,9 +1,8 @@
 @mixin menu-styleguide {
   /**
-   * Inverted Menu for Styleguide
+   * Menu for Styleguide
    */
-
-  .ui.inverted.menu {
+  .ui.menu {
     background-color: palette(neutral, dark);
     box-shadow: none;
 

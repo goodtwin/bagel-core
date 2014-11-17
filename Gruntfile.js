@@ -17,29 +17,6 @@ module.exports = function (grunt) {
   grunt.initConfig({
     globalConfig: globalConfig,
     pkg: grunt.file.readJSON('./package.json'),
-    assemble : {
-      docs: {
-        options: {
-          assets: '<%= globalConfig.docs  %>/assets',
-          flatten: false,
-          partials: ['<%= globalConfig.docs  %>/partials/*.hbs'],
-          layout: '<%= globalConfig.docs  %>/layouts/default.hbs',
-          data: ['<%= globalConfig.docs  %>/data/*.{json,yml}','config.{json,yml}']
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= globalConfig.styleguide  %>',
-          src: ['**/*.hbs'],
-          dest: '<%= globalConfig.dist.docs  %>'
-        },
-        {
-          expand: true,
-          src: ['**/node_modules/bagel-*/guide/**/*.hbs'],
-          flatten: true,
-          dest: '<%= globalConfig.dist.docs  %>'
-        }]
-      }
-    },
     clean: {
       docs: {
         files : [
@@ -70,12 +47,7 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
-        loadPath: ['./', 'node_modules/', 'node_modules/bagel-authoring/node_modules/']
-      },
-      styleguide: {
-        files : {
-          '<%= globalConfig.dist.docs  %>/stylesheets/styleguide.css': '<%= globalConfig.styleguide  %>/guide.scss'
-        }
+        loadPath: ['./']
       },
       dist: {
         files : {
@@ -83,6 +55,17 @@ module.exports = function (grunt) {
         }
       }
     },
+    bagel_sass_path : {
+			gt: {
+				options: {
+					chrome: [
+            './',
+					  'src/',
+					  'chrome/'
+					]
+				}
+			}
+		},
     shared_config: {
       style: {
         options: {
@@ -122,9 +105,19 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      hbs: {
-        files: ['**/*.hbs'],
-        tasks: ['assemble:docs']
+      css: {
+        files: ['chrome/**/*.scss', 'src/**/*.scss'],
+        tasks: ['build']
+      }
+    },
+    bagel_pattern_lib: {
+      docs: {
+        files: {
+          'dist/docs/': 'dist/style/*.css'
+        },
+        options: {
+          css_include: 'dist/style/style.css'
+        }
       }
     }
   });
@@ -132,23 +125,9 @@ module.exports = function (grunt) {
 require('load-grunt-tasks')(grunt);
 grunt.loadNpmTasks('assemble');
 
-grunt.registerTask('bagel:dirs',
-  'used to create an array of bagel paths for use in sass pathing',
-  function(){
-    var loadPaths = grunt.file.expand({}, [
-      './',
-      'node_modules/',
-      '**/node_modules/bagel-*/',
-      '**/node_modules/bagel-*/node_modules/'
-    ]);
-    grunt.log.write(loadPaths.join(", "));
-    grunt.config.set('sass.options.loadPath', loadPaths);
-
-  });
-
 grunt.registerTask('default', ['build']);
-grunt.registerTask('dist', ['sass:dist', 'myth:dist']);
-grunt.registerTask('docs', ['copy:docs', 'sass:styleguide', 'myth:docs', 'assemble']);
-grunt.registerTask('build', ['clean', 'shared_config', 'bagel:dirs', 'docs', 'dist']);
+grunt.registerTask('dist', ['bagel_sass_path','sass:dist', 'myth:dist']);
+grunt.registerTask('docs', ['copy:docs', 'myth:docs', 'bagel_pattern_lib']);
+grunt.registerTask('build', ['clean', 'shared_config', 'bagel_sass_path', 'dist', 'docs']);
 
 };

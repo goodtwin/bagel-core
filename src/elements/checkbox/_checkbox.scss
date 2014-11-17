@@ -1,68 +1,59 @@
 @mixin checkbox-src {
-  /* Checkbox
-  ========================================
-  ======================================== */
-
-  /* Content */
-
+  /**
+    * @name Checkbox
+    * @description Checkbox includes styles for both checkbox input and radio inputs.
+    *
+    * @section components.checkbox.index
+    *
+    *
+    * @markup
+    *   <div class="ui checkbox">
+    * 		<input type="checkbox" name="checkbox" id="checkbox" />
+    * 		<label for="checkbox">Checkbox</label>
+    * 	</div>
+    */
   .ui.checkbox {
     position: relative;
     display: inline-block;
     outline: none;
     vertical-align: middle;
-  }
-  .ui.checkbox input {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    opacity: 0;
-    outline: none;
-  }
+    input {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      opacity: 0;
+      outline: none;
+    }
+    .box,
+    label {
+      cursor: pointer;
+      outline: none;
+    }
+    .box:before,
+    label:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 1;
+      content: '';
+    }
+    .box:after,
+    label:after {
+      opacity: 0;
+      position: absolute;
+      background: transparent;
 
-
-  /* Box */
-
-  .ui.checkbox .box,
-  .ui.checkbox label {
-    cursor: pointer;
-    outline: none;
-  }
-
-  .ui.checkbox .box:before,
-  .ui.checkbox label:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 1;
-    content: '';
-  }
-
-  /* Checkbox */
-  .ui.checkbox .box:after,
-  .ui.checkbox label:after {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    position: absolute;
-    background: transparent;
-
-  }
-  .ui.checkbox .box:after,
-  .ui.checkbox label:after {
-    top: 0;
-    left: 0;
+    }
+    .box:after,
+    label:after {
+      top: 0;
+      left: 0;
+    }
+    + label {
+      vertical-align: middle;
+    }
   }
 
-  /* Outside Label */
-  .ui.checkbox + label {
-    vertical-align: middle;
-  }
-
-
-  /* States
-  ======================================== */
-
-  /* Active */
   .ui.checkbox input:checked + .box:after,
   .ui.checkbox input:checked + label:after {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -70,120 +61,160 @@
     opacity: 1;
   }
 
-  /* Disabled */
-  .ui.disabled.checkbox + .box:after,
+  /**
+    * @name Checkbox - Disabled
+    * @description Checkboxes can be disabled.
+    *
+    * @section components.checkbox.disabled
+    *
+    *
+    * @markup
+    *   <div class="ui checkbox">
+    * 		<input type="checkbox" name="checkbox" id="checkboxd1" disabled />
+    * 		<label for="checkboxd1">Checkbox</label>
+    * 	</div>
+    */
   .ui.checkbox input[disabled] + .box:after,
-  .ui.disabled.checkbox label,
   .ui.checkbox input[disabled] + label {
     opacity: 0.4;
     color: rgba(0, 0, 0, 0.3);
   }
 
-
-  /* Variations
-  ======================================== */
-
+  /**
+    * @name Checkbox - Radiobox
+    * @description Checkbox includes styles radio inputs.
+    *
+    * @section components.checkbox.radio
+    *
+    *
+    * @markup
+    *		<fieldset class="grouped inline fields">
+    *			<div class="field">
+    *				<div class="ui radio checkbox">
+    *					<input type="radio" name="fruit" id="apples" checked />
+    *					<label for="apples">Apples</label>
+    *				</div>
+    *			</div>
+    *			<div class="field">
+    *				<div class="ui radio checkbox">
+    *					<input type="radio" name="fruit" id="oranges" />
+    *					<label for="oranges">Oranges</label>
+    *				</div>
+    *			</div>
+    *			<div class="field">
+    *				<div class="ui radio checkbox">
+    *					<input type="radio" name="fruit" id="pears" />
+    *					<label for="pears">Pears</label>
+    *				</div>
+    *			</div>
+    *			<div class="field">
+    *				<div class="ui radio checkbox">
+    *					<input type="radio" name="fruit" id="grapefruit" />
+    *					<label for="grapefruit">Grapefruit</label>
+    *				</div>
+    *			</div>
+    *		</fieldset>
+    */
+  .ui.radio.checkbox{
+    .box:before,
+    label:before {
+      border-radius: 500px;
+      transform: none;
+    }
+    .box:after,
+    label:after {
+      content: '';
+      border: none;
+      transform: none;
+      border-radius: 500px;
+    }
+  }
 
   /**
-   * Radio
-   */
-
-  .ui.radio.checkbox .box:before,
-  .ui.radio.checkbox label:before {
-    border-radius: 500px;
-    transform: none;
-  }
-  .ui.radio.checkbox .box:after,
-  .ui.radio.checkbox label:after {
-    content: '';
-    border: none;
-    transform: none;
-    border-radius: 500px;
-  }
-
-  /**
-   * Slider
-   */
-
+    * @name Checkbox - Slider
+    * @description Checkboxes can appear as a slideable control.
+    *
+    * @section components.checkbox.slider
+    *
+    *
+    * @markup
+    *   <div class="ui slider checkbox">
+    * 		<input type="checkbox" name="checkbox" id="checkboxs1" />
+    * 		<label for="checkboxs1">Checkbox</label>
+    * 	</div>
+    */
   .ui.slider.checkbox {
     cursor: pointer;
     min-width: 3em;
+    &:after {
+      position: absolute;
+      left: 0;
+      content: '';
+    }
+    .box:before,
+    label:before {
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      transform: none;
+    }
+    .box:after,
+    label:after {
+      opacity: 1;
+      position: absolute;
+      content: '';
+      left: 0;
+      z-index: 2;
+      border: none;
+      transform: none;
+    }
+    input:checked + .box:before,
+    input:checked + label:before,
+    input:checked + .box:after,
+    input:checked + label:after {
+      left: 1.75em;
+    }
   }
-
-  /* Line */
-  .ui.slider.checkbox:after {
-    position: absolute;
-    left: 0;
-    content: '';
-  }
-
-  /* Button */
-  .ui.slider.checkbox .box:before,
-  .ui.slider.checkbox label:before {
-    cursor: pointer;
-    display: block;
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    transform: none;
-  }
-
-  /* Button Activation Light */
-  .ui.slider.checkbox .box:after,
-  .ui.slider.checkbox label:after {
-    opacity: 1;
-    position: absolute;
-    content: '';
-    left: 0;
-    z-index: 2;
-    border: none;
-    transform: none;
-  }
-
-  /* Selected Slider Toggle */
-  .ui.slider.checkbox input:checked + .box:before,
-  .ui.slider.checkbox input:checked + label:before,
-  .ui.slider.checkbox input:checked + .box:after,
-  .ui.slider.checkbox input:checked + label:after {
-    left: 1.75em;
-  }
-
-
 
   /**
-   * Toggle
-   */
-
+    * @name Checkbox - Toggle
+    * @description Checkboxes can appear as toggleable controls.
+    *
+    * @section components.checkbox.toggle
+    *
+    *
+    * @markup
+    *   <div class="ui toggle checkbox">
+    * 		<input type="checkbox" name="checkbox" id="checkboxt1" />
+    * 		<label for="checkboxt1">Checkbox</label>
+    * 	</div>
+    */
   .ui.toggle.checkbox {
     cursor: pointer;
-  }
-
-  /* Switch */
-  .ui.toggle.checkbox .box:before,
-  .ui.toggle.checkbox label:before {
-    cursor: pointer;
-    display: block;
-    position: absolute;
-    content: '';
-    left: 0;
-    z-index: 1;
-    transform: none;
-  }
-
-  /* Activation Light */
-  .ui.toggle.checkbox .box:after,
-  .ui.toggle.checkbox label:after {
-    opacity: 1;
-    content: '';
-    position: absolute;
-    left: 0.5em;
-    z-index: 2;
-    border: none;
-  }
-
-  /* Active */
-  .ui.toggle.checkbox input:checked + .box:after,
-  .ui.toggle.checkbox input:checked + label:after {
-    left: 1.75em;
+    .box:before,
+    label:before {
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      z-index: 1;
+      transform: none;
+    }
+    .box:after,
+    label:after {
+      opacity: 1;
+      content: '';
+      position: absolute;
+      left: 0.5em;
+      z-index: 2;
+      border: none;
+    }
+    input:checked + .box:after,
+    input:checked + label:after {
+      left: 1.75em;
+    }
   }
 }

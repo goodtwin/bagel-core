@@ -1,0 +1,96 @@
+@mixin media-src {
+  /**
+    * @name Media
+    * @description A take on @stubornella's media object: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+    * @section core.containers.media
+    *
+    * @state .align-middle - Vertically align contents to middle
+    * @state .align-bottom - Vertically align contents to bottom
+    * @state .reversed - Label to the right; Content to the left
+    *
+    * @markup
+    *   <div class="ui media {{modifier}}">
+    *    <div class="label">
+    *       <img src="http://placehold.it/150x150" alt="" />
+    *     </div>
+    *     <div class="content">
+    *       <p>The 2007 Turkish motorcycle Grand Prix was the third round of the 2007 MotoGP championship. It took place on the weekend of 20–22 April 2007 at the Istanbul Park circuit.</p>
+    *     </div>
+    *   </div>
+    *
+    */
+  .ui.media {
+      display: block;
+
+      &:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+      .label {
+          float: left;
+
+          > img {
+              display: block;
+          }
+      }
+
+      .content {
+          overflow: hidden;
+          display: block;
+      }
+
+      &[class*='align-'] {
+        display: table;
+        width: 100%;
+
+        .label, .content {
+          display: table-cell;
+        }
+
+        .label {
+          > img {
+              max-width: none;
+          }
+        }
+
+        .content {
+          width: 100%;
+        }
+      }
+
+      &.align-middle {
+
+        .label, .content {
+          vertical-align:middle;
+        }
+      }
+
+      &.align-bottom {
+
+        .label, .content {
+          vertical-align:bottom;
+        }
+      }
+
+      &.reversed {
+
+        .label {
+          float: right;
+        }
+
+        &[class*='align-'] {
+          direction: rtl;
+
+          .label {
+            float: none;
+          }
+
+          .label, .content {
+            direction: rtl;
+          }
+        }
+      }
+  }
+}
