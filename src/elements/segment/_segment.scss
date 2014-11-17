@@ -1,66 +1,60 @@
 @mixin segment-src {
-  /* Segment
-  ========================================
-  ======================================== */
-
+  /**
+    * @name Segment
+    * @description The segment is for some simple structure and style around basic site copy.
+    *
+    * @section components.segment.index
+    *
+    *
+    * @markup
+		* 	<div class="ui segment">
+		* 	  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+		* 	</div>
+    */
   .ui.segment {
     position: relative;
+    &:first-child {
+      margin-top: 0em;
+    }
+    &:last-child {
+      margin-bottom: 0em;
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
   }
-
-  .ui.segment:first-child {
-    margin-top: 0em;
-  }
-  .ui.segment:last-child {
-    margin-bottom: 0em;
-  }
-
-  .ui.segment:after {
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
-
   .ui.vertical.segment {
     margin: 0em;
     padding-left: 0em;
     padding-right: 0em;
+    &:first-child {
+      padding-top: 0em;
+    }
   }
-  .ui.vertical.segment:first-child {
-    padding-top: 0em;
-  }
-
   .ui.horizontal.segment {
     margin: 0em;
     padding-top: 0em;
     padding-bottom: 0em;
+    &:first-child {
+      padding-left: 0em;
+    }
   }
-  .ui.horizontal.segment:first-child {
-    padding-left: 0em;
-  }
-
   /**
-   * Loose Coupling
-   */
-
-  /* No padding on edge content */
-  .ui.segment > :first-child {
-    margin-top: 0em;
-  }
-  .ui.segment > :last-child {
-    margin-bottom: 0em;
-  }
-
-
-  /* Types
-  ======================================== */
-
-
-  /**
-   * Circular
-   */
-
+    * @name Segment - Circular
+    * @description The circular segment centers copy within a circular container.
+    *
+    * @section components.segment.circular
+    *
+    *
+    * @markup
+    * 	<div class="ui circular segment">
+    * 	  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+    * 	</div>
+    */
   .ui.circular.segment {
     display: table-cell;
     text-align: center;
@@ -68,84 +62,4 @@
     border-radius: 500em;
   }
 
-
-  /* Variations
-  ======================================== */
-
-
-  /**
-   * Basic
-   */
-
-  .ui.basic.segment {
-    position: relative;
-    background-color: transparent;
-    box-shadow: none;
-    border-radius: 0px;
-  }
-  .ui.basic.segment:first-child {
-    padding-top: 0em;
-  }
-  .ui.basic.segment:last-child {
-    padding-bottom: 0em;
-  }
-
-
-  /**
-   * Fittted
-   */
-
-  .ui.fitted.segment {
-    padding: 0em;
-  }
-
-
-
-  /**
-   * Aligned
-   */
-
-  .ui.left.aligned.segment {
-    text-align: left;
-  }
-  .ui.right.aligned.segment {
-    text-align: right;
-  }
-  .ui.center.aligned.segment {
-    text-align: center;
-  }
-  .ui.justified.segment {
-    text-align: justify;
-    hyphens: auto;
-  }
-
-  /**
-   * Floated
-   */
-
-  .ui.floated.segment,
-  .ui.left.floated.segment {
-    float: left;
-  }
-  .ui.right.floated.segment {
-    float: right;
-  }
-
-
-  /**
-   * Attached
-   */
-
-  .ui.segment.attached {
-    border-radius: 0px;
-    margin: 0em;
-  }
-
-  .ui.segment.top.attached:first-child {
-    margin-top: 0em;
-  }
-
-  .ui.segment.bottom.attached:last-child {
-    margin-bottom: 0em;
-  }
 }

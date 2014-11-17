@@ -1,8 +1,30 @@
 @mixin input-src {
-  /* Inputs
-  ========================================
-  ======================================== */
-
+  /**
+    * @name Input
+    * @description Input styles are additional enhancements on the basic input. Note: These inputs styles can be used separately from forms (although in nearly all cases we don't recommend it).
+    *
+    * @section components.input.index
+    *
+    *
+    * @markup
+    *   <div class="mv pv">
+    * 		<div class="ui input">
+    * 			<input type="text" placeholder="Username">
+    * 		</div>
+    *   </div>
+    *   <div class="mv pv">
+    * 		<div class="ui icon input">
+    * 			<input type="text" placeholder="Username">
+    * 			<i class="user icon"></i>
+    * 		</div>
+    *   </div>
+    *   <div class="mv pv">
+    * 		<div class="ui fluid icon input">
+    * 			<i class="user icon"></i>
+    * 			<input type="text" placeholder="Username">
+    * 		</div>
+    *   </div>
+    */
   .ui.input {
     display: inline-block;
     position: relative;
@@ -11,56 +33,14 @@
     width: 100%;
     outline: none;
   }
-
-
-  /**
-   * Placeholder
-   */
-
-
-  /* States
-  ======================================== */
-
-  /**
-   * Active
-   */
-
-  /**
-   * Loading
-   */
-
   .ui.loading.input > .icon:before,
   .ui.loading.input > .icon:after {
     display: none;
   }
-
-  /**
-   * Focus
-   */
-
-
-  /**
-   * Error
-   */
-
-  /* Variations
-  ======================================== */
-
-
-  /**
-   * Transparent
-   */
-
   .ui.transparent.input input {
     border: none;
     background-color: transparent;
   }
-
-
-  /**
-   * Icon
-   */
-
   .ui.icon.input > .icon {
     cursor: default;
     position: absolute;
@@ -71,8 +51,6 @@
   .ui.icon.input > .link.icon {
     cursor: pointer;
   }
-
-  /* Left Side */
   .ui.left.icon.input > .icon {
     right: auto;
     left: 1px;
@@ -81,24 +59,13 @@
     right: auto;
     left: 0.5em;
   }
-
-  /* Focus */
   .ui.icon.input > input:focus ~ .icon {
     opacity: 1;
   }
 
-  /**
-   * Labeled
-   */
-
-  /**
-   * Action
-   */
-
   .ui.action.input {
     display: table;
   }
-
   .ui.action.input > input {
     display: table-cell;
     border-right: none;
@@ -113,17 +80,78 @@
     display: inline;
     vertical-align: top;
   }
-
   .ui.fluid.action.input {
     display: table;
     width: 100%;
   }
-
-  /**
-   * Fluid
-   */
-
   .ui.fluid.input {
     display: block;
+  }
+
+  /**
+    * @name Input - Sizes
+    * @description Inputs can be explicitly sized.
+    *
+    * @section components.input.sizes
+    *
+    *
+    * @markup
+    *   <div class="mv pv">
+    * 		<div class="ui mini icon input">
+    * 			<input type="text" placeholder="Username">
+    * 			<i class="user icon"></i>
+    * 		</div>
+    *   </div>
+    *   <div class="mv pv">
+    * 		<div class="ui small icon input">
+    * 			<input type="text" placeholder="Username">
+    * 			<i class="user icon"></i>
+    * 		</div>
+    *   </div>
+    *   <div class="mv pv">
+    * 		<div class="ui large icon input">
+    * 			<input type="text" placeholder="Username">
+    * 			<i class="user icon"></i>
+    * 		</div>
+    *   </div>
+    *   <div class="mv pv">
+    * 		<div class="ui big icon input">
+    * 			<input type="text" placeholder="Username">
+    * 			<i class="user icon"></i>
+    * 		</div>
+    *   </div>
+    *   <div class="mv pv">
+    * 		<div class="ui huge icon input">
+    * 			<input type="text" placeholder="Username">
+    * 			<i class="user icon"></i>
+    * 		</div>
+    *   </div>
+    *   <div class="mv pv">
+    * 		<div class="ui massive icon input">
+    * 			<input type="text" placeholder="Username">
+    * 			<i class="user icon"></i>
+    * 		</div>
+    *   </div>
+    */
+  .ui.mini.input {
+    font-size: 0.8125em;
+  }
+  .ui.small.input {
+    font-size: 0.875em;
+  }
+  .ui.input {
+    font-size: 1em;
+  }
+  .ui.large.input {
+    font-size: 1.125em;
+  }
+  .ui.big.input {
+    font-size: 1.25em;
+  }
+  .ui.huge.input {
+    font-size: 1.375em;
+  }
+  .ui.massive.input {
+    font-size: 1.5em;
   }
 }

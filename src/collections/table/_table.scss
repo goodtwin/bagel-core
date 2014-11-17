@@ -1,65 +1,60 @@
 @mixin table-src {
   /**
     * @name Table
-    * @description <table>
-    * @section core.collections.table
+    * @description Responsive tables
     *
-    * @state .celled - Border around each cell
-    * @state .basic - Removes some style
-    * @state .sortable - Hover states on <th>; Requires custom JS to sort
-    * @state .two column - Specify column width between 1-16
+    * @section components.table.-
+    *
     *
     * @markup
-    *   <table class="ui table {{modifier}}">
-    *      <thead>
-    *       <tr>
-    *        <th>H ITEM</th>
-    *        <th>H ITEM</th>
-    *        <th>H ITEM</th>
-    *        <th>H ITEM</th>
-    *       </tr>
-    *     </thead>
-    *     <tbody>
-    *      <tr>
-    *       <td>ITEM</td>
-    *       <td>ITEM</td>
-    *       <td>ITEM</td>
-    *       <td>ITEM</td>
-    *      </tr>
-    *       <tr>
-    *       <td>ITEM</td>
-    *       <td>ITEM</td>
-    *       <td>ITEM</td>
-    *       <td>ITEM</td>
-    *      </tr>
-    *     </tbody>
-    *   </table>
-    *
+    * <table class="ui table segment">
+    * 	<thead>
+    * 		<th>Name</th>
+    * 		<th>Status</th>
+    * 		<th>Notes</th>
+    * 	</thead>
+    * 	<tbody>
+    * 		<tr>
+    * 			<td>John</td>
+    * 			<td>Approved</td>
+    * 			<td>None</td>
+    * 		</tr>
+    * 		<tr>
+    * 			<td>Jamie</td>
+    * 			<td>Approved</td>
+    * 			<td>Requires call</td>
+    * 		</tr>
+    * 		<tr>
+    * 			<td>Jill</td>
+    * 			<td>Denied</td>
+    * 			<td>None</td>
+    * 		</tr>
+    * 	</tbody>
+    * 	<tfoot>
+    * 		<th colspan="3">
+    * 			<div class="ui labeled icon button"><i class="user icon"></i> Add User</div>
+    * 		</th>
+    * 	</tfoot>
+    * </table>
     */
   .ui.table {
     width: 100%;
     border-collapse: collapse;
   }
 
-  /* Table Content */
   .ui.table th,
   .ui.table tr,
   .ui.table td {
     border-collapse: collapse;
   }
-
-  /* Headers */
   .ui.table th {
     cursor: auto;
     vertical-align: middle;
   }
-
-  /* Table Cells */
   .ui.table td {
     vertical-align: middle;
   }
 
-  /* Responsive */
   @include media-query(palm) {
     .ui.responsive.table {
       display: block;
@@ -83,10 +78,6 @@
     }
   }
 
-  /* Variations
-  ======================================== */
-
-  /* Column Count */
   .ui.two.column.table td {
     width: percentage(1/2);
   }
@@ -134,9 +125,43 @@
   }
 
   /**
-   * Celled
-   */
-
+    * @name Table - Celled
+    * @description Tables can be celled
+    *
+    * @section components.table.celled
+    *
+    *
+    * @markup
+    * 	<table class="ui celled table">
+    * 		<thead>
+    * 			<th>Name</th>
+    * 			<th>Status</th>
+    * 			<th>Notes</th>
+    * 		</thead>
+    * 		<tbody>
+    * 			<tr>
+    * 				<td>John</td>
+    * 				<td>No Action</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jamie</td>
+    * 				<td class="positive">Approved</td>
+    * 				<td class="warning">Requires call</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jill</td>
+    * 				<td class="negative">Denied</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 		</tbody>
+    * 		<tfoot>
+    * 			<th>3 People</th>
+    * 			<th>2 Approved</th>
+    * 			<th></th>
+    * 		</tfoot>
+    * 	</table>
+    */
   .ui.celled.table td,
   .ui.celled.table th {
     border-width: 1px;
@@ -144,9 +169,43 @@
   }
 
   /**
-   * Sortable
-   */
-
+    * @name Table - Sortable
+    * @description Tables can be sortable
+    *
+    * @section components.table.sortable
+    *
+    *
+    * @markup
+    * 	<table class="ui sortable table segment">
+    * 		<thead>
+    * 			<th>Name</th>
+    * 			<th>Status</th>
+    * 			<th>Notes</th>
+    * 		</thead>
+    * 		<tbody>
+    * 			<tr>
+    * 				<td>John</td>
+    * 				<td>No Action</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jamie</td>
+    * 				<td class="positive">Approved</td>
+    * 				<td class="warning">Requires call</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jill</td>
+    * 				<td class="negative">Denied</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 		</tbody>
+    * 		<tfoot>
+    * 			<th>3 People</th>
+    * 			<th>2 Approved</th>
+    * 			<th></th>
+    * 		</tfoot>
+    * 	</table>
+    */
   .ui.sortable.table thead th {
     cursor: pointer;
     white-space: nowrap;
@@ -157,9 +216,43 @@
   }
 
   /**
-   * Basic
-   */
-
+    * @name Table - Basic
+    * @description Tables can be basic
+    *
+    * @section components.table.basic
+    *
+    *
+    * @markup
+    * 	<table class="ui basic table segment">
+    * 		<thead>
+    * 			<th>Name</th>
+    * 			<th>Status</th>
+    * 			<th>Notes</th>
+    * 		</thead>
+    * 		<tbody>
+    * 			<tr>
+    * 				<td>John</td>
+    * 				<td>No Action</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jamie</td>
+    * 				<td class="positive">Approved</td>
+    * 				<td class="warning">Requires call</td>
+    * 			</tr>
+    * 			<tr>
+    * 				<td>Jill</td>
+    * 				<td class="negative">Denied</td>
+    * 				<td>None</td>
+    * 			</tr>
+    * 		</tbody>
+    * 		<tfoot>
+    * 			<th>3 People</th>
+    * 			<th>2 Approved</th>
+    * 			<th></th>
+    * 		</tfoot>
+    * 	</table>
+    */
   .ui.basic.table th {
     background-color: transparent;
   }

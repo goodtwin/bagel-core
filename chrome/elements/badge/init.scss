@@ -1,0 +1,5 @@
+@import "prototype";
+
+@if use-theme(badge) {
+  @include badge-prototype;
+}

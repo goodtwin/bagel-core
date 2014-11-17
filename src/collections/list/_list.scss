@@ -2,17 +2,22 @@
 	/**
 		* @name List
 		* @description <ul>, <ol>, <li>
-		* @section core.collections.list
+		* @section components.list.index
 		*
-		* @state .bare - Removes padding, margin, and list style
 		*
 		* @markup
-		*   <ul class="ui list {{modifier}}">
+		*   <ul class="ui list">
 		*    <li>ITEM</li>
 		*    <li>ITEM</li>
 		*    <li>ITEM</li>
 		*    <li>ITEM</li>
 		*   </ul>
+		*   <ol class="ui list">
+		*    <li>ITEM 1</li>
+		*    <li>ITEM 2</li>
+		*    <li>ITEM 3</li>
+		*    <li>ITEM 4</li>
+		*   </ol>
 		*
 		*/
 	%bare-list {
