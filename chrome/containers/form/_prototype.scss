@@ -185,45 +185,6 @@
 		max-height: 24em;
 		resize: vertical;
 	}
-
-
-	/**
-		* @name Form - Errors
-		* @description Form input error styles. In order to show messages in regards to the error, the form must have a class of error
-		*
-		* @section components.form.error
-		*
-		*
-		* @markup
-		* <form class="ui form error">
-		* 	<div class="ui error message">
-		* 		<div class="header">We noticed some issues</div>
-		* 	</div>
-		* 	<fieldset class="error field">
-		* 		<label>Text Field</label>
-		* 		<div class="ui left labeled icon input">
-		* 			<input type="text" placeholder="Username">
-		* 			<i class="user icon"></i>
-		* 		</div>
-		* 	</fieldset>
-		* 	<fieldset class="field">
-		* 		<label>Email Field</label>
-		* 		<div class="ui left labeled icon input">
-		* 			<input type="email">
-		* 			<i class="mail icon"></i>
-		* 		</div>
-		* 	</fieldset>
-		* 	<fieldset class="error field">
-		* 		<label>Password Field</label>
-		* 		<div class="ui left labeled icon input">
-		* 			<input type="password">
-		* 			<i class="lock icon"></i>
-		* 		</div>
-		* 		<div class="ui message">Here is a prompt for the user about how to fix the error.</div>
-		* 	</fieldset>
-		* 	<input type="submit" class="ui blue submit button" value="Login"/>
-		* </form>
-		*/
 	// Error
 	.ui.form .fields.error .field label,
 	.ui.form .field.error label,
@@ -393,8 +354,6 @@
 		margin: 0.5em 0em;
 		padding: 0em;
 	}
-
-	// Fields
 	.ui.form .fields > .field:first-child {
 		border-left: none;
 		box-shadow: none;
